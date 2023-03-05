@@ -28,4 +28,6 @@ $$
 
 
 
-### Minimize Cross Entropy?
+### Minimize Cross Entropy? H(p,q)
+When we train the model, we do differentiate KL Divergence w.r.t q  
+There is no parameter for p, so just minimizing Cross Entropy will ensure same result for KL Divergence
