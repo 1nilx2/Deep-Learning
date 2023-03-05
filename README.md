@@ -23,7 +23,7 @@ $$
 $$
 
 $$
-KL(p||q) = H(p,q) - H(p)
+\Leftrightarrow KL(p||q) = H(p,q) - H(p)
 $$
 
 
