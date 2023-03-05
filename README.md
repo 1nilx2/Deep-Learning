@@ -1,6 +1,7 @@
 # Statistics
 
 ## Cross-entropy & KL Divergence
+#### Entropy
 Entropy is average amount of information and can be said degree of surprise
 
 $$
@@ -14,6 +15,7 @@ $$
 H[x]= \lim_{\Delta \rightarrow 0}{\sum_{i}{p(x_i)\Delta\ln{p(x_i)} }} = - \int{p(x)}dx}
 $$
 
+#### KL Divergence
 KL Divergence is the difference between two probability distributions  
 More clealy, It's the difference between entropy and thus the loss due to a miss-modeling
 
@@ -28,6 +30,6 @@ $$
 
 
 
-### Minimize Cross Entropy? H(p,q)
+#### Minimize Cross Entropy? H(p,q)
 When we train the model, we do differentiate KL Divergence w.r.t q  
 There is no parameter for p, so just minimizing Cross Entropy will ensure same result for KL Divergence
