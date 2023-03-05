@@ -21,3 +21,11 @@ $$
 \displaylines{D_{KL}{(p||q)} = - \int{p(x)\ln{g(x)}}dx - (-\int{p(x)\ln{p(x)}dx}) \\  
 =-\int{p(x)\ln{\{ \frac{q(x)}{p(x)} \}}}dx}
 $$
+
+$$
+KL(p||q) = H(p,q) - H(p)
+$$
+
+
+
+### Minimize Cross Entropy?
