@@ -19,5 +19,5 @@ More clealy, It's the difference between entropy and thus the loss due to a miss
 
 $$
 \displaylines{D_{KL}{(p||q)} = - \int{p(x)\ln{g(x)}}dx - -\int{p(x)\ln{p(x)}dx} \\  
-=-\int{p(x)\ln{\left \{ \frac{q(x)}{p(x)} \right \}}}dx}
+=-\int{p(x)\ln{\{ \frac{q(x)}{p(x)} \}}}dx}
 $$
