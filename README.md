@@ -11,5 +11,5 @@ $$
 
 $$
 \displaylines{\mathit{for \ continuous \ x,} \\ 
-H[x]= \lim_{\Delta \rightarrow 0}{\sum_{i}{p(x_i\Delta)\ln{p(x_i)} }} = - \int{p(x)}dx}
+H[x]= \lim_{\Delta \rightarrow 0}{\sum_{i}{p(x_i)\Delta\ln{p(x_i)} }} = - \int{p(x)}dx}
 $$
