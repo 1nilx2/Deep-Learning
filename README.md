@@ -13,3 +13,6 @@ $$
 \displaylines{\mathit{for \ continuous \ x,} \\ 
 H[x]= \lim_{\Delta \rightarrow 0}{\sum_{i}{p(x_i)\Delta\ln{p(x_i)} }} = - \int{p(x)}dx}
 $$
+
+KL Divergence is the difference between two probability distributions
+More clealy, It's the difference between entropy and thus the loss due to a miss-modeling
