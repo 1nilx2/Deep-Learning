@@ -16,3 +16,8 @@ $$
 
 KL Divergence is the difference between two probability distributions  
 More clealy, It's the difference between entropy and thus the loss due to a miss-modeling
+
+$$
+\displaylines{D_{KL}{(p||q)} = - \int{p(x)\ln{g(x)}}dx - \left (-\int{p(x)\ln{p(x)}dx}  \right )\\
+=-\int{p(x)\ln{\left \{ \frac{q(x)}{p(x)} \right \}}}dx}
+$$
