@@ -13,6 +13,10 @@ This alleviates the problem of Gaussian distribution where sampling was done in 
 ### Some Concepts
 #### AdaIN (Adaptive Instance Normalization)
 
+#### Loss: WGAN-GP
+Traditional GAN shows instable convergence of loss. To cover this, Wasserstein GAN had been introduced.  
+WGAN stablized learning process using Lipshitz constraint and weight clipping for the constraint   
+WGAN-GP adopted gradient penalty to fullfill the requirement for Lipshitz
 
 ## Cross-entropy & KL Divergence
 #### Entropy
