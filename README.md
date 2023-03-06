@@ -5,6 +5,11 @@
 Mapping z to w space so that distribution becomes more linear and thus allows smooth transition.
 This alleviates the problem of Gaussian distribution where sampling was done in rather non-linear space 
 
+### Contributions
+1) Improved the performance of its baseline architecture, PGGAN
+2) Improved Disentanglement -> Handle individual features
+3) Publicated High-resolution dataset, FFHQ
+
 ### Some Concepts
 #### AdaIN (Adaptive Instance Normalization)
 
