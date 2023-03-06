@@ -1,5 +1,10 @@
 # Statistics
 
+## Style GAN
+#### Main Idea
+Mapping z to w space so that distribution becomes more linear and thus allows smooth transition
+This alleviates the problem of Gaussian distribution where sampling was done in rather non-linear space 
+
 ## Cross-entropy & KL Divergence
 #### Entropy
 Entropy is average amount of information and can be said degree of surprise
