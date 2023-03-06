@@ -1,9 +1,13 @@
 # Statistics
 
 ## Style GAN
-#### Main Idea
-Mapping z to w space so that distribution becomes more linear and thus allows smooth transition
+### Main Idea
+Mapping z to w space so that distribution becomes more linear and thus allows smooth transition.
 This alleviates the problem of Gaussian distribution where sampling was done in rather non-linear space 
+
+### Some Concepts
+#### AdaIN (Adaptive Instance Normalization)
+
 
 ## Cross-entropy & KL Divergence
 #### Entropy
