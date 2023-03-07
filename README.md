@@ -30,9 +30,12 @@ x = feature of image for content, so
 $$
 \mathit{to \ remove \ style \ of \ content, \} 
 (\frac{x-\mu{(x)}}{\sigma{x}})
+$$
+
+$
 \mathit{to \ apply \ style \ from \ y, \} 
 \sigma{(y)}(\frac{x-\mu{(x)}}{\sigma{x}}) + \mu{(y)}
-$$
+$
 
 
 #### VGG (Very Deep Convolutional Networks for Large-Scale Image Recognition)
