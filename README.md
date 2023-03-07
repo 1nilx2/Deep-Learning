@@ -22,13 +22,15 @@ This alleviates the problem of Gaussian distribution where sampling was done in 
 3) So changing those statics alter the style of an input 
 
 $$
-AdaIN(x,y)=\sigma{(y)}(\frac{x-\mu{(x)}}{\sigma{x}}) + \mu{(y)} \\
+AdaIN(x,y)=\sigma{(y)}(\frac{x-\mu{(x)}}{\sigma{x}}) + \mu{(y)} \\  
 where, \ x \ is \ feature \ of \ image \ for \ content, \ so \ 
 $$
 
 
 
-$\mathit{to \ remove \ style \ of \ content, \} (\frac{x-\mu{(x)}}{\sigma{x}})$
+$$
+\mathit{to \ remove \ style \ of \ content, \} (\frac{x-\mu{(x)}}{\sigma{x}})
+$$
 
 $
 \mathit{to \ apply \ style \ from \ y, \} 
