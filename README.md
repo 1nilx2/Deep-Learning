@@ -21,7 +21,7 @@ This alleviates the problem of Gaussian distribution where sampling was done in 
 2) 'Style' can be represented by statistics of feature space (mean and variance here)
 3) So changing those statics alter the style of an input 
 
-$\displaylines{ AdaIN(x,y)=\sigma{(y)}(\frac{x-\mu{(x)}}{\sigma{x}}) + \mu{(y)}$
+$AdaIN(x,y)=\sigma{(y)}(\frac{x-\mu{(x)}}{\sigma{x}}) + \mu{(y)}$
 
 $\mathit{, \ where \ x \ is \ feature \ of \ image \ for \ content, \ so \ }$
 
