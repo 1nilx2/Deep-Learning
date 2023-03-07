@@ -23,7 +23,7 @@ This alleviates the problem of Gaussian distribution where sampling was done in 
 
 $$
 AdaIN(x,y)=\sigma{(y)}(\frac{x-\mu{(x)}}{\sigma{x}}) + \mu{(y)} \\  
-where, \ x \ is \ feature \ of \ image \ for \ content, \ so \ 
+\mathit{where, \ x \ is \ feature \ of \ image \ for \ content, \ so \ }
 $$
 
 
