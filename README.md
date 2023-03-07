@@ -22,7 +22,8 @@ This alleviates the problem of Gaussian distribution where sampling was done in 
 3) So changing those statics alter the style of an input 
 
 $\displaylines{ AdaIN(x,y)=\sigma{(y)}(\frac{x-\mu{(x)}}{\sigma{x}}) + \mu{(y)}$
-$\mathit{, \ where \ x \ is \ feature \ of \ image \ for \ content, \ so \ } } \ $
+
+$\mathit{, \ where \ x \ is \ feature \ of \ image \ for \ content, \ so \ }$
 
 
 $$
