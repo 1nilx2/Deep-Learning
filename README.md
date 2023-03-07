@@ -14,9 +14,13 @@ This alleviates the problem of Gaussian distribution where sampling was done in 
 #### AdaIN (Adaptive Instance Normalization)
 
 #### VGG (Very Deep Convolutional Networks for Large-Scale Image Recognition)
-VGG19 consists of 19 weight layers (16 CNN, 3 FC)
-High performance with simple structure
-Impact of 'deep' layer structure has been identified 
+VGG19 consists of 19 weight layers (16 CNN, 3 FC).  
+High performance with simple structure.  
+Impact of 'deep' layer structure has been identified    
+Use 3x3 filters so that expedites learning speed and increases non-linearity. 
+  - Resulting size feature map is same when we do 3x3 convolution three times and when one time 7x7)
+  - This means less parameters to learn at once and more non-linearity due to more activations
+  - So Having more convolution enables model to fit loss function faster and to increase non-linearity
 
 #### Loss: WGAN-GP
 Traditional GAN shows instable convergence of loss. To cover this, Wasserstein GAN had been introduced.  
