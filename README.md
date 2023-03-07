@@ -3,7 +3,7 @@
 ## Style GAN
 ### Style Transfer?
 Content + Style  
-In Aluminum Bat, Aluminum: style; Bat: Content
+In Aluminum Bat, Aluminum: style; Bat: Content  
 If we transfer the style of Wood Bat,  
 expected output will be Wood Bat, while maintaining major characteristics of aluminum bat
 ### Main Idea
