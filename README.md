@@ -26,11 +26,13 @@ AdaIN(x,y)=\sigma{(y)}(\frac{x-\mu{(x)}}{\sigma{x}}) + \mu{(y)}
 $$
 
 x = feature of image for content, so This is to remove style of content
+
 $$
 (\frac{x-\mu{(x)}}{\sigma{x}}
 $$
 
 This is to apply style from y
+
 $$
 \sigma{(y)}(\frac{x-\mu{(x)}}{\sigma{x}}) + \mu{(y)}
 $$
