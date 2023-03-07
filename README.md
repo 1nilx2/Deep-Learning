@@ -27,11 +27,11 @@ $$\mathit{, \ where \ x \ is \ feature \ of \ image \ for \ content, \ so \ }$$
 
 
 $$
-\mathit{to \ remove \ style \ of \ content, \ do \\} (\frac{x-\mu{(x)}}{\sigma{x}})
+\mathit{to \ remove \ style \ of \ content, \ do \} (\frac{x-\mu{(x)}}{\sigma{x}})
 $$
 
 $$
-\mathit{to \ apply \ style \ from \ y, \} 
+\mathit{to \ apply \ style \ from \ y, \ do \ } 
 \sigma{(y)}(\frac{x-\mu{(x)}}{\sigma{x}}) + \mu{(y)}
 $$
 
