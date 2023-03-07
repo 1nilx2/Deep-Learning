@@ -36,7 +36,7 @@ $$
 $$
 
 $$
-\mathit{make\sure\that\these\changes\should\be\done\in\feature\space } 
+\mathit{make \ sure \ that \ these \ changes \ should \ be \ done \ in \ feature \ space } 
 $$
 
 Encoder is not learnable.  
