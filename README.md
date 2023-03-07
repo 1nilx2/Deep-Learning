@@ -13,6 +13,11 @@ This alleviates the problem of Gaussian distribution where sampling was done in 
 ### Some Concepts
 #### AdaIN (Adaptive Instance Normalization)
 
+#### VGG (Very Deep Convolutional Networks for Large-Scale Image Recognition)
+VGG19 consists of 19 weight layers (16 CNN, 3 FC)
+High performance with simple structure
+Impact of 'deep' layer structure has been identified 
+
 #### Loss: WGAN-GP
 Traditional GAN shows instable convergence of loss. To cover this, Wasserstein GAN had been introduced.  
 WGAN stablized learning process using Lipshitz constraint and weight clipping for the constraint   
