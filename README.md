@@ -17,6 +17,13 @@ This alleviates the problem of Gaussian distribution where sampling was done in 
 
 ### Some Concepts
 #### AdaIN (Adaptive Instance Normalization)
+1) Information on content and style can be extracted through VGG Encoder. 
+2) 'Style' can be represented by statistics of feature space (mean and variance here)
+3) So changing those statics alter the style of an input 
+
+$$
+AdaIN(x,y)=\sigma{(y)}
+$$
 
 #### VGG (Very Deep Convolutional Networks for Large-Scale Image Recognition)
 VGG19 consists of 19 weight layers (16 CNN, 3 FC).  
