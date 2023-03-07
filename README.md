@@ -4,7 +4,8 @@
 ### Style Transfer?
 Content + Style  
 In Aluminum Bat, Aluminum: style; Bat: Content
-If we transfer the style of Wood Bat, expected output will be Wood Bat, while maintaining major characteristics of aluminum bat
+If we transfer the style of Wood Bat,  
+expected output will be Wood Bat, while maintaining major characteristics of aluminum bat
 ### Main Idea
 Mapping z to w space so that distribution becomes more linear and thus allows smooth transition.
 This alleviates the problem of Gaussian distribution where sampling was done in rather non-linear space 
