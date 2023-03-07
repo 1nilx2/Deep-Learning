@@ -22,8 +22,19 @@ This alleviates the problem of Gaussian distribution where sampling was done in 
 3) So changing those statics alter the style of an input 
 
 $$
-AdaIN(x,y)=\sigma{(y)}(\frac{x-\mu{x}}{\sigma{x}}) + \mu{y}
+AdaIN(x,y)=\sigma{(y)}(\frac{x-\mu{(x)}}{\sigma{x}}) + \mu{(y)}
 $$
+
+x = feature of image for content, so This is to remove style of content
+$$
+(\frac{x-\mu{(x)}}{\sigma{x}}
+$$
+
+This is to apply style from y
+$$
+\sigma{(y)}(\frac{x-\mu{(x)}}{\sigma{x}}) + \mu{(y)}
+$$
+
 
 #### VGG (Very Deep Convolutional Networks for Large-Scale Image Recognition)
 VGG19 consists of 19 weight layers (16 CNN, 3 FC).  
