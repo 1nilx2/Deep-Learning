@@ -35,6 +35,10 @@ $$
 \sigma{(y)}(\frac{x-\mu{(x)}}{\sigma{x}}) + \mu{(y)}
 $$
 
+Encoder is not learnable.  
+Only Decoder is trained, which means to learn how to invert features genereated from AdaIN to image space through Decoder
+
+
 
 #### VGG (Very Deep Convolutional Networks for Large-Scale Image Recognition)
 VGG19 consists of 19 weight layers (16 CNN, 3 FC).  
