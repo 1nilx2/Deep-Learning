@@ -22,7 +22,7 @@ This alleviates the problem of Gaussian distribution where sampling was done in 
 3) So changing those statics alter the style of an input 
 
 $$
-AdaIN(x,y)=\sigma{(y)}
+AdaIN(x,y)=\sigma{(y)}(\frac{x-\mu{x}}{\sigma{x}}) + \mu{y}
 $$
 
 #### VGG (Very Deep Convolutional Networks for Large-Scale Image Recognition)
