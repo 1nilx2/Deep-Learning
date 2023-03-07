@@ -27,10 +27,7 @@ $$
 
 x = feature of image for content, so
 
-$$
-\mathit{to \ remove \ style \ of \ content, \} 
-(\frac{x-\mu{(x)}}{\sigma{x}})
-$$
+$\mathit{to \ remove \ style \ of \ content, \} (\frac{x-\mu{(x)}}{\sigma{x}})$
 
 $
 \mathit{to \ apply \ style \ from \ y, \} 
