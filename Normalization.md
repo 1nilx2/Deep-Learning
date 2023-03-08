@@ -47,5 +47,11 @@ the resulting functions can vary, which is called Covariate Shift
 Interncal Covariate Shift(ICS) indicates when those kinds of situation happens between inputs of layers, and
 thus a model doesn't learn well. 
 
+#### BN (Batch Normalization)
+So to alleviate ICS, Batch Normalizaing has been suggested to be applied before Activation
+
+$\mathit{Values \ of \ x \ over \ a \ mini-batch: \ } B = {x_i...m}; \mathit{Parameters \ to \ be \ learned: \gamma,\beta} $
+$\mu{Β}$
+
 continue
 https://www.notion.so/Batch-Normalization-0649da054353471397e97296d6564298
