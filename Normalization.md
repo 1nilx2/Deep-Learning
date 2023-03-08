@@ -55,7 +55,7 @@ $\mathit{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Parameters \ to \ be \ learned: \gamma,
 
 $\mathbf{Output: \ } \{ y_i=BN_{\gamma,\beta}(x_i) \}$
 
-$y_i \leftarrow \gamma \hat{x_i} + \beta \equiv BN_{\gamma,\beta}{(x_i)} $  (scale and shift)
+$y_i \leftarrow \gamma \hat{x_i} + \beta \equiv BN_{\gamma,\beta}{(x_i)} \text{(scale and shift)}$  
 
 continue
 https://www.notion.so/Batch-Normalization-0649da054353471397e97296d6564298
