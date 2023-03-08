@@ -59,7 +59,7 @@ $\mu{B} \leftarrow \frac{1}{m} \sum_{i=1}^{m}{x_i} $
 
 $\mu_{B} \leftarrow \frac{1}{m} \sum_{i=1}^{m}{x_i} $
 
-$\sigma^{2}_{B} \leftarrow \frac{1}{m} \sum^{m}_{i=1}{(x_i-\mu_{B})^2} $
+$\sigma^{2}{B} \leftarrow \frac{1}{m} \sum^{m}_{i=1}{(x_i-\mu_{B})^2} $
 
 $\hat{x_i} \leftarrow \frac{x_i-\mu_{B}}{\sqrt{\sigma^2_B + \epsilon}}$
 
