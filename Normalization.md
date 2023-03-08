@@ -53,7 +53,7 @@ $\mathbf{Input: \ } \mathit{Values \ of \ x \ over \ a \ mini-batch: \ } B = \{x
 
 $\mathit{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Parameters \ to \ be \ learned: \gamma,\beta}$
 
-$\mathbf{Output: \ } \{y_i=BN_{\gamma,\beta}(x_i)\}$
+$\mathbf{Output: \ } \{ y_i=BN_{\gamma,\beta}(x_i) \}$
 
 continue
 https://www.notion.so/Batch-Normalization-0649da054353471397e97296d6564298
