@@ -19,6 +19,7 @@
  ### Background
  #### Normalization
   - Min-Max and Standardization (with mean and std)
+
 $$ x' = \frac{x-\mu{(x)}}{\sigma{(x)}} $$
 
 ## Style GAN
