@@ -55,5 +55,7 @@ $\mathit{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Parameters \ to \ be \ learned: \gamma,
 
 $\mathbf{Output: \ } \{ y_i=BN_{\gamma,\beta}(x_i) \}$
 
+$y_i \leftarrow \gammax_i = \beta == BN_{\gamma,\beta}{(x_i)} $
+
 continue
 https://www.notion.so/Batch-Normalization-0649da054353471397e97296d6564298
