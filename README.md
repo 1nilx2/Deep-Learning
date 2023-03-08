@@ -86,6 +86,7 @@ $$
 Encoder is not learnable.  
 Only Decoder is trained, which means to learn how to invert features genereated from AdaIN to image space through Decoder
 
+Continue: https://lifeignite.tistory.com/48?category=460776
 
 
 #### VGG (Very Deep Convolutional Networks for Large-Scale Image Recognition)
