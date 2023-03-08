@@ -4,23 +4,27 @@
 ### Batch Normalization
 #### Role
   - re-cetering and re-scaling distribution of input feature of layers
- #### Pros
+#### Pros
   - Faster Tranining (can set learning rate higher)
   - Stable Training (less vanishing and exploding gradients)
   - Regularziation (less overfitting, more generalized)
- #### Cons
+#### Cons
   - Need to use larger size for mini-batch. Mini-batch needs to have silmiar distribution with population
- #### Reason of working well
+#### Reason of working well
   - Alleviate ICN (Internal Covariate Shift)?
     - controversy on this. 
   - Smooth solution space of objective function
     - so far, this is strong opinion
  
- ### Background
- #### Normalization
+### Background
+#### Normalization
   - Min-Max and Standardization (with mean and std)
 
+##### Standardization
+
 $$\mathit{Standardization: \ } \ x' = \frac{x-\mu{(x)}}{\sigma{(x)}} $$
+  
+ 
 
 ## Style GAN
 ### Style Transfer?
