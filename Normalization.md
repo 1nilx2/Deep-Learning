@@ -1,7 +1,6 @@
-$IN(x)= \gamma \left(\frac{x-\mu{(x)}}{\sigma{(x)}} \right) + \beta $
-
-
-$\mathit{group by (b,c)} $
+\[ 
+\text{$x=4$ or $x=5$} 
+\]
 
 
 continue: https://lifeignite.tistory.com/46
