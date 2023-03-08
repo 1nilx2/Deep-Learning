@@ -15,6 +15,11 @@
     - controversy on this. 
   - Smooth solution space of objective function
     - so far, this is strong opinion
+ 
+ ### Background
+ #### Normalization
+  - Min-Max and Standardization (with mean and std)
+  - $ x' = \frac{x-\mu{(x)}}{\sigma{(x)}} $
 
 ## Style GAN
 ### Style Transfer?
