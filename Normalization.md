@@ -55,6 +55,14 @@ $\mathit{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Parameters \ to \ be \ learned: \gamma,
 
 $\mathbf{Output: \ } \{ y_i=BN_{\gamma,\beta}(x_i) \}$
 
+$ \mu{B} \leftarrow \frac{1}{m} \sum_{i=1}^{m}{x_i} $
+
+$ \mu_{B} \leftarrow \frac{1}{m} \sum_{i=1}^{m}{x_i} $
+
+$ \sigma^{2}_{B} \leftarrow \frac{1}{m} \sum^{m}_{i=1}{(x_i-\mu_{B})^2} \ \ \ \ \ \ \ \ \ \ \ //mini-batch \ variance$
+
+$ \hat{x_i} \leftarrow \frac{x_i-\mu_{B}}{\sqrt{\sigma^2_B + \epsilon}}$
+
 $y_i \leftarrow \gamma \hat{x_i} + \beta \equiv BN_{\gamma,\beta}{(x_i)} \text{(scale and shift)}$  
 
 continue
