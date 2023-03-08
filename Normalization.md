@@ -1,4 +1,4 @@
-$\sigma^2_B$
+$\sum{m}{i=1}$
 
 
 continue: https://lifeignite.tistory.com/46
