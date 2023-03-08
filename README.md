@@ -20,7 +20,7 @@
  #### Normalization
   - Min-Max and Standardization (with mean and std)
 
-$$ x' = \frac{x-\mu{(x)}}{\sigma{(x)}} $$
+$$\mathit{Standardization: \ } \ x' = \frac{x-\mu{(x)}}{\sigma{(x)}} $$
 
 ## Style GAN
 ### Style Transfer?
