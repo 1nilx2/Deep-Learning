@@ -1,4 +1,4 @@
-$\sum_{m}^{i=1} 34$
+$\textstyle \sum_{m}^{i=1} 34 \to$
 
 
 continue: https://lifeignite.tistory.com/46
