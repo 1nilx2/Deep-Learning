@@ -1,4 +1,4 @@
-$\sum_{m}{i=1}$
+$\sum_{m}^{i=1} 34$
 
 
 continue: https://lifeignite.tistory.com/46
