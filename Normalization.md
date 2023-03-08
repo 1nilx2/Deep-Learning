@@ -51,7 +51,7 @@ So to alleviate ICS, Batch Normalizaing has been suggested to be applied before 
 
 $\mathbf{Input: \ } \mathit{Values \ of \ x \ over \ a \ mini-batch: \ } B = \{x_i...m\}$
 
-$\mathit{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Parameters \ to \ be \ learned: \gamma,\beta}$
+$\mathit{\ \ \ \ \ \ \ \ \ \ \ \ \ \; \ \ \ Parameters \ to \ be \ learned: \gamma,\beta}$
 
 continue
 https://www.notion.so/Batch-Normalization-0649da054353471397e97296d6564298
