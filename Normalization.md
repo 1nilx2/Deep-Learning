@@ -1,6 +1,4 @@
-\[ 
-\text{$x=4$ or $x=5$} 
-\]
+$\sigma^2_B$
 
 
 continue: https://lifeignite.tistory.com/46
