@@ -54,7 +54,7 @@ thus a model doesn't learn well.
 So to alleviate ICS, Batch Normalizaing has been suggested to be applied before Activation
 
 $$
-\begin
+\begin{aligned}
 \mathbf{Input: \ } \mathit{Values \ of \ x \ over \ a \ mini-batch: \ } B = \{x_i...m\} \\
 \mathit{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Parameters \ to \ be \ learned: \gamma,\beta} \\
 \mathbf{Output: \ } \{ y_i=BN_{\gamma,\beta}(x_i) \} \\
@@ -63,7 +63,7 @@ $$
 \sigma^2_B \leftarrow \frac{1}{m}  \sum_{i=1}^{m}{(x_i-\mu_{B})^2} \\
 \hat{x_i} \leftarrow \frac{x_i-\mu_{B}}{\sqrt{\sigma^2_B + \epsilon}} \\
 y_i \leftarrow \gamma \hat{x_i} + \beta \equiv BN_{\gamma,\beta}{(x_i)} \text{\ \ \ \ \ (scale and shift)} \\
-\end
+\end{aligned}
 $$
 
 continue
