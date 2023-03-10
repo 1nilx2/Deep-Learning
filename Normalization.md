@@ -62,7 +62,7 @@ $$
 \sigma^2_B \leftarrow \frac{1}{m}  \sum_{i=1}^{m}{(x_i-\mu_{B})^2} \\
 \hat{x_i} \leftarrow \frac{x_i-\mu_{B}}{\sqrt{\sigma^2_B + \epsilon}} \\
 y_i \leftarrow \gamma \hat{x_i} + \beta \equiv BN_{\gamma,\beta}{(x_i)} \text{\ \ \ \ \ (scale and shift)} \\
-\end{aligned}
+\end{aligned="left"}
 $$
 
 continue
