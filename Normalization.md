@@ -57,6 +57,8 @@ $$
 $$
 
 ##### Learnable Parameters $\mathbf{\gamma, \beta}$
+BN is located before activation, so it can reduce non-linearity of Activation layer. 
+That's why $\gamma \ and \beta$ are learnable so that values can be scaled and shifted appropriated
 
 continue
 https://www.notion.so/Batch-Normalization-0649da054353471397e97296d6564298
