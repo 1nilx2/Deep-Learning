@@ -1,12 +1,3 @@
-$$
-\begin{aligned}
-\mu_{B} \leftarrow \frac{1}{m} \sum_{i=1}^{m}{x_i} \\ 
-\sigma^{2}_{B} \leftarrow \frac{1}{m} \sum^{m}_{i=1}{(x_i-\mu_{B})^2} \\
-\hat{x_i} \leftarrow \frac{x_i-\mu_{B}}{\sqrt{\sigma^2_B + \epsilon}}
-\end{aligned}
-$$
-
-
 continue: https://lifeignite.tistory.com/46
 
 ## Normalizations
@@ -64,6 +55,8 @@ $$
 & y_i \leftarrow \gamma \hat{x_i} + \beta \equiv BN_{\gamma,\beta}{(x_i)} \text{\ \ \ \ \ (scale and shift)} \\
 \end{aligned}
 $$
+
+##### Learnable Parameters $\gamma, \beta$
 
 continue
 https://www.notion.so/Batch-Normalization-0649da054353471397e97296d6564298
