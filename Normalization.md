@@ -63,5 +63,12 @@ $$
 BN is located before activation, so it can reduce non-linearity of Activation layer(tanh). 
 That's why $\gamma \ and \ \beta$ are learnable so that values can be scaled and shifted appropriately.
 
+##### Why Model with BN performs better?
+Becuase BN does not have impact on reducing ICS, other explanation is needed.   
+One reason can be found by BN's characteristic of smoothing solution space.  
+
+![image](https://user-images.githubusercontent.com/88100984/224217376-ebd9d85e-e40a-42cc-891c-a0429430b056.png)
+
+Smoother solution space allows higher learning rate with faster and stable convergence.
 continue
 https://www.notion.so/Batch-Normalization-0649da054353471397e97296d6564298
