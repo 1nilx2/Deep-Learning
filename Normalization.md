@@ -56,7 +56,7 @@ $$
 \end{aligned}
 $$
 
-##### Learnable Parameters $\gamma, \beta$
+##### Learnable Parameters $\mathbf{\gamma, \beta}$
 
 continue
 https://www.notion.so/Batch-Normalization-0649da054353471397e97296d6564298
