@@ -75,21 +75,6 @@ $$
 \end{aligned}
 $$
 
-$$AdaIN(x,y)=\sigma{(y)}(\frac{x-\mu{(x)}}{\sigma{x}}) + \mu{(y)}$$
-
-$$\mathit{, \ where \ x \ is \ feature \ of \ image \ for \ content, \ so \ }$$
-
-$$\mathit{to \ remove \ style \ of \ content, \ do: \} (\frac{x-\mu{(x)}}{\sigma{x}})$$
-
-$$
-\mathit{to \ apply \ style \ from \ y, \ do:  \ } 
-\sigma{(y)}(\frac{x-\mu{(x)}}{\sigma{x}}) + \mu{(y)}
-$$
-
-$$
-\mathit{make \ sure \ that \ these \ changes \ should \ be \ done \ in \ \mathbf{feature \ space} } 
-$$
-
 Encoder is not learnable. Only Decoder is trained, which means to learn how to invert features genereated from AdaIN to image space through Decoder
 
 ##### Formulation
