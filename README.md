@@ -65,14 +65,21 @@ This alleviates the problem of Gaussian distribution where sampling was done in 
 2) 'Style' can be represented by statistics of feature space (mean and variance here)
 3) So changing those statics alter the style of an input 
 
+$$
+\begin{aligned}
+& AdaIN(x,y)=\sigma{(y)}(\frac{x-\mu{(x)}}{\sigma{x}}) + \mu{(y)} \\
+& \mathit{, \ where \ x \ is \ feature \ of \ image \ for \ content, \ so \ } \\
+& \mathit{to \ remove \ style \ of \ content, \ do: \} (\frac{x-\mu{(x)}}{\sigma{x}}) \\
+& \mathit{to \ apply \ style \ from \ y, \ do:  \ } \sigma{(y)}(\frac{x-\mu{(x)}}{\sigma{x}}) + \mu{(y)} \\
+& \mathit{make \ sure \ that \ these \ changes \ should \ be \ done \ in \ \mathbf{feature \ space} }  \\
+\end{aligned}
+$$
+
 $$AdaIN(x,y)=\sigma{(y)}(\frac{x-\mu{(x)}}{\sigma{x}}) + \mu{(y)}$$
 
 $$\mathit{, \ where \ x \ is \ feature \ of \ image \ for \ content, \ so \ }$$
 
-
-$$
-\mathit{to \ remove \ style \ of \ content, \ do: \} (\frac{x-\mu{(x)}}{\sigma{x}})
-$$
+$$\mathit{to \ remove \ style \ of \ content, \ do: \} (\frac{x-\mu{(x)}}{\sigma{x}})$$
 
 $$
 \mathit{to \ apply \ style \ from \ y, \ do:  \ } 
