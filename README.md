@@ -80,11 +80,10 @@ $$
 $$
 
 $$
-\mathit{make \ sure \ that \ these \ changes \ should \ be \ done \ in \ feature \ space } 
+\mathit{make \ sure \ that \ these \ changes \ should \ be \ done \ in \ \mathbf{feature \ space} } 
 $$
 
-Encoder is not learnable.  
-Only Decoder is trained, which means to learn how to invert features genereated from AdaIN to image space through Decoder
+Encoder is not learnable. Only Decoder is trained, which means to learn how to invert features genereated from AdaIN to image space through Decoder
 
 Continue: https://lifeignite.tistory.com/48?category=460776
 
