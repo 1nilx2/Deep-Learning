@@ -93,6 +93,10 @@ Given those terms, feature t generated through AdaIN layer is like following
 
 $$t=\operatorname{AdaIN}(f(c), f(s)) $$
 
+Decoder, g, generates image T(c,s) to which style is applied, while learning how to invert t to image space
+
+$$T(c, s)=g(t)$$
+
 Continue: https://lifeignite.tistory.com/48?category=460776
 
 
