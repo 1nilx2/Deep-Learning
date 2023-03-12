@@ -1,5 +1,7 @@
 # Deep-Learnings
 
+참고할만한 링크들: https://happy-jihye.github.io/nlp/
+
 ## Normalizations
 ### Batch Normalization
 ##### Role
