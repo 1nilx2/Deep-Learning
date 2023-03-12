@@ -1,4 +1,4 @@
-# Statistics
+# Deep-Learnings
 
 ## Normalizations
 ### Batch Normalization
