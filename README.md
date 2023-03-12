@@ -85,6 +85,14 @@ $$
 
 Encoder is not learnable. Only Decoder is trained, which means to learn how to invert features genereated from AdaIN to image space through Decoder
 
+##### Formulation
+- T = Style Transfer Network (Encoder-AdaIN-Decoder)
+- f = encoder (the front of pre-trained VGG-19 (~relu4_1))
+- g = Decdoer to learn
+Given those terms, feature t generated through AdaIN layer is like following
+
+$$t=\operatorname{AdaIN}(f(c), f(s)) $$
+
 Continue: https://lifeignite.tistory.com/48?category=460776
 
 
