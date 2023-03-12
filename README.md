@@ -125,6 +125,15 @@ $$
 H[x]= \lim_{\Delta \rightarrow 0}{\sum_{i}{p(x_i)\Delta\ln{p(x_i)} }} = - \int{p(x)}dx}
 $$
 
+$$
+\begin{aligned}
+& \mathit{for \ discrete \ x,} \\
+& \sum_{x}{p(x)log_{b}{p(x)}} = E_p[-log_{b}{p(x)}] \\
+& \\
+& \mathit{for \ continuous \ x,} \\
+& H[x]= \lim_{\Delta \rightarrow 0}{\sum_{i}{p(x_i)\Delta\ln{p(x_i)} }} = - \int{p(x)}dx\\
+\end{alinged}
+$$
 #### KL Divergence
 KL Divergence is the difference between two probability distributions  
 More clealy, It's the difference between entropy and thus the loss due to a miss-modeling
