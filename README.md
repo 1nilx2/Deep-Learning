@@ -132,7 +132,7 @@ $$
 & \\
 & \mathit{for \ continuous \ x,} \\
 & H[x]= \lim_{\Delta \rightarrow 0}{\sum_{i}{p(x_i)\Delta\ln{p(x_i)} }} = - \int{p(x)}dx\\
-\end{alinged}
+\end{aligned}
 $$
 #### KL Divergence
 KL Divergence is the difference between two probability distributions  
