@@ -6,4 +6,8 @@ Recurrent model computes 'sequentially'. This shown difficulty in parallelizatio
 Transformer and, thus, attention mechanism has been suggested to overcome these problems
 
 ## Seq2Seq
-![seq2seq](https://user-images.githubusercontent.com/88100984/227755446-41c9ab8f-c5f6-404a-a0ed-ea1c4ef36af4.jpg)
+![seq2seq](https://user-images.githubusercontent.com/88100984/227757491-94779534-447e-40bf-aa64-c332c675d398.jpg)
+
+## Note
+![Transformer_1](https://user-images.githubusercontent.com/88100984/227757504-f1743c32-049b-4377-becf-a6c062bfa41c.JPG)
+
