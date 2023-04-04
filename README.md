@@ -9,8 +9,8 @@ $\theta^* = argminL(f_\theta(x),y)$
 $\mathit{Iterative \ \ \ Method \ \ } \theta^* = argminL(f_\theta(x),y) = argminL(\theta)$
 
 |   Questions  |  Strategies  |
-|---------------|--------------|
-|How to update $\theta -> \Delta\theta$ | Only if $L(\theta+\Delta\theta) < L(\theta)$  |
+|--------------|--------------|
+|How to update $\theta \rightarrow \Delta\theta$ | Only if $L(\theta+\Delta\theta) < L(\theta)$  |
 |When we stop to search?  | If $L(\theta + \Delta\theta) == L(\theta)$  |
 
 
