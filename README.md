@@ -14,7 +14,9 @@ $\mathit{Iterative \ Method \ } \theta^* = argminL(f_\theta(x),y) = argminL(\the
 |When we stop to search?  | If $L(\theta + \Delta\theta) == L(\theta)$  |
 |How to find $\Delta\theta$ so that $L(\theta + \Delta\theta) < L(\theta)?$|$\Delta\theta = -\eta\nabla L$, where $\eta>0$|
 
-Taylor Exapnsion $\rightarrow \ L(\theta + \Delta\theta) = L(\theta) + \nabla L \dot \Delta\theta$ + second derivative + third derivative + ...
+
+Taylor Exapnsion $\rightarrow \ L(\theta + \Delta\theta) = L(\theta) + \nabla L \. \Delta\theta$ + second derivative + third derivative + ...
+
 
 Approximation $\rightarrow L(\theta + \Delta\theta) \approx L(\theta) + \nabla L \dot \Delta\theta$
 
