@@ -18,7 +18,7 @@ $\mathit{Iterative \ Method \ } \theta^* = argminL(f_\theta(x),y) = argminL(\the
 
 **Taylor Exapnsion** $\rightarrow \ L(\theta + \Delta\theta) = L(\theta) + \nabla L \cdot \Delta\theta$ + second derivative + third derivative + ...
 
-**Approximation**    $\rightarrow L(\theta + \Delta\theta) \approx L(\theta) + \nabla L \cdot \Delta\theta$
+**Approximation**  \   $\rightarrow L(\theta + \Delta\theta) \approx L(\theta) + \nabla L \cdot \Delta\theta$
 
 $L(\theta + \Delta\theta)-L(\theta) = \Delta L =  \nabla L \cdot \Delta\theta$
 
