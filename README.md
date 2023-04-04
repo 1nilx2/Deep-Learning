@@ -6,12 +6,12 @@ How to update parameters(𝜃, weights and biases)?
 
 $\theta^* = argminL(f_\theta(x),y)$
 
-$\mathit{Iterative \ \ \ Method \ \ } \; \; \theta^* = argminL(f_\theta(x),y) = argminL(\theta)$
+$\mathit{Iterative \ \ \ Method \ \ } \theta^* = argminL(f_\theta(x),y) = argminL(\theta)$
 
 |Questions|Strategies|
-------------------------------
+--------------------------------------------------------------------------------------
 |How to update $\theta -> \delta\theta$|Only if $L(\theta+\delta\theta) < L(\theta)$|
-
+|When we stop to search?|If $L(\theta + \delta\theta) == L(\theta)$|
 
 
 참고할만한 링크들: https://happy-jihye.github.io/nlp/
