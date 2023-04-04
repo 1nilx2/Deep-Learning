@@ -3,16 +3,10 @@
 ## Revisit Learning / Training of Deep learning
 How to update parameters(𝜃, weights and biases)?
 
-$$
-\begin{aligned}
-& \theta^* = argminL(f_\theta(x),y) \\
-& \mathit{Iterative \ Method} \theta^* = argminL(f_\theta(x),y) = argminL(\theta)\\
-\end{aligned}
-$$
 
-$$ \theta^* = argminL(f_\theta(x),y) $$
+$ \theta^* = argminL(f_\theta(x),y) $
 
-$$ \mathit{Iterative \ \ \ Method \ \ } \; \; \theta^* = argminL(f_\theta(x),y) = argminL(\theta) $$
+$ \mathit{Iterative \ \ \ Method \ \ } \; \; \theta^* = argminL(f_\theta(x),y) = argminL(\theta) $
 
 
 
