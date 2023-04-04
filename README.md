@@ -10,13 +10,12 @@ $$
 \end{aligned}
 $$
 
------------------------
-|Questions|Strategiest|
------------------------
-|How to update |Only if |
------------------------
+
+|Questions     |Strategies|
+---------------------------
+|How to update $\theta -> \theta + \delta\theta $ |Only if |
 |When we stop to search?| If |
------------------------
+
 
 $$
 \begin{aligned}
