@@ -6,7 +6,7 @@ How to update parameters(𝜃, weights and biases)?
 
 $\theta^* = argminL(f_\theta(x),y)$
 
-$\mathit{Iterative \ \ \ Method \ \ } \theta^* = argminL(f_\theta(x),y) = argminL(\theta)$
+$\mathit{Iterative \ Method \ } \theta^* = argminL(f_\theta(x),y) = argminL(\theta)$
 
 |   Questions  |  Strategies  |
 |--------------|--------------|
