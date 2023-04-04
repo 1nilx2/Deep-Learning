@@ -8,10 +8,17 @@ $\theta^* = argminL(f_\theta(x),y)$
 
 $\mathit{Iterative \ \ \ Method \ \ } \theta^* = argminL(f_\theta(x),y) = argminL(\theta)$
 
-   Questions  |  Strategies  |
+|   Questions  |  Strategies  |
 --------------------------------------------------------------------------------------
-How to update $\theta -> \Delta\theta$ | Only if $L(\theta+\Delta\theta) < L(\theta)$  |
-When we stop to search?  | If $L(\theta + \Delta\theta) == L(\theta)$  |
+|How to update $\theta -> \Delta\theta$ | Only if $L(\theta+\Delta\theta) < L(\theta)$  |
+|When we stop to search?  | If $L(\theta + \Delta\theta) == L(\theta)$  |
+
+
+|   Questions  |  Strategies  |
+--------------------------------------------------------------------------------------
+|How to update | Only if   |
+|When we stop to search?  | If   |
+
 
 
 참고할만한 링크들: https://happy-jihye.github.io/nlp/
