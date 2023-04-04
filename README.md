@@ -12,7 +12,7 @@ $\mathit{Iterative \ Method \ } \theta^* = argminL(f_\theta(x),y) = argminL(\the
 |--------------|--------------|
 |How to update $\theta \rightarrow \Delta\theta$ | Only if $L(\theta+\Delta\theta) < L(\theta)$  |
 |When we stop to search?  | If $L(\theta + \Delta\theta) == L(\theta)$  |
-|How to find $\Delta\theta$ so that $L(\theta + \Delta\theta) < L(\theta)?$|$\Delta\theta = -\eta\nablaL$, where $\eta>0$|
+|How to find $\Delta\theta$ so that $L(\theta + \Delta\theta) < L(\theta)?$|$\Delta\theta = -\eta\nabla L$, where $\eta>0$|
 
 
 
