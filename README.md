@@ -12,7 +12,7 @@ $$
 
 $$ \theta^* = argminL(f_\theta(x),y) $$
 
-$$ \mathit{Iterative \ \ \ Method \ \ } \theta^* = argminL(f_\theta(x),y) = argminL(\theta) $$
+$$ \mathit{Iterative \ \ \ Method \ \ } \; \; \theta^* = argminL(f_\theta(x),y) = argminL(\theta) $$
 
 
 
