@@ -12,7 +12,10 @@ $$
 
 -----------------------
 |Questions|Strategiest|
-|How to update ||
+-----------------------
+|How to update |Only if |
+-----------------------
+|When we stop to search?| If |
 -----------------------
 
 $$
