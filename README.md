@@ -11,13 +11,11 @@ $$
 $$
 
 $$ \theta^* = argminL(f_\theta(x),y) $$
+
 $$ \mathit{Iterative \ \ \ Method \ \ } \theta^* = argminL(f_\theta(x),y) = argminL(\theta) $$
 
 
-|Questions     |Strategies|
----------------------------
-|How to update $\theta -> \theta + \delta\theta $ |Only if |
-|When we stop to search?| If |
+
 
 
 $$
