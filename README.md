@@ -5,6 +5,17 @@ How to update parameters(𝜃, weights and biases)?
 
 𝜃∗ = argmin𝐿(𝑓 𝑥 ,𝑦)
 
+$$
+\begin{aligned}
+& \theta^* = argminL(f_\theta(x),y) \\
+& \mathit{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Parameters \ to \ be \ learned: \gamma,\beta} \\
+& \mathbf{Output: \ } \{ y_i=BN_{\gamma,\beta}(x_i) \} \\
+& \mu_{B} \leftarrow \frac{1}{m} \sum_{i=1}^{m}{x_i} \\
+& \sigma^2_B \leftarrow \frac{1}{m}  \sum_{i=1}^{m}{(x_i-\mu_{B})^2} \\
+& \hat{x_i} \leftarrow \frac{x_i-\mu_{B}}{\sqrt{\sigma^2_B + \epsilon}} \\
+& y_i \leftarrow \gamma \hat{x_i} + \beta \equiv BN_{\gamma,\beta}{(x_i)} \text{\ \ \ \ \ (scale and shift)} \\
+\end{aligned}
+$$
 
 
 참고할만한 링크들: https://happy-jihye.github.io/nlp/
