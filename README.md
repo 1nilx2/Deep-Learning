@@ -1,5 +1,12 @@
 # Deep-Learnings
 
+## Revisit Learning / Training of Deep learning
+How to update parameters(𝜃, weights and biases)?
+
+𝜃∗ = argmin𝐿(𝑓 𝑥 ,𝑦)
+
+
+
 참고할만한 링크들: https://happy-jihye.github.io/nlp/
 
 ## Normalizations
