@@ -3,7 +3,17 @@
 ## Revisit Learning / Training of Deep learning
 How to update parameters(𝜃, weights and biases)?
 
-𝜃∗ = argmin𝐿(𝑓 𝑥 ,𝑦)
+$$
+\begin{aligned}
+& \theta^* = argminL(f_\theta(x),y) \\
+& \mathit{Iterative \ Method} \theta^* = argminL(f_\theta(x),y) = argminL(\theta)\\
+\end{aligned}
+$$
+
+-----------------------
+|Questions|Strategiest|
+|How to update ||
+-----------------------
 
 $$
 \begin{aligned}
@@ -16,7 +26,6 @@ $$
 & y_i \leftarrow \gamma \hat{x_i} + \beta \equiv BN_{\gamma,\beta}{(x_i)} \text{\ \ \ \ \ (scale and shift)} \\
 \end{aligned}
 $$
-
 
 참고할만한 링크들: https://happy-jihye.github.io/nlp/
 
