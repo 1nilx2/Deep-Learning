@@ -16,13 +16,13 @@ $\mathit{Iterative \ Method \ } \theta^* = argminL(f_\theta(x),y) = argminL(\the
 
 ------------------------------------------------------------------------------------------------------------------------------
 
-**Taylor Exapnsion** $\rightarrow \ L(\theta + \Delta\theta) = L(\theta) + \nabla L \cdot \Delta\theta$ + second derivative + third derivative + ... (1)
+**Taylor Exapnsion** $\rightarrow \ L(\theta + \Delta\theta) = L(\theta) + \nabla L \cdot \Delta\theta$ + second derivative + third derivative + ... --- (1)
 
-**Approximation** $\ \ \ \rightarrow L(\theta + \Delta\theta) \approx L(\theta) + \nabla L \cdot \Delta\theta$ (2)
+**Approximation** $\ \ \ \rightarrow L(\theta + \Delta\theta) \approx L(\theta) + \nabla L \cdot \Delta\theta$ --- (2)
 
-$L(\theta + \Delta\theta)-L(\theta) = \Delta L =  \nabla L \cdot \Delta\theta$ (3)
+$L(\theta + \Delta\theta)-L(\theta) = \Delta L =  \nabla L \cdot \Delta\theta$ --- (3)
 
-If $\Delta\theta = -\eta \nabla L,$ then $\Delta L = -\eta||\nabla L||^2 < 0$, where $\eta > 0$ (4)
+If $\Delta\theta = -\eta \nabla L,$ then $\Delta L = -\eta||\nabla L||^2 < 0$, where $\eta > 0$ --- (4)
 
 ------------------------------------------------------------------------------------------------------------------------------
 
