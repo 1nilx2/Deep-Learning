@@ -14,6 +14,7 @@ $\mathit{Iterative \ Method \ } \theta^* = argminL(f_\theta(x),y) = argminL(\the
 |When we stop to search?  | If $L(\theta + \Delta\theta) == L(\theta)$  |
 |How to find $\Delta\theta$ so that $L(\theta + \Delta\theta) < L(\theta)?$|$\Delta\theta = -\eta\nabla L$, where $\eta>0$|
 
+------------------------------------------------------------------------------------------------------------------------------
 
 Taylor Exapnsion $\rightarrow \ L(\theta + \Delta\theta) = L(\theta) + \nabla L \cdot \Delta\theta$ + second derivative + third derivative + ...
 
@@ -22,6 +23,8 @@ Approximation $\rightarrow L(\theta + \Delta\theta) \approx L(\theta) + \nabla L
 $\rightarrow L(\theta + \Delta\theta)-L(\theta) = \Delta L =  \nabla L \cdot \Delta\theta$
 
 If $\Delta\theta = -\eta \nabla L,$ then $\Delta L = -\eta||\nabla L||^2 < 0$, where $\eta > 0$
+
+------------------------------------------------------------------------------------------------------------------------------
 
 That's why we take **Negative** direction of gradient & apply learning rate of small value (due to approximation not use full expansion)
 
