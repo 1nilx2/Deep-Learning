@@ -20,7 +20,7 @@ Taylor Exapnsion $\rightarrow \ L(\theta + \Delta\theta) = L(\theta) + \nabla L 
 Approximation $\rightarrow L(\theta + \Delta\theta) \approx L(\theta) + \nabla L \cdot \Delta\theta$
 
 $\rightarrow L(\theta + \Delta\theta)-L(\theta) = \Delta L =  \nabla L \cdot \Delta\theta$
-If $\Delta\theta = -\eta \nabla L,$ then $\Delta L = -\eta||\nable L||^2 < 0$, where $\eta > 0$
+If $\Delta\theta = -\eta \nabla L,$ then $\Delta L = -\eta||\nabla L||^2 < 0$, where $\eta > 0$
 
 
 참고할만한 링크들: https://happy-jihye.github.io/nlp/
