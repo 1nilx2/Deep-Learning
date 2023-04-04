@@ -16,18 +16,19 @@ $\mathit{Iterative \ Method \ } \theta^* = argminL(f_\theta(x),y) = argminL(\the
 
 ------------------------------------------------------------------------------------------------------------------------------
 
-**Taylor Exapnsion** $\rightarrow \ L(\theta + \Delta\theta) = L(\theta) + \nabla L \cdot \Delta\theta$ + second derivative + third derivative + ...
+**Taylor Exapnsion** $\rightarrow \ L(\theta + \Delta\theta) = L(\theta) + \nabla L \cdot \Delta\theta$ + second derivative + third derivative + ... (1)
 
-**Approximation** $\ \ \ \rightarrow L(\theta + \Delta\theta) \approx L(\theta) + \nabla L \cdot \Delta\theta$
+**Approximation** $\ \ \ \rightarrow L(\theta + \Delta\theta) \approx L(\theta) + \nabla L \cdot \Delta\theta$ (2)
 
-$L(\theta + \Delta\theta)-L(\theta) = \Delta L =  \nabla L \cdot \Delta\theta$
+$L(\theta + \Delta\theta)-L(\theta) = \Delta L =  \nabla L \cdot \Delta\theta$ (3)
 
-If $\Delta\theta = -\eta \nabla L,$ then $\Delta L = -\eta||\nabla L||^2 < 0$, where $\eta > 0$
+If $\Delta\theta = -\eta \nabla L,$ then $\Delta L = -\eta||\nabla L||^2 < 0$, where $\eta > 0$ (4)
 
 ------------------------------------------------------------------------------------------------------------------------------
 
-That's why we take **Negative** direction of gradient  
-& apply learning rate of small value (due to approximation not use full expansion)
+That's why we 
+  - take **Negative** direction of gradient  --- (4)
+  - apply learning rate of small value (due to approximation not use full expansion) --- (2)
 
 참고할만한 링크들: https://happy-jihye.github.io/nlp/
 
