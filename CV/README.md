@@ -1,3 +1,14 @@
+# AutoEncoders
+
+## Manifold Learning
+One of most important function of Autoencoder is learning 'Manifold'  
+Objectives of Maniford
+  - Condense Data
+  - Data Visualization
+  - Alleviate Curse of Dimensionality
+  - Extract major features
+
+
 ## Style GAN
 ### Style Transfer?
 Content + Style  
