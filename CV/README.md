@@ -1,5 +1,7 @@
 # AutoEncoders
 
+  - Recommendation system based on Autoencoder?
+
 ## Manifold Learning
 One of most important function of Autoencoder is learning 'Manifold'  
 Maniford means a sub-space $(\tau)$ that can well explain original data.  
@@ -10,6 +12,15 @@ We assume that $p(\tau)$ is smooth, distributed uniformly, and noise is small
   - Data Visualization
   - Alleviate Curse of Dimensionality
   - Discovering most important features
+
+### Discover of features
+  - Euclidian Distance in High dimension might not reflect 'semantic' distance we usually think
+
+## Introduction
+
+<img width="860" alt="스크린샷 2023-04-05 오후 4 29 39" src="https://user-images.githubusercontent.com/88100984/230215850-af4d68b3-405b-4649-9ce7-c5845284ffe1.png">
+
+
 
 
 ## Style GAN
