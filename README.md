@@ -48,9 +48,13 @@ $$\delta_{CE} = \nabla_a C \odot \sigma'(Z^L) = \frac{a-y}{(1-a)a}(1-a)a = a-y$$
 ### View-Point 2: Maximum Likelihood
 
 
+### This Revisit helps to understance Autoencoder
 
-
-
+|              |   Autoencoder  |  Variational Autoencoder  |
+|--------------|----------------|--------------|
+|Probability distribution| $p(x|x)$ | $p(x)$   |
+|Gaussian distribution|MSE Loss|MSE Loss|
+|Categorical distribution(Multinoulli)|CE Loss|CE Loss|
 
 ## Normalizations
 ### Batch Normalization
