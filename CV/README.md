@@ -33,9 +33,13 @@ After traning, encoder and decoder can be used in different context
 
 <img width="1094" alt="스크린샷 2023-04-05 오후 4 35 05" src="https://user-images.githubusercontent.com/88100984/230217149-6df646e1-713b-400d-956e-1caf3d3807f2.png">
 
+### Denoising AutoEncoder
 
+<img width="979" alt="스크린샷 2023-04-05 오후 4 39 55" src="https://user-images.githubusercontent.com/88100984/230218092-0fa67bdb-6ab7-4ce0-ab1d-4854647d0081.png">
 
-
+Add noise in original data
+  - This noise won't affect the manifold, only does in original data
+  - Loss will be calculated between origianl (before adding noise) and output
 
 
 
