@@ -17,8 +17,25 @@ We assume that $p(\tau)$ is smooth, distributed uniformly, and noise is small
   - Euclidian Distance in High dimension might not reflect 'semantic' distance we usually think
 
 ## Introduction
-
+Autoencoder (diabolo)
 <img width="860" alt="스크린샷 2023-04-05 오후 4 29 39" src="https://user-images.githubusercontent.com/88100984/230215850-af4d68b3-405b-4649-9ce7-c5845284ffe1.png">
+
+Loss encourages output to be close to input
+$L(x,y)$
+
+Unsupervised Learning -> Supervised Learning (self-supervised learning)
+
+After traning, encoder and decoder can be used in different context
+  - Decoder: at least, able to generate training data
+  - Encoder: at least, well represent input data in latent space
+
+### Multi-Layer Perceptron
+
+<img width="1094" alt="스크린샷 2023-04-05 오후 4 35 05" src="https://user-images.githubusercontent.com/88100984/230217149-6df646e1-713b-400d-956e-1caf3d3807f2.png">
+
+
+
+
 
 
 
