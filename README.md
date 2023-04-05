@@ -41,6 +41,11 @@ Assume that we use sigmoid as activation function
 $$\delta_{CE} = \nabla_a C \odot \sigma'(Z^L) = \frac{a-y}{(1-a)a}(1-a)a = a-y$$
   - While Error term at the output layer of MSE is
  $$\delta_{MSE} = (a-y) \sigma'(z)$$
+  - Due to one more multiplication of 'derivative of activation fuction', CE relatively free from vanishing gradient
+  - But in actual 'deep' learning, we use multiple layers, so this strength becomes blurred
+  - ReLU has 1 or 0 as its derivative, so can be a good alternative
+
+### View-Point 2: Maximum Likelihood
 
 
 
