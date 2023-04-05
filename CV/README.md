@@ -2,7 +2,9 @@
 
 ## Manifold Learning
 One of most important function of Autoencoder is learning 'Manifold'  
-Objectives of Maniford
+Maniford means a sub-space that can well explain original data. Manifold Learning bases upon the assumption that there will be the Manifold in our training data
+
+### Objectives of Maniford
   - Condense Data
   - Data Visualization
   - Alleviate Curse of Dimensionality
