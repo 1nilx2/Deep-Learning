@@ -2,7 +2,8 @@
 
 ## Manifold Learning
 One of most important function of Autoencoder is learning 'Manifold'  
-Maniford means a sub-space that can well explain original data. Manifold Learning bases upon the assumption that there will be the Manifold in our training data
+Maniford means a sub-space$(\tau)$ that can well explain original data.  
+We assume that $p(\tau)$ is smooth, distributed uniformly, and noise is small
 
 ### Objectives of Maniford
   - Condense Data
