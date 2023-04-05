@@ -41,6 +41,11 @@ Add noise in original data
   - This noise won't affect the manifold, only does in original data
   - Loss will be calculated between origianl (before adding noise) and output
 
+# Variational Autoencoder
+  - Variational AE (VAE): as generative model
+  - Conditional VAE (CVAE): conditions added to control generated output
+  - Adversarial AE (AAE): can work on general prior distribution 
+
 
 
 
