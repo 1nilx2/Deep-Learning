@@ -50,7 +50,7 @@ $$\delta_{CE} = \nabla_a C \odot \sigma'(Z^L) = \frac{a-y}{(1-a)a}(1-a)a = a-y$$
 
 
 
-참고할만한 링크들: https://happy-jihye.github.io/nlp/
+
 
 ## Normalizations
 ### Batch Normalization
