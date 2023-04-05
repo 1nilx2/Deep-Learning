@@ -52,7 +52,7 @@ $$\delta_{CE} = \nabla_a C \odot \sigma'(Z^L) = \frac{a-y}{(1-a)a}(1-a)a = a-y$$
 
 |              |   Autoencoder  |  Variational Autoencoder  |
 |--------------|----------------|--------------|
-|Probability distribution| $p(x|x)$ | $p(x)$   |
+|Probability distribution|$p(x|x)$|$p(x)$|
 |Gaussian distribution|MSE Loss|MSE Loss|
 |Categorical distribution(Multinoulli)|CE Loss|CE Loss|
 
