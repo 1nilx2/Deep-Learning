@@ -6,10 +6,10 @@ Maniford means a sub-space $(\tau)$ that can well explain original data.
 We assume that $p(\tau)$ is smooth, distributed uniformly, and noise is small
 
 ### Objectives of Maniford
-  - Condense Data
+  - Data Compression
   - Data Visualization
   - Alleviate Curse of Dimensionality
-  - Extract major features
+  - Discovering most important features
 
 
 ## Style GAN
