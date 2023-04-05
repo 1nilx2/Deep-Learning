@@ -37,8 +37,10 @@ That's why we
 ## Revisit Loss Function
 ### View-Point 1: Backpropagation
 Assume that we use sigmoid as activation function
-  - Cross Entropy is expected to perform better 
-  - $\delta_{CE} = \nabla_a C \odot \sigma'(Z^L) = \frac{a-y}{(1-a)a}(1-a)a = a-y$
+  - Cross Entropy is expected to perform better
+$$\delta_{CE} = \nabla_a C \odot \sigma'(Z^L) = \frac{a-y}{(1-a)a}(1-a)a = a-y$$
+  - While Error term at the output layer of MSE is
+ $$\delta_{MSE} = (a-y) \sigma'(z)$$
 
 
 
