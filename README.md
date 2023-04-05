@@ -30,6 +30,19 @@ That's why we
   - take **Negative** direction of gradient  --- (4)
   - apply learning rate of small value (due to approximation not use full expansion) --- (2)
 
+## Back Propagation
+<img width="578" alt="스크린샷 2023-04-04 오후 9 57 47" src="https://user-images.githubusercontent.com/88100984/229969762-6ff469b4-a7ee-49c3-849c-5a5277a90085.png">
+
+
+## Revisit Loss Function
+### View-Point 1: Backpropagation
+Assume that we use sigmoid as activation function
+  - Cross Entropy is expected to perform better 
+  - $\delta_{CE} = \nabla_a C hardamad \sigmoid'(Z^L) = \frac{a-y}{(1-a)a}(1-a)a = a-y$
+
+
+
+
 참고할만한 링크들: https://happy-jihye.github.io/nlp/
 
 ## Normalizations
