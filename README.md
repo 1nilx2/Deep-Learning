@@ -38,7 +38,7 @@ That's why we
 ### View-Point 1: Backpropagation
 Assume that we use sigmoid as activation function
   - Cross Entropy is expected to perform better 
-  - $\delta_{CE} = \nabla_a C hardamad \sigmoid'(Z^L) = \frac{a-y}{(1-a)a}(1-a)a = a-y$
+  - $\delta_{CE} = \nabla_a C \odot \sigma'(Z^L) = \frac{a-y}{(1-a)a}(1-a)a = a-y$
 
 
 
