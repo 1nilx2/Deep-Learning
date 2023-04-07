@@ -14,5 +14,10 @@ Transformer and, thus, attention mechanism has been suggested to overcome these 
 ![Transformer-2](https://user-images.githubusercontent.com/88100984/228073192-8fde7f83-3f0c-4b59-80c9-3e9c7421b3ad.jpg)
 
 
+Main layers
+  - Multi-head attention (n x scaled dot-product self attention)
+  - FFNN
+    - Dense -> Activation -> Dense 
+    - $(n, d_{model}) \cdot (d_{model}, d_{ff}) \rightarrow \mathit{activation} \rightarrow (n, d_{ff}) \cdot (d_{ff}, d_{model})$
 
 ref: https://happy-jihye.github.io/nlp/
