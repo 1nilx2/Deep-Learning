@@ -29,13 +29,13 @@ $\mathit{In \ Encoder, \ the \ input \ vector \ used \ for \ generating \ Q, K, 
 
 $\mathit{Input \ Vector \ (input \ embedding \ + \ positional \ embedding/encoding), } (n, d_{model})$
 
-$Linear_1 \mathit{input \ vector} \cdot W^Q $
+$Linear_1 \ \mathit{input \ vector} \cdot W^Q $
 
-$Linear_2 \mathit{input \ vector} \cdot W^K$
+$Linear_2 \ \mathit{input \ vector} \cdot W^K$
 
-$Linear_3 \mathit{input \ vector} \cdot W^V$
+$Linear_3 \ \mathit{input \ vector} \cdot W^V$
 
-$\rightarrow Q, K, V \ {n, d_{model}/num_head}$
+$\rightarrow Q, K, V \ \ {n, d_{model}/num_head}$
 
 
 
