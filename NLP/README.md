@@ -29,7 +29,7 @@ $\mathit{Input \ Vector \ (input \ embedding \ + \ positional \ embedding/encodi
 
 $\mathit{In \ Encoder, \ the \ input \ vector \ used \ for \ generating \ Q, K, V}$
 
-$Linear_1 \mathit{input vector} \cdot W^Q$
+$Linear_1 \mathit{input vector} \cdot W^Q \\$
 $Linear_2 \mathit{input vector} \cdot W^K$
 $Linear_3 \mathit{input vector} \cdot W^V$
 
