@@ -25,8 +25,10 @@ Input vector -> input vector * 3(Q,K,V) -> linear -> split by num_head ->
 
 $(n, d_{model}) \rightarrow (3, n, d_{model}) -> W^Q, W^K, W^V $
 
-$\mathit{Input Vector (input embedding + positional embedding/encoding), } (n, d_{model})$
-$\mathit{In Encoder, the input vector used for generating Q, K, V}$
+$\mathit{Input \ Vector \ (input \ embedding \ + \ positional \ embedding/encoding), } (n, d_{model})$
+
+$\mathit{In \ Encoder, \ the \ input \ vector \ used \ for \ generating \ Q, K, V}$
+
 $Linear_1 \mathit{input vector} \cdot W^Q$
 $Linear_2 \mathit{input vector} \cdot W^K$
 $Linear_3 \mathit{input vector} \cdot W^V$
