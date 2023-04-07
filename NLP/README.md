@@ -19,5 +19,7 @@ Main layers
   - FFNN
     - Dense -> Activation -> Dense 
     - $(n, d_{model}) \cdot (d_{model}, d_{ff}) \rightarrow \mathit{activation} \rightarrow (n, d_{ff}) \cdot (d_{ff}, d_{model})$
+    - residual connection: $h(x) = x + f(x)$ 
+    - Layer Normalization: $LN(h(x)) = LN(x + f(x)) \leftarrow \hat{x_{i}} = frac{x_i - \mu_x}{\sigma_x}$  
 
 ref: https://happy-jihye.github.io/nlp/
