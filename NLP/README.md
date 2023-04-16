@@ -47,3 +47,9 @@ $\rightarrow Q, K, V \ \ \ {n, d_{model}/num_head}$
 - Layer Normalization: $LN(h(x)) = LN(x + f(x)) \leftarrow \hat{x_{i}} = \frac{x_i - \mu_x}{\sigma_x}$  
 
 ref: https://happy-jihye.github.io/nlp/
+
+
+
+# LSTM
+RNN is about $h_t, x_t \rightarrow$ Problem of Long-term dependency. 
+    - It does not keep information of tokens (or vector of those)
