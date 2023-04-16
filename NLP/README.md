@@ -4,9 +4,7 @@ RNN is about $h_t \ and \ x_t \rightarrow$ Problem of Long-term dependency.
     - It does not keep information of tokens (or vector of those)
 
 ## Main
-LSTM is about $\mathit{cell \ state}$ and $\mathit{3 \ gates}$
-
-3 Gates  
+LSTM is about $\mathit{cell \ state}$ and $\mathit{3 \ gates}$ 
     - $\mathit{forget} \sim C_{t-1} \sim (h_{t-1}, x_t)$  
     - $\mathit{input} \sim h_{t-1}, x_t$  
     - $\mathit{output} \sim C_t, h_{t-1}, x_t$  
