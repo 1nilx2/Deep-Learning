@@ -95,8 +95,8 @@ BERT (Bidirectional Encoder Representation of Transformer)
         - 0 for others (tokens for padding)
 
 ## Training
-MLM: Masked Language Model -> Masking some tokens 
-NSP: Next Sentence Prediction -> Infer whether two sentences are connected 
+  - MLM: Masked Language Model -> Masking some tokens  
+  - NSP: Next Sentence Prediction -> Infer whether two sentences are connected 
 
 ## Fine-tuning
 Single Sentence Classification -> CLS Token
