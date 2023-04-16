@@ -1,3 +1,18 @@
+# LSTM
+## Background
+RNN is about $h_t & x_t \rightarrow$ Problem of Long-term dependency. 
+    - It does not keep information of tokens (or vector of those)
+
+## Main
+LSTM is about 
+  - $\mathit{cell \ state}$
+  - 3 gates
+    - forget ~ $C_{t-1} ~ (h_{t-1}, x_t$
+    - input ~ $h_{t-1}, x_t$
+    - output ~ $C_t, h_{t-1}, x_t$
+
+
+
 # Transformer
 
 ## Background
@@ -5,16 +20,16 @@ Recurrent model computes 'sequentially'. This shown difficulty in parallelizatio
 
 Transformer and, thus, attention mechanism has been suggested to overcome these problems
 
-## Seq2Seq
+### Seq2Seq
 ![seq2seq](https://user-images.githubusercontent.com/88100984/227757491-94779534-447e-40bf-aa64-c332c675d398.jpg)
 
-## Note
+### Note
 ![Transformer_1](https://user-images.githubusercontent.com/88100984/227757504-f1743c32-049b-4377-becf-a6c062bfa41c.JPG)
 
 ![Transformer-2](https://user-images.githubusercontent.com/88100984/228073192-8fde7f83-3f0c-4b59-80c9-3e9c7421b3ad.jpg)
 
 
-### Multi-head attention (n x scaled dot-product attention) [Encoder]
+## Multi-head attention (n x scaled dot-product attention) [Encoder]
 
 Input vector = input embedding + positional encoding/embedding
 * encoding is given like sinusoid functions
@@ -40,7 +55,7 @@ $\rightarrow Q, K, V \ \ \ {n, d_{model}/num_head}$
 
 
 
-### FFNN
+## FFNN
 - Dense -> Activation -> Dense 
 - $(n, d_{model}) \cdot (d_{model}, d_{ff}) \rightarrow \mathit{activation} \rightarrow (n, d_{ff}) \cdot (d_{ff}, d_{model})$
 - residual connection: $h(x) = x + f(x)$ 
@@ -50,6 +65,3 @@ ref: https://happy-jihye.github.io/nlp/
 
 
 
-# LSTM
-RNN is about $h_t, x_t \rightarrow$ Problem of Long-term dependency. 
-    - It does not keep information of tokens (or vector of those)
