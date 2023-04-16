@@ -87,12 +87,12 @@ BERT (Bidirectional Encoder Representation of Transformer)
   - 'Pre-trained Large Language Model (LLM)' which can be fine-tuned according to users' ends 
 
 ## Input representation
-    - Token Embedding: Sub-word tokenization (WordPiece)  [input_ids]
-    - Segment Embedding: 0 and 1 but all tokens can be zero if it's for sentence prediction [token_type_id]
-    - Position Embedding
-    - Attention Mask
-        - 1 for meaningful tokens (CLS, SEP, Other normal tokens) 
-        - 0 for others (tokens for padding)
+  - Token Embedding: Sub-word tokenization (WordPiece)  [input_ids]
+  - Segment Embedding: 0 and 1 but all tokens can be zero if it's for sentence prediction [token_type_id]
+  - Position Embedding
+  - Attention Mask
+    - 1 for meaningful tokens (CLS, SEP, Other normal tokens) 
+    - 0 for others (tokens for padding)
 
 ## Training
   - MLM: Masked Language Model -> Masking some tokens  
