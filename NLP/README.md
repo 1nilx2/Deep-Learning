@@ -6,7 +6,7 @@ RNN is about $h_t \ and \ x_t \rightarrow$ Problem of Long-term dependency.
 ## Main
 LSTM is about 
   - $\mathit{cell \ state}$
-  - $3 \ mathit{gates}$
+  - $\mathit{3 \ gates}$
     - $\mathit{forget} ~ C_{t-1} ~ (h_{t-1}, x_t$
     - $\mathit{input} ~ $h_{t-1}, x_t$
     - $\mathit{output} ~ $C_t, h_{t-1}, x_t$
