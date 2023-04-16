@@ -11,6 +11,14 @@ LSTM is about
     - $\mathit{input} \sim h_{t-1}, x_t$
     - $\mathit{output} \sim C_t, h_{t-1}, x_t$
 
+How much forget, input, and ouput is 'ratio', so take 'sigmoid'
+
+$f_t = \sigma (W_{hf}h_{t-1} + W_{xf} x_{t-1} + b_f)$
+
+$i_t = \sigma (W_{hi}h_{t-1} + W_{xi} x_{t-1} + b_i)$
+
+$o_t = \sigma (W_{ho}h_{t-1} + W_{xo} x_{t-1} + b_o)$
+
 
 
 # Transformer
