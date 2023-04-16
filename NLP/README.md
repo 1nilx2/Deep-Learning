@@ -1,6 +1,6 @@
 # LSTM
 ## Background
-RNN is about $h_t \ and \ x_t \rightarrow$ Problem of Long-term dependency. 
+RNN is about $h_t \ and \ x_t \rightarrow$ Problem of Long-term dependency.  
     - It does not keep information of tokens (or vector of those)
 
 ## Main
