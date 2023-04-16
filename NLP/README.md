@@ -7,9 +7,9 @@ RNN is about $h_t \ and \ x_t \rightarrow$ Problem of Long-term dependency.
 LSTM is about $\mathit{cell \ state}$ and $\mathit{3 \ gates}$
 
 3 Gates  
-    - $\mathit{forget} \sim C_{t-1} \sim (h_{t-1}, x_t)$
-    - $\mathit{input} \sim h_{t-1}, x_t$
-    - $\mathit{output} \sim C_t, h_{t-1}, x_t$
+    - $\mathit{forget} \sim C_{t-1} \sim (h_{t-1}, x_t)$  
+    - $\mathit{input} \sim h_{t-1}, x_t$  
+    - $\mathit{output} \sim C_t, h_{t-1}, x_t$  
 
 How much forget, input, and ouput is 'ratio', so take 'sigmoid'
 
