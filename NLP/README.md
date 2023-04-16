@@ -8,8 +8,8 @@ LSTM is about
   - $\mathit{cell \ state}$
   - $\mathit{3 \ gates}$
     - $\mathit{forget} \sim C_{t-1} \sim (h_{t-1}, x_t$
-    - $\mathit{input} \sim $h_{t-1}, x_t$
-    - $\mathit{output} \sim $C_t, h_{t-1}, x_t$
+    - $\mathit{input} \sim h_{t-1}, x_t$
+    - $\mathit{output} \sim C_t, h_{t-1}, x_t$
 
 
 
