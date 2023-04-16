@@ -79,5 +79,31 @@ $\rightarrow Q, K, V \ \ \ {n, d_{model}/num_head}$
 
 ref: https://happy-jihye.github.io/nlp/
 
+# BERT
+BERT (Bidirectional Encoder Representation of Transformer)
+  - Takes encoder of Transformer 
+  - 'Bidirectional' due to the fact that BERT does not use look-ahead mask while decoder of Transformer does 
+  - What decoder of Transformer does is left to users who will fine-tune it by adding post-layers
+  - 'Pre-trained Large Language Model (LLM)' which can be fine-tuned according to users' ends 
 
+## Input representation
+    - Token Embedding: Sub-word tokenization (WordPiece)  [input_ids]
+    - Segment Embedding: 0 and 1 but all tokens can be zero if it's for sentence prediction [token_type_id]
+    - Position Embedding
+    - Attention Mask
+        - 1 for meaningful tokens (CLS, SEP, Other normal tokens) 
+        - 0 for others (tokens for padding)
+
+## Training
+MLM: Masked Language Model -> Masking some tokens 
+NSP: Next Sentence Prediction -> Infer whether two sentences are connected 
+
+## Fine-tuning
+Single Sentence Classification -> CLS Token
+Tagging -> Every tokens between CLS and SEP
+Text Pair / Regression -> CLS Token
+Question-Answering -> Tokens between first and second SEP tokens
+
+* We can assume that [CLS] token represent overall information of the sentence 
+* With this idea, Sentence BERT can be fine-tuned 
 
