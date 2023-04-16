@@ -13,12 +13,13 @@ LSTM is about
 
 How much forget, input, and ouput is 'ratio', so take 'sigmoid'
 
-$f_t = \sigma (W_{hf}h_{t-1} + W_{xf} x_{t-1} + b_f)$
 
-$i_t = \sigma (W_{hi}h_{t-1} + W_{xi} x_{t-1} + b_i)$
 
-$o_t = \sigma (W_{ho}h_{t-1} + W_{xo} x_{t-1} + b_o)$
-
+|   Gates  |  Others  |
+|--------------|--------------|
+|$i_t = \sigma (W_{hi}h_{t-1} + W_{xi} x_{t-1} + b_i)$ | $g_t=\mathit{tanh} (W_{hg}h_{t-1} + W_{xg} x_t + b_g)$ |
+|$f_t = \sigma (W_{hf}h_{t-1} + W_{xf} x_{t-1} + b_f)$ | $C_t = f_t \odot C_{t-1} + i_t \odot x_t$ |
+|$o_t = \sigma (W_{ho}h_{t-1} + W_{xo} x_{t-1} + b_o)$ | $h_t = o_t \odot \ tanh(C_t)$ |
 
 
 # Transformer
