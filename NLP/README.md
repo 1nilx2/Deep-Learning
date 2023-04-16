@@ -23,7 +23,7 @@ How much forget, input, and ouput is 'ratio', so take 'sigmoid'
 
 $x_t = (d_{embedding}, \ )$
 
-$W_{x \_ } = (d_{hidden_state, d_{embedding}})$
+$W_{x \textunderscore } = (d_{hidden_state, d_{embedding}})$
 
 
 # Transformer
