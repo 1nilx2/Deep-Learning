@@ -39,6 +39,8 @@ Transformer and, thus, attention mechanism has been suggested to overcome these 
 ## Diagram
 <img width="1889" alt="스크린샷 2023-04-16 오후 7 06 13" src="https://user-images.githubusercontent.com/88100984/232351308-257d3233-ea0a-4d7e-ace3-e2cb8081fa24.png">
 
+<img width="766" alt="Layer_Normalization" src="https://user-images.githubusercontent.com/88100984/232352006-68e3e095-ce3c-4dc5-abd8-e71d4036f6b1.png">
+
 
 ### Seq2Seq
 ![seq2seq](https://user-images.githubusercontent.com/88100984/227757491-94779534-447e-40bf-aa64-c332c675d398.jpg)
