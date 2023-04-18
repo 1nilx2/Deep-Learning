@@ -105,10 +105,10 @@ BERT (Bidirectional Encoder Representation of Transformer)
   - NSP: Next Sentence Prediction -> Infer whether two sentences are connected 
 
 ## Fine-tuning
-Single Sentence Classification -> CLS Token
-Tagging -> Every tokens between CLS and SEP
-Text Pair / Regression -> CLS Token
-Question-Answering -> Tokens between first and second SEP tokens
+Single Sentence Classification -> CLS Token  
+Tagging -> Every tokens between CLS and SEP  
+Text Pair / Regression -> CLS Token  
+Question-Answering -> Tokens between first and second SEP tokens  
 
 * We can assume that [CLS] token represent overall information of the sentence 
 * With this idea, Sentence BERT can be fine-tuned 
