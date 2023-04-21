@@ -131,3 +131,15 @@ $$\Leftrightarrow KL(p||q) = H(p,q) - H(p)$$
 #### Minimize Cross Entropy? H(p,q)
 When we train the model, we do differentiate KL Divergence w.r.t q  
 There is no parameter for p, so just minimizing Cross Entropy will ensure same result for KL Divergence
+
+
+## Calibration  
+When we evaluate performance of a model, we used to see accuracy or f1-score.  
+However, Calibration of the model is also important measurement. 
+
+### What is Calibration  
+ref:https://towardsdatascience.com/a-comprehensive-guide-on-model-calibration-part-1-of-4-73466eb5e09a  
+Matching output porbability with actual probability.
+For example in BERT, we cannot ensure, without calibration, that logit value of 0.8 is twice as much confident as that of 0.4
+
+### When is useful
