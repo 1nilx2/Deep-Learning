@@ -6,8 +6,15 @@
 
 <img width="592" alt="스크린샷 2023-05-08 오후 6 11 14" src="https://user-images.githubusercontent.com/88100984/236956565-b2bbb5dc-2983-47a4-91df-f74e8a62cbd1.png">
 
+## Semantic Segmentation
+  - FCN uses convnet to transform pixels to pixel categories
+  - consists of down-sampling and up-sampling with skip-connection
 
+## Skip Connection
 
+<img width="752" alt="스크린샷 2023-05-08 오후 6 14 09" src="https://user-images.githubusercontent.com/88100984/236956907-adcad8ef-df0a-4695-b9d9-a87bca952ca1.png">
+
+  - A series of operations (conv, deconv with skip connection) is an effort to **combine** information from **various resolution**
 
 
 # AutoEncoders
