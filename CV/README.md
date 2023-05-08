@@ -1,3 +1,15 @@
+# FCN (Fully Convolutional Network)
+## Segmentation
+  - Different from classification as it requires pixel-wise prediction 
+  - Segments images into regions with different semantic categories
+  - This involves **what**(context) and **where**
+
+<img width="592" alt="스크린샷 2023-05-08 오후 6 11 14" src="https://user-images.githubusercontent.com/88100984/236956565-b2bbb5dc-2983-47a4-91df-f74e8a62cbd1.png">
+
+
+
+
+
 # AutoEncoders
 
   - Recommendation system based on Autoencoder?
