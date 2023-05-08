@@ -15,6 +15,9 @@
 <img width="752" alt="스크린샷 2023-05-08 오후 6 14 09" src="https://user-images.githubusercontent.com/88100984/236956907-adcad8ef-df0a-4695-b9d9-a87bca952ca1.png">
 
   - A series of operations (conv, deconv with skip connection) is an effort to **combine** information from **various resolution**
+  - This can be rephrased as 'considering both what and where'
+  - Because we lost lots of spatial information during conv process, when we recover it, we use skip connection 
+  - In addition, the up-sampling is trained on weight parameters so model learns how to up-sample condensed input
 
 
 # AutoEncoders
