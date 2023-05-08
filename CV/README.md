@@ -1,4 +1,5 @@
 # FCN (Fully Convolutional Network)
+**Distill Semantic information while maintaining Spatial information through trainable weights**
 ## Segmentation
   - Different from classification as it requires pixel-wise prediction 
   - Segments images into regions with different semantic categories
