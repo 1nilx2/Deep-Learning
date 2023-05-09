@@ -22,6 +22,6 @@ Both scores can be expressed by isotropic gaussian map
 
 $L = \sum_p{||S_r(p) - S_{r}^{*}(p)||^{2}_{2} + ||S_a(p) - S_a^*(p)||^2_2}$
 
-$L = \sum_p{||S_r(p) - S_{r}^{*}(p)||^{2}_{2}} +$  $||S_a(p) - S_a^*(p)||^2_2}$
+$L = \sum_p{||S_r(p) - S_{r}^{*}(p)||^{2}_{2}} +$  $ ||S_a(p) - S_a^*(p)||^2_2}$
 
 
