@@ -25,7 +25,7 @@ $L = \sum_p{||S_r(p) - S_{r}^{*}(p)||^{2}_{2} + ||S_a(p) - S_a^*(p)||^2_2}$
 
 $L = \sum_p{\lVert S_r(p) - S_{r}^{*}(p) \rVert^{2}_{2} + \Vert S_a(p) - S_a^*(p) \Vert^2_2}$
 
-$L = \sum_p{\lVert S_r(p) - S_r^*(p) \rVert^2_2}$
+$L = \sum_p{\lVert \mathbf{S_r(p) - S_r^*(p)}\rVert^2_2}$
 
 
   
