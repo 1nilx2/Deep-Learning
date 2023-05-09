@@ -20,8 +20,8 @@ Both scores can be expressed by isotropic gaussian map
 
 ### Loss
 
-$L = \sum_p{||S_r(p) - S_{r}^{*}(p)||^{2}_{2} + ||S_a(p) - S_a^*(p)||^2_2}$
+<img width="715" alt="스크린샷 2023-05-09 오후 5 13 30" src="https://github.com/1nilx2/Deep-Learning/assets/88100984/aed8d7ca-a3ae-4588-8308-5533f6da0224">
 
-
-$L = \sum_p{ |\| S_r(p) - S_r^*(p) |\|^2_2 + |\|S_a(p) - S_a^*(p)|\|^2_2}$
-
+Loss conists of two parts
+  - Finding Euclidean distances for region score and affinity score
+  - Multiplication of 
