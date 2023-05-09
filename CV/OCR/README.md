@@ -25,3 +25,16 @@ Both scores can be expressed by isotropic gaussian map
 Loss conists of two parts
   - Finding Euclidean distances for region score and affinity score
   - Multlying confidence score of the pixel (Mainly related with Pseudo-Ground Truth)
+
+
+### Training
+Character-level dataset is limited, and manual labeling is too costly.  
+So we
+ 1) Train model with Ground Truth <- Interim Model
+ 2) Generates Pseudo GT with confidence 
+ 3) Conduct additional learning with PGT (Weekly-Supervised Learning)
+
+
+Really good references
+  - https://medium.com/@msmapark2/character-region-awareness-for-text-detection-craft-paper-%EB%B6%84%EC%84%9D-da987b32609c
+  - https://towardsdatascience.com/pytorch-scene-text-detection-and-recognition-by-craft-and-a-four-stage-network-ec814d39db05
