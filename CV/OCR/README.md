@@ -19,6 +19,6 @@ Affinity score = P(center of adjacent two chars), which will be used to combine 
 Both scores can be expressed by isotropic gaussian map 
 
 ### Loss
-$L = \sum_p \left( {|| S_r(p) - S_r^*(p) ||^2_2 + ||S_a(p) - S_a^*(p)||^2_2 } \right)$
+$L = \sum_p{\left(|| S_r(p) - S_r^*(p) ||^2_2 + ||S_a(p) - S_a^*(p)||^2_2 \right)}$
 
   
