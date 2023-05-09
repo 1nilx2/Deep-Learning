@@ -21,4 +21,6 @@ Both scores can be expressed by isotropic gaussian map
 ### Loss
 $L = \sum_p{ \lvert S_r(p) - S_r^*(p) \rvert^2_2 + ||S_a(p) - S_a^*(p) ||^2_2 }$
 
+$L = \sum_p{ \lvert S_r(p) - S_r^*(p) \rvert^2_2}$
+
   
