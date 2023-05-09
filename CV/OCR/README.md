@@ -20,8 +20,8 @@ Both scores can be expressed by isotropic gaussian map
 
 ### Loss
 
-<img width="715" alt="스크린샷 2023-05-09 오후 5 13 30" src="https://github.com/1nilx2/Deep-Learning/assets/88100984/aed8d7ca-a3ae-4588-8308-5533f6da0224">
+<img width="803" alt="스크린샷 2023-05-09 오후 5 14 32" src="https://github.com/1nilx2/Deep-Learning/assets/88100984/59b23700-f065-49dc-b783-973d8721a3df">
 
 Loss conists of two parts
   - Finding Euclidean distances for region score and affinity score
-  - Multiplication of 
+  - Multlying confidence score of the pixel (Mainly related with Pseudo-Ground Truth)
