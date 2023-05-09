@@ -31,7 +31,7 @@ Loss conists of two parts
 Character-level dataset is limited, and manual labeling is too costly.  
 So we
  1) Train model with Ground Truth <- Interim Model
- 2) Generates Pseudo GT with confidence 
+ 2) Generates Pseudo GT with confidence through Interim Model
  3) Conduct additional learning with PGT (Weekly-Supervised Learning)
 
 
