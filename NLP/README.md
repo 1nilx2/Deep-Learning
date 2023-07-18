@@ -1,4 +1,4 @@
- # LSTM
+# LSTM
 ## Background
 RNN is about $h_t \ and \ x_t \rightarrow$ Problem of Long-term dependency.
 
@@ -126,3 +126,7 @@ An ability to perform new task
 
 This motivated approaches that is based upon increasing model size (parameters). 
 However, recent work shows that best performance can be achieded by smaller models trained on more data. 
+
+If this is effective, we can think that 
+'we haven't utilized full-potential each parameter has in conjunction with non-linearity'
+
