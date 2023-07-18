@@ -1,4 +1,4 @@
-# LSTM
+ # LSTM
 ## Background
 RNN is about $h_t \ and \ x_t \rightarrow$ Problem of Long-term dependency.
 
@@ -111,5 +111,18 @@ Text Pair / Regression -> CLS Token
 Question-Answering -> Tokens between first and second SEP tokens  
 
 * We can assume that [CLS] token represent overall information of the sentence 
-* With this idea, Sentence BERT can be fine-tuned 
+* With this idea, Sentence BERT can be fine-tuned
 
+
+# LLaMA
+Open and Efficient Foundation Language Models
+  - Considers 'Inference' cost not just training cost
+    - 13B model is competitive with 175B GPT-3
+
+## Few-shot properties
+An ability to perform new task 
+  - from textual instructions or few examples
+  - which appears when scaling up models to sufficient size
+
+This motivated approaches that is based upon increasing model size (parameters). 
+However, recent work shows that best performance can be achieded by smaller models trained on more data. 
