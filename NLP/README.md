@@ -117,7 +117,9 @@ Question-Answering -> Tokens between first and second SEP tokens
 # LLaMA
 Open and Efficient Foundation Language Models
   - Considers 'Inference' cost not just training cost
-    - 13B model is competitive with 175B GPT-3
+  - 13B model is competitive with 175B GPT-3
+  - Trained with public data <> Chinchilla, PaLM, GPT-3
+  - Tokenizer: BPE (Byte-pair encoding) via SetntencePiece ==> 1.4T Tokens
 
 ## Few-shot properties
 An ability to perform new task 
@@ -128,5 +130,17 @@ This motivated approaches that is based upon increasing model size (parameters).
 However, recent work shows that best performance can be achieded by smaller models trained on more data. 
 
 If this is effective, we can think that  
-** 'we haven't utilized full-potential each parameter has in conjunction with non-linearity' **
+**'we haven't utilized full-potential each parameter has'**
+
+
+## Architecture
+Transformer-based but has some difference
+   - Pre-normalization
+   - SwiGLU activiation instead of ReLU
+   - Removed absolute positional embedding. Instead, add rotary positional embedding
+
+## Main Results
+Two types of guidance were given to models
+  - Zero-shot: a textual description only
+  - Few-shot: few examples 
 
