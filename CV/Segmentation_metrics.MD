@@ -30,6 +30,7 @@ $$F1 = \frac{2TP}{2TP+FP+FN}$$
 
 ### $Jaccard (IoU)$
 Intersection over Union (IoU) is another metric that can represent a segmentation performance. 
+
 $$IoU = \frac{TP}{TP+FP+FN}$$
 
 ## mAP
