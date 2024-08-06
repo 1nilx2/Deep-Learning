@@ -1,8 +1,10 @@
 # Metrics for Segmentation
  
 ## Accuracy
- We can count the number of pixels predicted correctly among the total number of pixels.  
- $$Accuracy(A, B) = \frac{1}{n} \Sigma^{n}_{i=0} 1_{(A_i=B_i)}$$
+ We can count the number of pixels predicted correctly among the total number of pixels.
+
+$$Accuracy(A, B) = \frac{1}{n} \Sigma^{n}_{i=0} 1_{(A_i=B_i)}$$
+
  This works well when our class distribution is rather balanced. 
  What if our image has 1,000 total pixels and only 3 of them is for an object?
  If our model predicts entire pixels as backgound, it will still have 0.997 accuracy.  
@@ -17,7 +19,9 @@ This is somewhat exaggerated, but usually images consist of less pixels for obje
 ### $Dice (F1)$
 If you want to see these values at once with a condensed figure, F1 score can be used, which is minimized when either has 0 and maximized when both have 1. Also F1 score is menteiond as $Dice \ Score$.
 $$F1 = 2 \times \frac{Precision \times Recall}{Precision + Recall}$$
+
 $$F1 = 2 * \frac{\frac{TP^2}{(TP+FP)(TP+FN)}}{TP(\frac{2TP+FP+FN}{(TP+FP)(TP+FN)})}$$
+
 $$F1 = \frac{2TP}{2TP+FP+FN}$$
 
 ### $Jaccard (IoU)$
