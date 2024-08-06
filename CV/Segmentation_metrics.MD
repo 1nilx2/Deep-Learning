@@ -4,7 +4,7 @@
  We can count the number of pixels predicted correctly among the total number of pixels.
 
 
-$$Accuracy(A, B) = \frac{1}{n} \Sigma^{n}_{i=0} 1_{(A_i=B_i)}$$
+  $$Accuracy(A, B) = \frac{1}{n} \Sigma^{n}_{i=0} 1_{(A_i=B_i)}$$
 
  This works well when our class distribution is rather balanced. 
  What if our image has 1,000 total pixels and only 3 of them is for an object?
@@ -22,7 +22,7 @@ If you want to see these values at once with a condensed figure, F1 score can be
 
 $$F1 = 2 \times \frac{Precision \times Recall}{Precision + Recall}$$
 
-$$F1 = 2 * \frac{\frac{TP^2}{(TP+FP)(TP+FN)}}{TP(\frac{2TP+FP+FN}{(TP+FP)(TP+FN)})}$$
+$$F1 = 2 \times \frac{\frac{TP^2}{(TP+FP)(TP+FN)}}{TP(\frac{2TP+FP+FN}{(TP+FP)(TP+FN)})}$$
 
 $$F1 = \frac{2TP}{2TP+FP+FN}$$
 
