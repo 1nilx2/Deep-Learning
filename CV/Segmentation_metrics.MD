@@ -6,7 +6,7 @@
 
 $$Accuracy(A, B) = \frac{1}{n} \sigma^{n}_{i=0} 1_{(A_i=B_i)}$$
 
-$$Accuracy(A, B) = \frac{1}{n} \Sigma_{i=1}^n  {1_{A_i}}$$
+$$Accuracy(A, B) = \frac{1}{n} \Sigma_{i=1}^n  {1_{A_i = B_i}}$$
 
  This works well when our class distribution is rather balanced. 
  What if our image has 1,000 total pixels and only 3 of them is for an object?
