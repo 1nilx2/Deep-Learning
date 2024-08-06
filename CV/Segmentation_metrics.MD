@@ -13,8 +13,10 @@ This is somewhat exaggerated, but usually images consist of less pixels for obje
 
 ## Precision and Recall
  Thus, we might want to speculate more detailed traits of our model. How precisely a model captured truth among what it predicted or how much truth it has captured among total truth. The former is $Precision$ and the later is $Recall$.
- $$Precision = \frac{TP}{TP+FP}$$
- $$Recall = \frac{TP}{TP+FN}$$
+
+$$Precision = \frac{TP}{TP+FP}$$
+
+$$Recall = \frac{TP}{TP+FN}$$
 
 ## F1 Score & IoU
 ### $Dice (F1)$
