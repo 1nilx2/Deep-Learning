@@ -3,6 +3,7 @@
 ## Accuracy
  We can count the number of pixels predicted correctly among the total number of pixels.
 
+
 $$Accuracy(A, B) = \frac{1}{n} \Sigma^{n}_{i=0} 1_{(A_i=B_i)}$$
 
  This works well when our class distribution is rather balanced. 
@@ -18,6 +19,7 @@ This is somewhat exaggerated, but usually images consist of less pixels for obje
 ## F1 Score & IoU
 ### $Dice (F1)$
 If you want to see these values at once with a condensed figure, F1 score can be used, which is minimized when either has 0 and maximized when both have 1. Also F1 score is menteiond as $Dice \ Score$.
+
 $$F1 = 2 \times \frac{Precision \times Recall}{Precision + Recall}$$
 
 $$F1 = 2 * \frac{\frac{TP^2}{(TP+FP)(TP+FN)}}{TP(\frac{2TP+FP+FN}{(TP+FP)(TP+FN)})}$$
