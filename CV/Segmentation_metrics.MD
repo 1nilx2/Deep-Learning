@@ -11,7 +11,7 @@ $$Accuracy(A, B) = \frac{1}{n} \Sigma_{i=1}^n  {1_{\(A_i = B_i\)}}$$
 This is somewhat exaggerated, but usually images consist of less pixels for objects than those for background.
 
 ## Precision and Recall
- Thus, we might want to speculate more detailed traits of our model. How precisely a model captured truth among what it predicted or how much truth it has captured among total truth. The former is $Precision$ and the later is $Recall$.
+ Thus, we might want to investigate more detailed traits of our model. How precisely a model captured truth among what it predicted or how much truth it has captured among total truth. The former is $Precision$ and the later is $Recall$.
 
 $$Precision = \frac{TP}{TP+FP}$$
 
