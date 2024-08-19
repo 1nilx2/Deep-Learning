@@ -24,3 +24,22 @@ Is there a way to cherry-pick both FP16 and 32? We might also consider mixed-pre
 In addition, the loss calculated by FP16 will be scaled up. I should remebmer that the range FP16 can express is narrower, which might lead to a vanishing gradient.
 
 ![Mixed-precision](figs/mixed-precision.png)
+
+
+## Lora
+Low-rank adpatation which tries to approximate, with rather simple decomposition, what would've been done by full fine tuning, $\Delta W$. 
+
+LoRA is a kind of adapter so we can easily exchange it according to our usage. If we have a strong foundation model and different downstream tasks on top of the model, we can tune model for individual tasks then change adapters for purpose.
+
+![LoRA](figs/LoRA.png)
+
+You can approximate $\Delta W \text{ through } BA$
+Also the impact of adapter can be handled by specifying $\text{decomposition level}, r, and \ \alpha$
+  
+We can also speicfy to which matrix/layer LoRA will be applied. 
+
+What is appropriate level of adaptation and which layer could be positively influenced by it?
+ - It seems that choosing variety of layers has more impact increasing the rank. 
+ - Always, this depends on our specific task and the gap between foundation model and the domain in interest. So practical investigation is definitely recommneded.
+
+![LoRA2](figs/LoRA2.png)
