@@ -12,7 +12,7 @@ In a numbering system with FP32, 32 bits are needed to express one number, 1bit 
 
 How it's actually different from FP32? 
   - Numerical Range a precision level can express is different, which might result in difference especially in large/accumulated matrix multiplication due to round-off 
-    - FP16: $ -6.55 \times 10^{4}  \text{ to }  6.55 \times 10^{4} $
+    - FP16: $-6.55 \times 10^{4}  \text{ to }  6.55 \times 10^{4}$
     - FP32: $-3.4 \times 10^{38} \text{ to } 3.4 \times 10^{38}$
   - Memory usage / Speed accordingly will be less required at a cost of precision. 
   - However, this does not mean that FP16 does always impact a model's performance significantly. If our use case requires less sophisticated computation, the repercussion small delta brings can be minimized.
