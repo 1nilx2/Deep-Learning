@@ -39,7 +39,7 @@ Also the impact of adapter can be handled by specifying $\text{decomposition lev
 We can also speicfy to which matrix/layer LoRA will be applied. 
 
 What is appropriate level of adaptation and which layer could be positively influenced by it?
- - It seems that choosing variety of layers has more impact increasing the rank. 
+ - It seems that choosing variety of layers has more impact than increasing the rank. 
  - Always, this depends on our specific task and the gap between foundation model and the domain in interest. So practical investigation is definitely recommneded.
 
 ![LoRA2](figs/LoRA2.png)
