@@ -43,3 +43,20 @@ What is appropriate level of adaptation and which layer could be positively infl
  - Always, this depends on our specific task and the gap between foundation model and the domain in interest. So practical investigation is definitely recommneded.
 
 ![LoRA2](figs/LoRA2.png)
+
+## Gradient Accumulation
+Model parameters are used to be updated after every mini-batch operation. A bit more detail is that 
+ - Loss Calculation by `criterion(pred, target)`
+ - Gradients are calculated via `loss.backward()` and stored in `.grad` attribute of each parameter in a cumulative manner
+ - The stored gradients will be reflected to parameters through `optimizer.step()`
+
+Thus, if we accumulate the gradients few times then reflect all of them at once, it has similar effect of training with larger batch size. Let's say you have 4 batch size and accumulate it 5 times. It's similar with having batch_size of 20 at a small sacrifice of speed. 
+
+## Gradient Checkpointing
+In order to back-propagte gradients using chain-rule, it's required to know the outcomes (activations) of every layers, which can make memory usage prohibitive. 
+
+If we forget everything and calculate again the forward path to the point to which gradient update will be done, there's huge overhead, which can also be prohibitive in an meaning. 
+
+Gradient Checkpointing might provide a balance between them as strategically storing some activations(intermediate outcomes) and calculating needed forward paths to back-prop.
+
+Here, the activations saved are 'checkpoints'
