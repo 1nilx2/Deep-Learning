@@ -1,4 +1,4 @@
-# LLM
+# Memory-efficient tactics
 
 ## FP16
 Intuitive vibe it gives is something is havled from FP32.
