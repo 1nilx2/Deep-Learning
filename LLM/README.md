@@ -44,6 +44,20 @@ What is appropriate level of adaptation and which layer could be positively infl
 
 ![LoRA2](figs/LoRA2.png)
 
+## [QLora](https://huggingface.co/blog/4bit-transformers-bitsandbytes)
+### 4bit quantization
+QLoRA uses 4-bit quantization to compress a pretrained model parameters. The parameters are then frozen and a relatively small number of trainable parameters are added to the model in the form of LoRA.
+
+QLoRA has one storage data type (usually 4-bit NormalFloat) for the base model weights and a computation data type (16-bit BrainFloat) used to perform computations.
+
+When such cases as forward, backward path where information from both frozen weights and adapter is needed, NF4 of weights is converted to BF16 (or the computation dtype you specified)
+
+ - In summary, 4-bit (NF4) Pre-trained weights + 16-bit (BF16) Adapter
+
+### Double quantization
+Additional point is double quantization. Quantization involves normalization to locate values/weights within the range of [-1, 1]. The number used for the norm is called absmax, or quantization constant. This quantization contant still generates some overheads so further reduction of memory can be made via additional quantization of the quantization constant. That's double quantization. 
+
+
 ## Gradient Accumulation
 Model parameters are used to be updated after every mini-batch operation. A bit more detail is that 
  - Loss Calculation by `criterion(pred, target)`
