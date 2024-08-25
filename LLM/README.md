@@ -5,9 +5,10 @@ Intuitive vibe it gives is something is havled from FP32.
 In a numbering system with FP32, 32 bits are needed to express one number, 1bit used for sign, 8bit for exponent, and 23 bit for mantissa.
 
 | Precision \ Item  | Sign | Exponent |  Mantissa  |
-|-------|--------|---------|----------|
+|-------|--------|---------|------------|
 | FP32  | 1 bit  |   8bit  |   23 bit   |
 | FP16  | 1 bit  |   5bit  |   10 bit   |
+| BF16  | 1 bit  |   8bit  |    7 bit   |
 
 
 How it's actually different from FP32? 
@@ -24,6 +25,9 @@ Is there a way to cherry-pick both FP16 and 32? We might also consider mixed-pre
 In addition, the loss calculated by FP16 will be scaled up. I should remebmer that the range FP16 can express is narrower, which might lead to a vanishing gradient.
 
 ![Mixed-precision](figs/mixed-precision.png)
+
+### BF16
+Brain Float 16. It adopts same number of bits for exponent, which means the expressible range of BF16 is same with FP32 at a cost of precision. While it sacrifices mantissa part, usually it less matters in large network where range would matter much than precision.
 
 
 ## Lora
