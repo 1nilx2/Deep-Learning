@@ -15,6 +15,7 @@ It will have
 	- will get arguments as input parameter. So internally at each method, function can access to the arguments 
        - return dictionary
 ## Two level understanding
+### Super High Level
 ```
 class MCPTool:
     def describe(self) -> dict:
@@ -22,4 +23,28 @@ class MCPTool:
     
     def call(self, arguments: dict) -> dict:
         """Standardized Calling"""
+```
+
+### Little bit lower
+```
+# What you would get as a description of a tool 
+{
+  "name": "get_weather",
+  "description": "Get current weather for a given city",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "city": { "type": "string" }
+    },
+    "required": ["city"]
+  }
+}
+
+# Tool calling detail
+def call(arguments: dict) -> dict:
+    city = arguments["city"]
+    return {
+        "temperature": 23,
+        "condition": "sunny"
+    }
 ```
