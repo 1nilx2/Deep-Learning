@@ -4,7 +4,7 @@ Instead of relying on direct reference to all past tokens via the KV-cache in th
 This approach does not preserve exact token-level recall and is therefore weaker at tasks like needle-in-a-haystack retrieval. However, it exhibits scaling behavior comparable to full attention on tasks where reasoning and logical consistency are emphasized, by progressively consolidating relevant information into the model state.
 
 If exact recall is required, this limitation can be mitigated by augmenting the model with an additional hard lookup or external memory mechanism.
----
+
 
 # RLMs (Recursive Language Models)
 
@@ -13,7 +13,6 @@ The LLM explores, decomposes, and manipulates the prompt by writing code, and so
 During this process, the model retains primary control over context access, strategy selection, and verification within the environment.
 Through selective, symbolic interaction with the prompt, RLMs maintain strong performance on contexts that exceed the base model’s context window by orders of magnitude.
 
----
 
 # MCP (Model Context Protocol)
 People want to expand the potential of LLM that's so powerful that makes just directly using its parameterized knowledge less desired. So there's a need for tool calling, which again raised an issue related with consistent formatting for compatibility and reusability. This is contextual background of MCP. 
