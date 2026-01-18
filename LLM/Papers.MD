@@ -14,3 +14,12 @@ It will have
  - call method where
 	- will get arguments as input parameter. So internally at each method, function can access to the arguments 
        - return dictionary
+## Two level understanding
+```
+class MCPTool:
+    def describe(self) -> dict:
+        """What this tool can do"""
+    
+    def call(self, arguments: dict) -> dict:
+        """Standardized Calling"""
+```
