@@ -48,3 +48,20 @@ def call(arguments: dict) -> dict:
         "condition": "sunny"
     }
 ```
+
+## Large Components of MCP
+Client, Server, and Tools
+
+Tools:
+- Business logic
+- Perform actual operations and side effects
+
+Server:
+- Hosts and exposes tools (and resources/prompts)
+- Acts as the execution and security boundary
+- Makes tools accessible via MCP protocol
+
+Client:
+- Uses an LLM to determine whether external tools are needed
+- Decides which tool to call and with what arguments
+- Issues tool invocation requests via MCP protocol
