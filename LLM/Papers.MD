@@ -8,6 +8,7 @@ If exact recall is required, this limitation can be mitigated by augmenting the 
 
 
 # RLMs (Recursive Language Models)
+
 Instead of ingesting long contexts directly, RLMs treat the prompt as a variable in an external, programmatic environment (e.g., a REPL), rather than as neural input.
 The LLM explores, decomposes, and manipulates the prompt by writing code, and solves problems by recursively calling itself or sub-LMs when needed.
 During this process, the model retains primary control over context access, strategy selection, and verification within the environment.
