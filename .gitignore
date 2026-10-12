@@ -1,3 +1,9 @@
 # Ignore env file
 .env
 .DS_Store
+.venv/
+.cache/
+__pycache__/
+*.pyc
+labs/nlp/laya-vs-cross-encoder/data/
+labs/nlp/laya-vs-cross-encoder/runs/

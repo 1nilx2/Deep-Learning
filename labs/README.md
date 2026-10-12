@@ -4,6 +4,7 @@ These notebooks record hands-on study and experiments. Some follow external tuto
 
 | Area | Notebook | Focus |
 | --- | --- | --- |
+| NLP | [Laya vs CrossEncoder classification lab](nlp/laya-vs-cross-encoder/README.md) | Reproducible public-data training and [results](nlp/laya-vs-cross-encoder/RESULTS.md) |
 | LLM | [Llama 3.2 11B fine-tuning](llm/Finetune_Llama_3.2_11B.ipynb) | Fine-tuning workflow |
 | LLM | [Llama 3.1 8B with LoRA and Unsloth](llm/Llama_3_1_8B_LoRA_Unsloth_Colab.ipynb) | Adapter training in Colab |
 | Multimodal | [Idefics2 with LoRA](llm/VLM_Idefics2_lora_in_sagemaker.ipynb) | Vision-language fine-tuning in SageMaker |
