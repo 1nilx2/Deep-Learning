@@ -15,7 +15,8 @@ def main() -> None:
     names = [
         ("Laya, original", "laya_base_test.json"),
         ("Laya, fine-tuned", "laya_test.json"),
-        ("CrossEncoder, fine-tuned", "cross_encoder_test.json"),
+        ("CrossEncoder, ModernBERT-base", "cross_encoder_test.json"),
+        ("CrossEncoder, ModernBERT-large", "cross_encoder_large_test.json"),
     ]
     reports = [(name, json.loads((args.runs / filename).read_text())) for name, filename in names]
     manifest = reports[0][1]["data_manifest"]
@@ -48,22 +49,31 @@ def main() -> None:
             f"{report['ece_10_bins']:.3f} | {report['milliseconds_per_request']:.1f} | "
             f"{report.get('parameters', 0):,} |"
         )
-    lines += ["", "## F1 by intent", "", "| Intent | Laya original | Laya fine-tuned | CrossEncoder |",
-              "| --- | ---: | ---: | ---: |"]
+    lines += ["", "## F1 by intent", "",
+              "| Intent | " + " | ".join(name for name, _ in reports) + " |",
+              "| --- | " + " | ".join("---:" for _ in reports) + " |"]
     for label in labels:
         scores = [report["per_class_f1"][label] for _, report in reports]
-        lines.append(f"| `{label}` | {scores[0]:.3f} | {scores[1]:.3f} | {scores[2]:.3f} |")
+        lines.append(f"| `{label}` | " + " | ".join(f"{score:.3f}" for score in scores) + " |")
     original = reports[0][1]
     fine_tuned = reports[1][1]
-    cross_encoder = reports[2][1]
     original_correct = round(original["accuracy"] * original["n"])
     laya_correct = round(fine_tuned["accuracy"] * fine_tuned["n"])
-    cross_correct = round(cross_encoder["accuracy"] * cross_encoder["n"])
+    cross_results = [(name, report, round(report["accuracy"] * report["n"]))
+                     for name, report in reports[2:]]
+    large_cross_encoder = reports[3][1]
+    large_correct = cross_results[1][2]
     lines += [
         "", "## Observations", "",
-        f"Laya classified {original_correct}/{original['n']} test requests correctly before fine-tuning and {laya_correct}/{fine_tuned['n']} afterward, an increase of {laya_correct - original_correct} correct requests. CrossEncoder classified {cross_correct}/{cross_encoder['n']} correctly. The {abs(laya_correct - cross_correct)}-request gap between the fine-tuned models is small on this test set and does not establish a reliable ranking.",
+        f"Laya classified {original_correct}/{original['n']} test requests correctly before fine-tuning and {laya_correct}/{fine_tuned['n']} afterward, an increase of {laya_correct - original_correct} correct requests. "
+        + " ".join(f"{name} classified {correct}/{report['n']} correctly."
+                   for name, report, correct in cross_results),
         "",
-        f"CrossEncoder used {cross_encoder['parameters']:,} parameters and {cross_encoder['milliseconds_per_request']:.1f} ms/request; fine-tuned Laya used {fine_tuned['parameters']:,} parameters and {fine_tuned['milliseconds_per_request']:.1f} ms/request. These are single local CPU timing runs, not a hardware-independent throughput claim.",
+        f"With similar-sized ModernBERT encoders, the large CrossEncoder was correct on {large_correct - laya_correct} more of the 320 test requests than fine-tuned Laya ({large_correct} versus {laya_correct}); its measured latency was {large_cross_encoder['milliseconds_per_request']:.1f} versus {fine_tuned['milliseconds_per_request']:.1f} ms/request. One test split and one timing run do not establish a reliable ranking.",
+        "",
+        "The two CrossEncoder rows separate a practical base-sized baseline from a large-sized comparison with Laya. The models still differ in their starting checkpoints, heads, and training objectives, so differences in accuracy cannot be attributed to the Decision Head alone.",
+        "",
+        "These are single local CPU timing runs, not hardware-independent throughput claims.",
         "",
     ]
     for name, report in reports[1:]:
@@ -77,7 +87,7 @@ def main() -> None:
         lines.append(f"The most frequent {name} confusion was `{truth}` → `{prediction}` ({count} requests).")
     lines += [
         "", "## Reading these results", "",
-        f"All three runs used `{device}`, batch size {batch_size}, the same question wording, option descriptions, and official test rows. The CrossEncoder scores eight pairs per request; Laya scores one eight-option question. The starting checkpoints differ in size and training history, so this is a system comparison.",
+        f"All four runs used `{device}`, batch size {batch_size}, the same question wording, option descriptions, and official test rows. Each CrossEncoder scores eight pairs per request; Laya scores one eight-option question. Laya and the large CrossEncoder use ModernBERT-large-family encoders, but their exact initialization and task-specific training history are not matched. This remains a system comparison, not an architecture ablation.",
         "",
         "Laya reserved 40 of its 400 allocated training requests for probability calibration, leaving 360 gradient-training items. CrossEncoder used all 400 for gradient training and fitted temperature on validation logits. Compare both quality and probability metrics with this protocol difference in mind. The benchmark does not measure out-of-scope detection or generalization to all 77 BANKING77 intents.",
         "",
