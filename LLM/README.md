@@ -78,3 +78,7 @@ If we forget everything and calculate again the forward path to the point to whi
 Gradient Checkpointing might provide a balance between them as strategically storing some activations(intermediate outcomes) and calculating needed forward paths to back-prop.
 
 Here, the activations saved are 'checkpoints'
+
+## Decision models
+
+- [Laya — Typed Decision Model (English / 한국어)](Laya.md)
