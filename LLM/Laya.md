@@ -109,22 +109,22 @@ A separate act/escalate branch uses the <code>[CLS]</code> vector and summary fe
 
 ### Loss function
 
-$$
+```math
 \mathcal{L}_{\mathrm{total}}
 =
 \mathcal{L}_{\mathrm{RLCD}}
 +
 \mathcal{L}_{\mathrm{CE}}.
-$$
+```
 
 #### CE
 
-$$
+```math
 \mathcal{L}_{\mathrm{CE}}
 =
 -\frac{1}{B}\sum_{b=1}^{B}\sum_{i=1}^{K_b}
 t_{b,i}\log p_{\theta,b,i}.
-$$
+```
 
 Here, $b$ indexes input rows within a batch, and $B$ is the **batch size**. Each question becomes one input row, so a batch containing both questions from the customer example has $B=2$. $K_b$ is the **number of options** in row $b$. Because each option has one <code>[MASK]</code> marker, it is also the number of <code>[MASK]</code> markers in that row.
 
@@ -141,12 +141,12 @@ $t_b$ is the **ground-truth target distribution** provided under <code>gold</cod
 
 RLCD averages the following term across rows in a batch and samples for each row. The core of each sample's contribution is **advantage × log probability**; the minus sign appears because this is a loss to minimize.
 
-$$
+```math
 \mathcal{L}_{\mathrm{RLCD}}
 =
 -\frac{1}{BG}\sum_{b=1}^{B}\sum_{g=1}^{G}
 A_b^{(g)}\log\pi_\theta\!\left(z_b^{(g)}\mid x_b\right).
-$$
+```
 
 **$A_b^{(g)}$ — advantage:** How much better the $g$-th candidate is than the other candidates for input row $b$. Its reward comes from comparison with the target distribution $t_b$. It is positive when the reward is above that row's sample average and negative when below. In the loss, it **weights** the candidate's log probability.
 
@@ -263,22 +263,22 @@ B는 batch size(한 번에 처리하는 입력 row 수), L은 패딩 후 토큰 
 
 ### Loss function
 
-$$
+```math
 \mathcal{L}_{\mathrm{total}}
 =
 \mathcal{L}_{\mathrm{RLCD}}
 +
 \mathcal{L}_{\mathrm{CE}}.
-$$
+```
 
 #### CE
 
-$$
+```math
 \mathcal{L}_{\mathrm{CE}}
 =
 -\frac{1}{B}\sum_{b=1}^{B}\sum_{i=1}^{K_b}
 t_{b,i}\log p_{\theta,b,i}.
-$$
+```
 
 여기서 $b$는 배치 안의 입력 row 번호이고, $B$는 **batch size**다. 이 모델에서는 질문마다 입력 row 하나를 만들므로, $B$는 한 배치에 들어간 질문의 수다. 앞의 고객 문의에서 두 질문을 함께 처리하면 $B=2$다. $K_b$는 row $b$의 **선택지 개수**이며, 선택지마다 <code>[MASK]</code>가 하나씩 있으므로 그 row의 <code>[MASK]</code> 개수와 같다.
 
@@ -295,12 +295,12 @@ $t_b$는 <code>gold</code>로 주어진 **정답(ground truth) 확률분포**, $
 
 RLCD 손실은 batch의 row와 각 row에서 만든 샘플에 대해 다음 항을 평균한다. 각 샘플의 핵심은 **advantage × log probability**이며, 손실을 최소화하는 식이므로 앞에 마이너스가 붙는다.
 
-$$
+```math
 \mathcal{L}_{\mathrm{RLCD}}
 =
 -\frac{1}{BG}\sum_{b=1}^{B}\sum_{g=1}^{G}
 A_b^{(g)}\log\pi_\theta\!\left(z_b^{(g)}\mid x_b\right).
-$$
+```
 
 **$A_b^{(g)}$ — advantage:** $b$번째 입력 row에서 $g$번째 후보가 **같은 row의 다른 후보들보다 얼마나 좋은지** 나타낸다. 정답 분포 $t_b$와 비교해 받은 보상이 평균보다 높으면 양수, 낮으면 음수다. 따라서 수식에서 각 후보의 log probability에 곱하는 **가중치** 역할을 한다.
 
