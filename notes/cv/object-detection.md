@@ -24,7 +24,7 @@ As I know YOLOv8 does not have objectiveness score so it would be $4+C$. Neverth
 ## Detail of YOLOv8
 Flow might be quite straightforward. Interesting activities happen around the **Feature Extraction**. Here we play with numbers comprising input images to detect their underlying traits. 
 
-<img src="./YOLOv8_Scheme.png">
+<img src="../../assets/cv/YOLOv8_Scheme.png">
 
 ## Evaluation
 

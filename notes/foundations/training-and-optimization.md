@@ -1,4 +1,4 @@
-# Deep-Learnings
+# Training and optimization
 
 ## Revisit Learning / Training of Deep learning
 How to update parameters(𝜃, weights and biases)?

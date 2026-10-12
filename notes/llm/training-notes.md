@@ -24,7 +24,7 @@ Is there a way to cherry-pick both FP16 and 32? We might also consider mixed-pre
 
 In addition, the loss calculated by FP16 will be scaled up. I should remebmer that the range FP16 can express is narrower, which might lead to a vanishing gradient.
 
-![Mixed-precision](figs/mixed-precision.png)
+![Mixed-precision](../../assets/llm/mixed-precision.png)
 
 ### BF16
 Brain Float 16. It adopts same number of bits for exponent, which means the expressible range of BF16 is same with FP32 at a cost of precision. While it sacrifices mantissa part, usually it less matters in large network where range would matter much than precision.
@@ -35,7 +35,7 @@ Low-rank adpatation which tries to approximate, with rather simple decomposition
 
 LoRA is a kind of adapter so we can easily exchange it according to our usage. If we have a strong foundation model and different downstream tasks on top of the model, we can tune model for individual tasks then change adapters for purpose.
 
-![LoRA](figs/LoRA.png)
+![LoRA](../../assets/llm/LoRA.png)
 
 You can approximate $\Delta W \text{ through } BA$
 Also the impact of adapter can be handled by specifying $\text{decomposition level}, r, and \ \alpha$
@@ -46,7 +46,7 @@ What is appropriate level of adaptation and which layer could be positively infl
  - It seems that choosing variety of layers has more impact than increasing the rank. 
  - Always, this depends on our specific task and the gap between foundation model and the domain in interest. So practical investigation is definitely recommneded.
 
-![LoRA2](figs/LoRA2.png)
+![LoRA2](../../assets/llm/LoRA2.png)
 
 ## [QLora](https://huggingface.co/blog/4bit-transformers-bitsandbytes)
 ### 4bit quantization
@@ -81,4 +81,4 @@ Here, the activations saved are 'checkpoints'
 
 ## Decision models
 
-- [Laya — Typed Decision Model (English / 한국어)](Laya.md)
+- [Laya — Typed Decision Model (English / 한국어)](laya.md)
