@@ -117,7 +117,7 @@ $$
 \mathcal{L}_{\mathrm{CE}}.
 $$
 
-#### $\mathcal{L}_{\mathrm{CE}}$
+#### CE
 
 $$
 \mathcal{L}_{\mathrm{CE}}
@@ -137,7 +137,7 @@ $t_b$ is the **ground-truth target distribution** provided under <code>gold</cod
 
 **Meaning:** CE matches **these two probability distributions**. The target assigns option B a probability of 0.7, while the model assigns it 0.5. Substituting the numbers gives $-0.1\log 0.2-0.7\log 0.5-0.2\log 0.3$. Minimizing CE moves the model's probability allocation toward the target distribution.
 
-#### $\mathcal{L}_{\mathrm{RLCD}}$
+#### RLCD
 
 RLCD averages the following term across rows in a batch and samples for each row. The core of each sample's contribution is **advantage × log probability**; the minus sign appears because this is a loss to minimize.
 
@@ -271,7 +271,7 @@ $$
 \mathcal{L}_{\mathrm{CE}}.
 $$
 
-#### $\mathcal{L}_{\mathrm{CE}}$
+#### CE
 
 $$
 \mathcal{L}_{\mathrm{CE}}
@@ -291,7 +291,7 @@ $t_b$는 <code>gold</code>로 주어진 **정답(ground truth) 확률분포**, $
 
 **해석:** CE는 **이 두 확률분포를 맞추는 손실**이다. 위 row에서 정답 분포는 B에 0.7을 주지만 모델은 0.5를 주었다. 식에 대입하면 $-0.1\log 0.2-0.7\log 0.5-0.2\log 0.3$이 된다. CE를 줄이는 방향으로 학습하면 모델의 확률 배분이 정답 분포에 가까워진다.
 
-#### $\mathcal{L}_{\mathrm{RLCD}}$
+#### RLCD
 
 RLCD 손실은 batch의 row와 각 row에서 만든 샘플에 대해 다음 항을 평균한다. 각 샘플의 핵심은 **advantage × log probability**이며, 손실을 최소화하는 식이므로 앞에 마이너스가 붙는다.
 
