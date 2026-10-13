@@ -37,3 +37,11 @@ Selected results from completed labs. Click a chart for the full protocol, metri
 [![Laya (Jev) vs Cross Encoder on BANKING77: Laya base 77.5% accuracy at 98.6 ms per request; Laya fine-tuned 90.6% at 98.8 ms; CrossEncoder fine-tuned with ModernBERT-large 93.4% at 208.0 ms.](assets/spotlight/laya-banking77-model-comparison.svg)](labs/nlp/laya-vs-cross-encoder/RESULTS.md)
 
 Eight related payment intents, 320 held-out requests. The [lab](labs/nlp/laya-vs-cross-encoder/README.md) includes the training code and reproduction steps; the linked results page explains the remaining differences between the systems.
+
+### TurboQuant: KV cache vs total model memory
+
+[![KV cache allocation across three prompt lengths, comparing FP16 with Q8 K and TurboQuant 4-bit V.](assets/spotlight/turboquant-kv-cache.svg)](labs/llm/turboquant-kv-cache/RESULTS.md)
+
+[![Total Metal allocation broken into model weights, compute buffers, and KV cache, with and without TurboQuant.](assets/spotlight/turboquant-total-metal.svg)](labs/llm/turboquant-kv-cache/RESULTS.md)
+
+On an M1 Max with Qwen2.5-1.5B, TurboQuant cut KV allocation by about 60%; total Metal allocation fell by 2.3–5.5%. The [lab](labs/llm/turboquant-kv-cache/README.md) documents the 12 synthetic prompts, timing, retrieval results, and measurement limits.

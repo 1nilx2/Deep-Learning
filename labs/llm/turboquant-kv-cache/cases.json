@@ -1,0 +1,122 @@
+[
+  {
+    "case": "2k_early_s11",
+    "seed": 11,
+    "position": "early",
+    "size": "2k",
+    "records": 85,
+    "context": 3072,
+    "budget": 1445,
+    "gold": "LIME-742"
+  },
+  {
+    "case": "2k_early_s29",
+    "seed": 29,
+    "position": "early",
+    "size": "2k",
+    "records": 85,
+    "context": 3072,
+    "budget": 1445,
+    "gold": "NOVA-615"
+  },
+  {
+    "case": "2k_late_s11",
+    "seed": 11,
+    "position": "late",
+    "size": "2k",
+    "records": 85,
+    "context": 3072,
+    "budget": 1445,
+    "gold": "LIME-742"
+  },
+  {
+    "case": "2k_late_s29",
+    "seed": 29,
+    "position": "late",
+    "size": "2k",
+    "records": 85,
+    "context": 3072,
+    "budget": 1445,
+    "gold": "NOVA-615"
+  },
+  {
+    "case": "4k_early_s11",
+    "seed": 11,
+    "position": "early",
+    "size": "4k",
+    "records": 175,
+    "context": 5120,
+    "budget": 2975,
+    "gold": "LIME-742"
+  },
+  {
+    "case": "4k_early_s29",
+    "seed": 29,
+    "position": "early",
+    "size": "4k",
+    "records": 175,
+    "context": 5120,
+    "budget": 2975,
+    "gold": "NOVA-615"
+  },
+  {
+    "case": "4k_late_s11",
+    "seed": 11,
+    "position": "late",
+    "size": "4k",
+    "records": 175,
+    "context": 5120,
+    "budget": 2975,
+    "gold": "LIME-742"
+  },
+  {
+    "case": "4k_late_s29",
+    "seed": 29,
+    "position": "late",
+    "size": "4k",
+    "records": 175,
+    "context": 5120,
+    "budget": 2975,
+    "gold": "NOVA-615"
+  },
+  {
+    "case": "7k_early_s11",
+    "seed": 11,
+    "position": "early",
+    "size": "7k",
+    "records": 285,
+    "context": 8192,
+    "budget": 4845,
+    "gold": "LIME-742"
+  },
+  {
+    "case": "7k_early_s29",
+    "seed": 29,
+    "position": "early",
+    "size": "7k",
+    "records": 285,
+    "context": 8192,
+    "budget": 4845,
+    "gold": "NOVA-615"
+  },
+  {
+    "case": "7k_late_s11",
+    "seed": 11,
+    "position": "late",
+    "size": "7k",
+    "records": 285,
+    "context": 8192,
+    "budget": 4845,
+    "gold": "LIME-742"
+  },
+  {
+    "case": "7k_late_s29",
+    "seed": 29,
+    "position": "late",
+    "size": "7k",
+    "records": 285,
+    "context": 8192,
+    "budget": 4845,
+    "gold": "NOVA-615"
+  }
+]
