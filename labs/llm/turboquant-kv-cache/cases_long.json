@@ -1,0 +1,42 @@
+[
+  {
+    "case": "16k_early_s11",
+    "seed": 11,
+    "position": "early",
+    "size": "16k",
+    "records": 700,
+    "context": 18432,
+    "budget": 0,
+    "gold": "LIME-742"
+  },
+  {
+    "case": "16k_late_s11",
+    "seed": 11,
+    "position": "late",
+    "size": "16k",
+    "records": 700,
+    "context": 18432,
+    "budget": 0,
+    "gold": "LIME-742"
+  },
+  {
+    "case": "30k_early_s11",
+    "seed": 11,
+    "position": "early",
+    "size": "30k",
+    "records": 1300,
+    "context": 32768,
+    "budget": 0,
+    "gold": "LIME-742"
+  },
+  {
+    "case": "30k_late_s11",
+    "seed": 11,
+    "position": "late",
+    "size": "30k",
+    "records": 1300,
+    "context": 32768,
+    "budget": 0,
+    "gold": "LIME-742"
+  }
+]

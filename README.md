@@ -38,10 +38,12 @@ Selected results from completed labs. Click a chart for the full protocol, metri
 
 Eight related payment intents, 320 held-out requests. The [lab](labs/nlp/laya-vs-cross-encoder/README.md) includes the training code and reproduction steps; the linked results page explains the remaining differences between the systems.
 
-### TurboQuant: KV cache vs total model memory
+### TurboQuant: measured KV memory and a 1M-token projection
 
-[![KV cache allocation across three prompt lengths, comparing FP16 with Q8 K and TurboQuant 4-bit V.](assets/spotlight/turboquant-kv-cache.svg)](labs/llm/turboquant-kv-cache/RESULTS.md)
+[![Measured KV cache allocation at 6.5k, 16k, and 30.3k input tokens, comparing FP16 with Q8 K and TurboQuant 4-bit V.](assets/spotlight/turboquant-kv-cache.svg)](labs/llm/turboquant-kv-cache/RESULTS.md)
 
-[![Total Metal allocation broken into model weights, compute buffers, and KV cache, with and without TurboQuant.](assets/spotlight/turboquant-total-metal.svg)](labs/llm/turboquant-kv-cache/RESULTS.md)
+[![Projected KV cache allocation at one million tokens: 26.7 GiB with FP16 versus 10.6 GiB with Q8 K and TurboQuant 4-bit V. This is a storage estimate, not a model run.](assets/spotlight/turboquant-1m-projection.svg)](labs/llm/turboquant-kv-cache/RESULTS.md)
 
-On an M1 Max with Qwen2.5-1.5B, TurboQuant cut KV allocation by about 60%; total Metal allocation fell by 2.3–5.5%. The [lab](labs/llm/turboquant-kv-cache/README.md) documents the 12 synthetic prompts, timing, retrieval results, and measurement limits.
+[![Measured total Metal allocation at 6.5k, 16k, and 30.3k input tokens, broken into model weights, compute buffers, and KV cache.](assets/spotlight/turboquant-total-metal.svg)](labs/llm/turboquant-kv-cache/RESULTS.md)
+
+On an M1 Max with Qwen2.5-1.5B, the 30.3k-token runs cut KV allocation from 896 to 357 MiB and total Metal allocation from 4,368 to 3,829 MiB. The 1M chart extends **KV storage only**; this model cannot run a 1M-token context. The [results](labs/llm/turboquant-kv-cache/RESULTS.md) include timing, retrieval outcomes, and limits.

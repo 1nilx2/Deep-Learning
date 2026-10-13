@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parent
 BINARY = Path(os.environ.get("TURBOQUANT_BINARY", ROOT / "llama-cpp-turboquant/build/bin/llama-completion")).expanduser().resolve()
 MODEL = Path(os.environ.get("TURBOQUANT_MODEL", ROOT / "models/qwen2.5-1.5b-instruct-q8_0.gguf")).expanduser().resolve()
 OUT = Path(os.environ.get("TURBOQUANT_OUTPUT_DIR", ROOT / "quick-benchmark")).expanduser().resolve()
+TIMEOUT_S = int(os.environ.get("TURBOQUANT_TIMEOUT_S", "60"))
 PROMPTS = OUT / "prompts"
 LOGS = OUT / "logs"
 RESULTS = OUT / "results.csv"
@@ -83,11 +84,11 @@ def run_one(case: dict, arm: str) -> dict:
     )
     error = ""
     try:
-        stdout, stderr = proc.communicate(timeout=60)
+        stdout, stderr = proc.communicate(timeout=TIMEOUT_S)
     except subprocess.TimeoutExpired:
         os.killpg(proc.pid, signal.SIGKILL)
         stdout, stderr = proc.communicate()
-        error = "timeout after 60 s"
+        error = f"timeout after {TIMEOUT_S} s"
     wall_ms = round((time.perf_counter() - begin) * 1000, 1)
     log_stem = f"{case['case']}__{arm}"
     (LOGS / f"{log_stem}.stdout.txt").write_text(stdout)

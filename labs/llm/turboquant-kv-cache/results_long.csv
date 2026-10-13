@@ -1,0 +1,9 @@
+case,arm,seed,position,size,records,context,budget,prompt_tokens,evicted_tokens,answer,first_code_correct,exact_match,kv_mib,metal_self_mib,peak_rss_mib,prefill_ms,decode_ms,wall_ms,returncode,error
+16k_early_s11,fp16,11,early,16k,700,18432,0,16014,,LIME-742  Question: What is the,1,0,504.0,3251.0,2495.92,13937.72,165.85,14812.0,0,
+16k_early_s11,turbo4,11,early,16k,700,18432,0,16014,,LIME-742.   This answer is derived,1,0,200.81,2948.0,2192.09,23526.11,320.07,24823.5,0,
+16k_late_s11,fp16,11,late,16k,700,18432,0,16014,,LIME-742  Question: What is the,1,0,504.0,3251.0,2494.02,13932.76,165.31,14717.9,0,
+16k_late_s11,turbo4,11,late,16k,700,18432,0,16014,,LIME-742  Question: What is the,1,0,200.81,2948.0,2192.83,23563.33,323.99,24836.8,0,
+30k_early_s11,fp16,11,early,30k,1300,32768,0,30290,,LIME-742  Question: What is the,1,0,896.0,4368.0,2950.39,37776.08,195.99,38959.5,0,
+30k_early_s11,turbo4,11,early,30k,1300,32768,0,30290,,GOLD-742  Question: What is the audit,0,0,357.0,3829.0,2408.61,72725.49,442.49,74262.4,0,
+30k_late_s11,fp16,11,late,30k,1300,32768,0,30290,,LIME-742  Question: What is the,1,0,896.0,4368.0,2944.42,37700.66,190.16,38968.4,0,
+30k_late_s11,turbo4,11,late,30k,1300,32768,0,30290,,LIME-742  Question: What is the,1,0,357.0,3829.0,2406.77,73447.98,439.24,74746.4,0,
