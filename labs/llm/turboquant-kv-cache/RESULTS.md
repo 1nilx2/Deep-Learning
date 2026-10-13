@@ -34,6 +34,8 @@ This is **arithmetic, not a 1M-token benchmark**. The [model configuration](http
 
 The backend reports **1,801 MiB of model allocation** across these runs. Compute buffers also remain; the chart derives their size as total Metal minus model minus KV. At 30.3k, KV occupies 20.5% of FP16 total Metal allocation and 9.3% of TurboQuant total Metal allocation. Peak process RSS comes separately from macOS `/usr/bin/time -l`. It is a different view of memory and must not be added to the backend total; neither is a system-wide physical-memory peak.
 
+In particular, the **30,290-token input** uses a **32,768-token KV capacity**. Its TurboQuant bar is **3,829 MiB total Metal allocation = 1,801 MiB model + 1,671 MiB compute + 357 MiB KV**. The 357 MiB is the same KV value shown in the first chart; 3,829 MiB is the sum of all three components.
+
 ## Retrieval and prefill time
 
 | Input tokens | FP16 first code correct | TurboQuant first code correct | FP16 median prefill | TurboQuant median prefill |

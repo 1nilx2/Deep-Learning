@@ -74,13 +74,13 @@ turbo_total = [median(size, "turbo4", "metal_self_mib") for size in SIZES]
 
 
 # 1. Measured KV allocation through the longest supported context.
-fig, ax = plt.subplots(figsize=(12.4, 3.7), dpi=160)
+fig, ax = plt.subplots(figsize=(12.4, 3.9), dpi=160)
 fig.patch.set_facecolor(BG)
-fig.subplots_adjust(left=0.07, right=0.97, bottom=0.23, top=0.68)
+fig.subplots_adjust(left=0.07, right=0.97, bottom=0.29, top=0.68)
 axis_style(ax)
 fig.text(0.07, 0.91, "Measured KV cache allocation", color=FG,
          fontsize=19, fontweight="bold")
-fig.text(0.07, 0.80, "M1 Max · Qwen2.5-1.5B · x-axis is configured context capacity",
+fig.text(0.07, 0.80, "KV is allocated for context capacity, which is larger than the input",
          color=MUTED, fontsize=10)
 ax.plot(x_kv, baseline_kv, color=FP16, linewidth=3, marker="o", markersize=7,
         label="FP16 K/V")
@@ -89,14 +89,15 @@ ax.plot(x_kv, turbo_kv, color=TURBO, linewidth=3, marker="o", markersize=7,
 ax.fill_between(x_kv, turbo_kv, baseline_kv, color=TURBO, alpha=0.08)
 ax.set_xlim(6, 35)
 ax.set_ylim(0, 1050)
-ax.set_xticks(x_kv, ("8.2k", "18.4k", "32.8k"))
+ax.set_xticks(x_kv, ("8.2k capacity\n6.5k input", "18.4k capacity\n16.0k input",
+                     "32.8k capacity\n30.3k input"))
 ax.set_ylabel("MiB", color=MUTED, fontsize=10)
 for i, (base, turbo) in enumerate(zip(baseline_kv, turbo_kv)):
     ax.annotate(f"{base:.0f}", (x_kv[i], base), xytext=(0, 8), textcoords="offset points",
                 ha="center", color=FP16, fontweight="bold", fontsize=10)
     ax.annotate(f"{turbo:.0f}", (x_kv[i], turbo), xytext=(0, -10), textcoords="offset points",
                 ha="center", color=TURBO, fontweight="bold", fontsize=10)
-fig.legend(loc="lower center", bbox_to_anchor=(0.5, 0.06), ncol=2,
+fig.legend(loc="lower center", bbox_to_anchor=(0.5, 0.025), ncol=2,
            frameon=False, labelcolor=FG, fontsize=10)
 save(fig, "turboquant-kv-cache.svg", "Measured KV cache allocation through 30.3k tokens")
 
@@ -127,13 +128,15 @@ save(fig, "turboquant-1m-projection.svg", "Hypothetical KV storage at one millio
 
 
 # 3. The measured KV saving in relation to the rest of the model allocation.
-fig, ax = plt.subplots(figsize=(12.4, 4.2), dpi=160)
+fig, ax = plt.subplots(figsize=(12.4, 4.4), dpi=160)
 fig.patch.set_facecolor(BG)
-fig.subplots_adjust(left=0.07, right=0.97, bottom=0.24, top=0.70)
+fig.subplots_adjust(left=0.07, right=0.97, bottom=0.28, top=0.67)
 axis_style(ax)
 fig.text(0.07, 0.92, "What changes in the full model footprint?", color=FG,
          fontsize=19, fontweight="bold")
-fig.text(0.07, 0.81, "Measured Metal allocation = model weights + compute buffers + KV cache",
+fig.text(0.07, 0.82, "Numbers above bars = total Metal allocation (MiB); colored tops = KV cache",
+         color=MUTED, fontsize=10)
+fig.text(0.07, 0.75, "30.3k input / 32.8k capacity: TurboQuant total 3,829 = 1,801 model + 1,671 compute + 357 KV",
          color=MUTED, fontsize=10)
 base_model = 1801  # Backend-reported model allocation; unchanged across these runs.
 centers = (0, 1.35, 2.70)
@@ -147,7 +150,7 @@ for i, center in enumerate(centers):
         ax.bar(xpos, base_model, width, color=MODEL)
         ax.bar(xpos, compute, width, bottom=base_model, color=COMPUTE)
         ax.bar(xpos, kv, width, bottom=base_model + compute, color=color)
-        ax.annotate(f"{total:,.0f}", (xpos, total), xytext=(0, 4),
+        ax.annotate(f"Total {total:,.0f}", (xpos, total), xytext=(0, 4),
                     textcoords="offset points", ha="center", color=color,
                     fontweight="bold", fontsize=10)
     saving = baseline_total[i] - turbo_total[i]
@@ -155,7 +158,8 @@ for i, center in enumerate(centers):
             ha="center", color=TURBO, fontweight="bold", fontsize=10)
 ax.set_xlim(-0.60, 3.30)
 ax.set_ylim(0, 5100)
-ax.set_xticks(centers, LABELS)
+ax.set_xticks(centers, ("6.5k input\n8.2k capacity", "16.0k input\n18.4k capacity",
+                        "30.3k input\n32.8k capacity"))
 ax.set_ylabel("MiB", color=MUTED, fontsize=10)
 ax.yaxis.set_major_formatter(StrMethodFormatter("{x:,.0f}"))
 fig.legend(
@@ -165,7 +169,7 @@ fig.legend(
         plt.Rectangle((0, 0), 1, 1, color=FP16, label="FP16 KV"),
         plt.Rectangle((0, 0), 1, 1, color=TURBO, label="TurboQuant KV"),
     ],
-    loc="lower center", bbox_to_anchor=(0.5, 0.07), ncol=4,
+    loc="lower center", bbox_to_anchor=(0.5, 0.025), ncol=4,
     frameon=False, labelcolor=FG, fontsize=9,
 )
 save(fig, "turboquant-total-metal.svg", "Measured total Metal allocation through 30.3k tokens")
