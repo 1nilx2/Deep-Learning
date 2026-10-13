@@ -46,4 +46,4 @@ Eight related payment intents, 320 held-out requests. The [lab](labs/nlp/laya-vs
 
 [![Measured total Metal allocation at 6.5k, 16k, and 30.3k input tokens, broken into model weights, compute buffers, and KV cache.](assets/spotlight/turboquant-total-metal.svg)](labs/llm/turboquant-kv-cache/RESULTS.md)
 
-On an M1 Max with Qwen2.5-1.5B, a **30.3k-token input** used a **32.8k-token cache capacity**. TurboQuant's **357 MiB KV cache** is part of its **3,829 MiB total Metal allocation**. The 1M chart extends **KV storage only**; this model cannot run a 1M-token context. The [results](labs/llm/turboquant-kv-cache/RESULTS.md) include timing, retrieval outcomes, and limits.
+On an M1 Max with Qwen2.5-1.5B, TurboQuant's **357 MiB KV cache** at 30.3k input tokens is part of its **3,829 MiB total Metal allocation**. The 1M chart extends **KV storage only**; this model cannot run a 1M-token context. The [results](labs/llm/turboquant-kv-cache/RESULTS.md) include timing, retrieval outcomes, and limits.

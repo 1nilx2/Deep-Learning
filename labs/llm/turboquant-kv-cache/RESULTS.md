@@ -12,7 +12,7 @@ This exploratory lab compares FP16 K/V with **Q8_0 keys + TurboQuant 4-bit value
 | 16,014 | 18,432 | 504 MiB | 201 MiB | 60.2% |
 | 30,290 | 32,768 | 896 MiB | 357 MiB | 60.2% |
 
-The backend reserves KV memory for the configured **context capacity**, which exceeds the prompt length. This chart and the whole-model chart use the **same x-axis positions for the same capacities**, so the KV point can be compared directly with its stacked-bar segment. These are separate process runs, not live growth of one process's cache. The ~6.5k values are medians across four prompts; the 16k and 30.3k values are medians across two prompts each.
+The KV chart and the whole-model chart use the **same input-token x-axis**, so a KV point can be compared directly with its stacked-bar segment. The backend reserves KV memory for the configured context capacities listed in the table; these are separate process runs, not live growth of one process's cache. The ~6.5k values are medians across four prompts; the 16k and 30.3k values are medians across two prompts each.
 
 ## 2. What would one million allocated tokens require?
 
@@ -34,7 +34,7 @@ This is **arithmetic, not a 1M-token benchmark**. The [model configuration](http
 
 The backend reports **1,801 MiB of model allocation** across these runs. Compute buffers also remain; the chart derives their size as total Metal minus model minus KV. At 30.3k, KV occupies 20.5% of FP16 total Metal allocation and 9.3% of TurboQuant total Metal allocation. Peak process RSS comes separately from macOS `/usr/bin/time -l`. It is a different view of memory and must not be added to the backend total; neither is a system-wide physical-memory peak.
 
-In particular, the **30,290-token input** uses a **32,768-token KV capacity**. Its TurboQuant bar is **3,829 MiB total Metal allocation = 1,801 MiB model + 1,671 MiB compute + 357 MiB KV**. The 357 MiB is the same KV value shown in the first chart; 3,829 MiB is the sum of all three components.
+For the **30,290-token input**, the TurboQuant bar is **3,829 MiB total Metal allocation = 1,801 MiB model + 1,671 MiB compute + 357 MiB KV**. The 357 MiB is the same KV value shown in the first chart; 3,829 MiB is the sum of all three components.
 
 ## Retrieval and prefill time
 
