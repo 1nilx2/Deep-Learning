@@ -12,7 +12,7 @@ This exploratory lab compares FP16 K/V with **Q8_0 keys + TurboQuant 4-bit value
 | 16,014 | 18,432 | 504 MiB | 201 MiB | 60.2% |
 | 30,290 | 32,768 | 896 MiB | 357 MiB | 60.2% |
 
-The backend reserves KV memory for the configured **context capacity**, which exceeds the prompt length. These are separate process runs, not live growth of one process's cache. The ~6.5k values are medians across four prompts; the 16k and 30.3k values are medians across two prompts each.
+The backend reserves KV memory for the configured **context capacity**, which exceeds the prompt length. This chart and the whole-model chart use the **same x-axis positions for the same capacities**, so the KV point can be compared directly with its stacked-bar segment. These are separate process runs, not live growth of one process's cache. The ~6.5k values are medians across four prompts; the 16k and 30.3k values are medians across two prompts each.
 
 ## 2. What would one million allocated tokens require?
 

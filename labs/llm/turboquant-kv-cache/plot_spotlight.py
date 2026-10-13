@@ -65,8 +65,9 @@ def save(fig, name, description):
     plt.close(fig)
 
 
-x = (0, 1, 2)
 x_kv = tuple(capacity / 1000 for capacity in CAPACITIES)
+capacity_ticks = ("8.2k capacity\n6.5k input", "18.4k capacity\n16.0k input",
+                  "32.8k capacity\n30.3k input")
 baseline_kv = [median(size, "fp16", "kv_mib") for size in SIZES]
 turbo_kv = [median(size, "turbo4", "kv_mib") for size in SIZES]
 baseline_total = [median(size, "fp16", "metal_self_mib") for size in SIZES]
@@ -87,10 +88,9 @@ ax.plot(x_kv, baseline_kv, color=FP16, linewidth=3, marker="o", markersize=7,
 ax.plot(x_kv, turbo_kv, color=TURBO, linewidth=3, marker="o", markersize=7,
         label="Q8 K + TurboQuant 4-bit V")
 ax.fill_between(x_kv, turbo_kv, baseline_kv, color=TURBO, alpha=0.08)
-ax.set_xlim(6, 35)
+ax.set_xlim(5, 36)
 ax.set_ylim(0, 1050)
-ax.set_xticks(x_kv, ("8.2k capacity\n6.5k input", "18.4k capacity\n16.0k input",
-                     "32.8k capacity\n30.3k input"))
+ax.set_xticks(x_kv, capacity_ticks)
 ax.set_ylabel("MiB", color=MUTED, fontsize=10)
 for i, (base, turbo) in enumerate(zip(baseline_kv, turbo_kv)):
     ax.annotate(f"{base:.0f}", (x_kv[i], base), xytext=(0, 8), textcoords="offset points",
@@ -136,30 +136,32 @@ fig.text(0.07, 0.92, "What changes in the full model footprint?", color=FG,
          fontsize=19, fontweight="bold")
 fig.text(0.07, 0.82, "Numbers above bars = total Metal allocation (MiB); colored tops = KV cache",
          color=MUTED, fontsize=10)
-fig.text(0.07, 0.75, "30.3k input / 32.8k capacity: TurboQuant total 3,829 = 1,801 model + 1,671 compute + 357 KV",
+fig.text(0.07, 0.75, "At 32.8k capacity: TurboQuant KV 357 / total 3,829 MiB = 9.3%",
          color=MUTED, fontsize=10)
 base_model = 1801  # Backend-reported model allocation; unchanged across these runs.
-centers = (0, 1.35, 2.70)
-width = 0.33
-for i, center in enumerate(centers):
+width = 2.4
+offset = 1.35
+for i, center in enumerate(x_kv):
     for xpos, total, kv, color in (
-        (center - 0.20, baseline_total[i], baseline_kv[i], FP16),
-        (center + 0.20, turbo_total[i], turbo_kv[i], TURBO),
+        (center - offset, baseline_total[i], baseline_kv[i], FP16),
+        (center + offset, turbo_total[i], turbo_kv[i], TURBO),
     ):
         compute = total - base_model - kv
         ax.bar(xpos, base_model, width, color=MODEL)
         ax.bar(xpos, compute, width, bottom=base_model, color=COMPUTE)
         ax.bar(xpos, kv, width, bottom=base_model + compute, color=color)
+        if i == 2:
+            ax.text(xpos, total - kv / 2, f"KV {kv:.0f}", ha="center", va="center",
+                    color=BG, fontsize=8, fontweight="bold")
         ax.annotate(f"Total {total:,.0f}", (xpos, total), xytext=(0, 4),
                     textcoords="offset points", ha="center", color=color,
                     fontweight="bold", fontsize=10)
     saving = baseline_total[i] - turbo_total[i]
     ax.text(center, 4820, f"−{saving:.0f} MiB / {saving / baseline_total[i] * 100:.1f}%",
             ha="center", color=TURBO, fontweight="bold", fontsize=10)
-ax.set_xlim(-0.60, 3.30)
+ax.set_xlim(5, 36)
 ax.set_ylim(0, 5100)
-ax.set_xticks(centers, ("6.5k input\n8.2k capacity", "16.0k input\n18.4k capacity",
-                        "30.3k input\n32.8k capacity"))
+ax.set_xticks(x_kv, capacity_ticks)
 ax.set_ylabel("MiB", color=MUTED, fontsize=10)
 ax.yaxis.set_major_formatter(StrMethodFormatter("{x:,.0f}"))
 fig.legend(
