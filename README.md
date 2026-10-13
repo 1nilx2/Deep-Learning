@@ -34,6 +34,6 @@ Selected results from completed labs. Click a chart for the full protocol, metri
 
 ### Laya (Jev) vs Cross Encoder
 
-[![Laya (Jev) vs Cross Encoder on BANKING77: Laya 90.6% accuracy at 98.8 ms per request; ModernBERT-base CrossEncoder 89.7% at 76.3 ms; ModernBERT-large CrossEncoder 93.4% at 208.0 ms.](assets/spotlight/laya-banking77.svg)](labs/nlp/laya-vs-cross-encoder/RESULTS.md)
+[![Laya (Jev) vs Cross Encoder on BANKING77: Laya base 77.5% accuracy at 98.6 ms per request; Laya fine-tuned 90.6% at 98.8 ms; CrossEncoder fine-tuned with ModernBERT-large 93.4% at 208.0 ms.](assets/spotlight/laya-banking77.svg)](labs/nlp/laya-vs-cross-encoder/RESULTS.md)
 
 Eight related payment intents, 320 held-out requests. The [lab](labs/nlp/laya-vs-cross-encoder/README.md) includes the training code and reproduction steps; the linked results page explains the remaining differences between the systems.
