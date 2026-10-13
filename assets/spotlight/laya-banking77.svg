@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 468" role="img" aria-labelledby="title description">
-  <title id="title">BANKING77 experiment spotlight: Laya and two CrossEncoder sizes</title>
+  <title id="title">Laya (Jev) vs Cross Encoder on BANKING77</title>
   <desc id="description">On 320 held-out requests, fine-tuned Laya reached 90.6 percent accuracy at 98.8 milliseconds per request, ModernBERT-base CrossEncoder reached 89.7 percent at 76.3 milliseconds, and ModernBERT-large CrossEncoder reached 93.4 percent at 208.0 milliseconds. CPU, batch size four.</desc>
   <rect width="1000" height="468" rx="20" fill="#0d1117"/>
   <rect x="1" y="1" width="998" height="466" rx="19" fill="none" stroke="#30363d" stroke-width="2"/>
 
   <text x="40" y="43" fill="#7ee787" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" letter-spacing="2">EXPERIMENT SPOTLIGHT / NLP</text>
-  <text x="40" y="91" fill="#f0f6fc" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Banking intent classification</text>
+  <text x="40" y="91" fill="#f0f6fc" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Laya (Jev) vs Cross Encoder</text>
   <text x="40" y="122" fill="#aab5c2" font-family="Arial, Helvetica, sans-serif" font-size="17">8 related BANKING77 intents  ·  320 held-out requests  ·  CPU, batch size 4</text>
   <rect x="843" y="35" width="116" height="29" rx="14.5" fill="#173224" stroke="#2b6f43"/>
   <text x="901" y="54" text-anchor="middle" fill="#7ee787" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700">VIEW RESULTS ↗</text>
