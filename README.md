@@ -6,6 +6,12 @@ Study notes and hands-on notebooks across machine learning, NLP, computer vision
 
 Selected results from completed labs. Click a chart for the full protocol, metrics, and interpretation limits.
 
+### EmbeddingGemma 2: audio–text alignment
+
+[![EmbeddingGemma 2 Exp 1: 221 dialogue pairs from six children; text-to-audio Top-1 72.4%, audio-to-text 65.6%, and 100% text/audio modality classification on held-out children.](labs/multimodal/embeddinggemma2/assets/exp1/overview.svg)](labs/multimodal/embeddinggemma2/EXP1_FULL_RESULTS.md)
+
+Cross-modal retrieval works, while a strong modality signature persists. The [Exp 1 report](labs/multimodal/embeddinggemma2/EXP1_FULL_RESULTS.md) includes UMAP, similarity distributions, child-level analysis, and limits: 3 pairs reviewed, 218 assumed aligned, and no independent gold topic labels.
+
 ### Laya (Jev) vs Cross Encoder
 
 [![Laya (Jev) vs Cross Encoder on BANKING77: Laya base 77.5% accuracy at 98.6 ms per request; Laya fine-tuned 90.6% at 98.8 ms; CrossEncoder fine-tuned with ModernBERT-large 93.4% at 208.0 ms.](assets/spotlight/laya-banking77-model-comparison.svg)](labs/nlp/laya-vs-cross-encoder/RESULTS.md)

@@ -1,0 +1,148 @@
+{
+  "n_pairs": 221,
+  "n_children": 6,
+  "matched_cosine_mean": 0.8099403977394104,
+  "matched_cosine_std": 0.043195925652980804,
+  "mismatched_cosine_mean": 0.7195810079574585,
+  "matched_minus_mismatched": 0.0903593897819519,
+  "text_to_audio": {
+    "recall_at_1": 0.7239819004524887,
+    "recall_at_5": 0.8778280542986425,
+    "mrr": 0.791243058430671
+  },
+  "audio_to_text": {
+    "recall_at_1": 0.6561085972850679,
+    "recall_at_5": 0.8054298642533937,
+    "mrr": 0.7301978817142727
+  },
+  "modality_silhouette_cosine": 0.22599899768829346,
+  "child_silhouette_cosine": -0.01970612443983555,
+  "session_silhouette_cosine": -0.019344046711921692,
+  "per_child": {
+    "gleason-andy": {
+      "n_pairs": 59,
+      "matched_minus_same_session_negative": 0.08857033818455065,
+      "global_text_recall_at_1": 0.6271186440677966,
+      "global_audio_recall_at_1": 0.6101694915254238
+    },
+    "gleason-charlie": {
+      "n_pairs": 30,
+      "matched_minus_same_session_negative": 0.07314741412798563,
+      "global_text_recall_at_1": 0.6666666666666666,
+      "global_audio_recall_at_1": 0.5333333333333333
+    },
+    "gleason-frank": {
+      "n_pairs": 60,
+      "matched_minus_same_session_negative": 0.08444243470827738,
+      "global_text_recall_at_1": 0.7,
+      "global_audio_recall_at_1": 0.6166666666666667
+    },
+    "gleason-isadora": {
+      "n_pairs": 30,
+      "matched_minus_same_session_negative": 0.09126222928365071,
+      "global_text_recall_at_1": 0.7666666666666667,
+      "global_audio_recall_at_1": 0.7333333333333333
+    },
+    "gleason-katie": {
+      "n_pairs": 12,
+      "matched_minus_same_session_negative": 0.1123742014169693,
+      "global_text_recall_at_1": 1.0,
+      "global_audio_recall_at_1": 1.0
+    },
+    "gleason-olivia": {
+      "n_pairs": 30,
+      "matched_minus_same_session_negative": 0.09958945115407308,
+      "global_text_recall_at_1": 0.8666666666666667,
+      "global_audio_recall_at_1": 0.7333333333333333
+    }
+  },
+  "uncertainty": {
+    "matched_minus_same_session_negative": {
+      "child_macro_mean": 0.09156434481258446,
+      "child_bootstrap_95ci": [
+        0.08250204419012123,
+        0.10162080471630149
+      ]
+    },
+    "global_text_recall_at_1": {
+      "child_macro_mean": 0.7711864406779662,
+      "child_bootstrap_95ci": [
+        0.6746704331450095,
+        0.8833333333333334
+      ]
+    },
+    "global_audio_recall_at_1": {
+      "child_macro_mean": 0.704472693032015,
+      "child_bootstrap_95ci": [
+        0.6050847457627119,
+        0.8333333333333334
+      ]
+    },
+    "within_session_permutation": {
+      "iterations": 1000,
+      "observed_child_macro_delta": 0.09156434481258446,
+      "one_sided_p": 0.000999000999000999,
+      "null_mean": -3.655653259455599e-05,
+      "caveat": "Approximate exchangeability; temporal dependence not removed."
+    }
+  },
+  "modality_probe_leave_child_out": {
+    "balanced_accuracy_by_fold": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mean": 1.0
+  },
+  "hdbscan": {
+    "space": "original normalized 768d; Euclidean distance",
+    "min_cluster_size": 10,
+    "min_samples": 5,
+    "n_clusters": 2,
+    "noise_fraction": 0.4502262443438914,
+    "cluster_silhouette_cosine": 0.31797337532043457,
+    "modality_ari_including_noise": 0.5957936939107368,
+    "weak_topic_nmi_including_noise": 0.027795759347336975
+  },
+  "fixed_12_candidate_subsets": {
+    "iterations": 500,
+    "text_recall1_mean": 0.9058333333333343,
+    "audio_recall1_mean": 0.8580000000000005,
+    "note": "Descriptive repeated subsets; not independent experiments or confidence intervals."
+  },
+  "umap": {
+    "seeds": [
+      42,
+      7,
+      123
+    ],
+    "n_neighbors": 15,
+    "min_dist": 0.1,
+    "metric": "cosine"
+  },
+  "alignment_review": {
+    "verified": 3,
+    "assumed": 218
+  },
+  "n_sessions": 8,
+  "total_audio_seconds": 3727.9739682539694,
+  "model": "google/embeddinggemma-2",
+  "model_revision": "f9972ac22e696a105c482202646979e33e4b5a1e",
+  "device": "cpu",
+  "dtype": "torch.float32",
+  "versions": {
+    "torch": "2.15.0",
+    "transformers": "5.21.0",
+    "sentence-transformers": "6.2.0",
+    "numpy": "2.4.6"
+  },
+  "manifest_sha256": "99500f42274787c228c2d4ce383acce9e2b77cef6e0b5a2957c6f2b8cfb9c9fc",
+  "notes": [
+    "Expanded exploratory result: 3 reviewed pairs and 218 assumed aligned at user request.",
+    "One corpus; six children. Independent gold topic annotation not completed.",
+    "Only aggregate results and figures are published; no raw recordings, transcripts, embeddings or pair-level records."
+  ]
+}

@@ -1,0 +1,12 @@
+# Capture installed versions in provenance.json; pin a tested environment after real-model pilot.
+sentence-transformers>=6.1.0
+transformers>=5.21.0
+numpy>=2.0
+scikit-learn>=1.5
+soundfile>=0.13
+torchcodec
+torch>=2.5
+pillow>=11.0
+torchvision
+umap-learn>=0.5.12
+matplotlib>=3.10
