@@ -59,3 +59,7 @@ Source and license: https://github.com/oframe/ogl
 The SPD standalone study, notes, and metallic vector artwork were provided by the repository owner in their SPD outputs. The homepage adapts the artwork labels to the featured studies. Existing repository diagrams retain their original source notes. The page's shader rendering and interaction use the supplied FlexCarousel, rather than a CSS approximation.
 
 The GenRec and Artwork chapter illustrations adapt those same owner-supplied metallic vector studies. The three After the Tide posters are original schematic SVG illustrations for a fictional title, used only for teaching; they are not Netflix assets.
+
+## TiltedGridHero
+
+The homepage uses the TypeScript TiltedGridHero component supplied by the repository owner in the approved design reference. Its cylinder geometry, image slices, ResizeObserver, and wrap animation are retained; only the utility import path is adapted. Local research artwork replaces the reference demo images.

@@ -2,7 +2,7 @@
 
 [Live website](https://1nilx2.github.io/Deep-Learning/) · [SPD interactive study](https://1nilx2.github.io/Deep-Learning/studies/spd/)
 
-A repository homepage using the **original React + OGL FlexCarousel** supplied with the SPD study: liquid lens rendering, metallic illustrated cards, drag gestures, keyboard navigation, and click-to-focus zoom. No CSS imitation is used for the main gallery.
+A repository homepage using the supplied **TiltedGridHero**: a continuous ribbon of metallic cards curving across the hero, with motion controls and a featured-study selector. The three paper studies use the original React + OGL **FlexCarousel** for chapter navigation, lens rendering, and click-to-focus zoom.
 
 ## Build and preview
 
@@ -21,7 +21,7 @@ Open http://localhost:4173. The paper collection now includes three interactive 
 - `studies/genrec/` — A history of choices. A new way to rank.
 - `studies/artwork/` — One title. A different first impression.
 
-The output is a static website with bundled dependencies and local artwork. It needs no CDN or server framework. Browsers with WebGL 2 show the original lens effects and zoom; a scrollable card list remains available when WebGL 2 is unavailable. Vertical page scrolling is preserved; horizontal trackpad gestures move the carousel. Archive search and category filters work locally.
+The output is a static website with bundled dependencies and local artwork. It needs no CDN or server framework. The homepage ribbon uses CSS transforms, supports reduced motion, and includes a pause control. Its images are decorative; the study selector and archive provide navigation. The paper studies use WebGL 2 for the original lens effects and zoom. GenRec and Artwork also provide a card-list fallback when WebGL 2 is unavailable. Archive search and category filters work locally.
 
 ## Keep GitHub and the website in sync
 
@@ -29,9 +29,10 @@ The output is a static website with bundled dependencies and local artwork. It n
 - **SPD learning panels:** edit `paper/spd/index.html`, the canonical standalone study. The build copies it to `dist/studies/spd/index.html` and adds homepage/GitHub navigation.
 - **Homepage content:** edit `website/content.json` to add or change featured works and archive entries. A `page` field opens a local interactive study; `path` links to its repository notes.
 - **Repository figures:** edit the original paths listed in `content.json` under `assets`. Each build copies those sources, so figures are not maintained twice.
-- **Design and behavior:** `website/src/index.html`, `styles.css`, `app.jsx`, and `archive.js`.
+- **Design and behavior:** `website/src/index.html`, `styles.css`, `app.tsx`, `home.css`, and `archive.js`.
 - **GenRec and Artwork chapters:** edit `paper/genrec/study.json` or `paper/netflix-artwork-personalization/study.json`. Each has eight chapters and a named explorer. The shared study UI is in `website/src/study/`; metallic chapter artwork lives beside the papers. Builds regenerate the deployed pages and notes downloads from these sources.
-- **Original component:** `website/src/components/FlexCarousel.jsx` and `FlexCarousel.css`.
+- **Homepage component:** `website/src/components/ui/tilted-grid-hero.tsx`, supplied with the approved homepage design. Only its utility import is adapted. Its Tailwind utility classes are implemented in scoped CSS in `home.css`; esbuild compiles its TSX without a framework migration.
+- **Study component:** `website/src/components/FlexCarousel.jsx` and `FlexCarousel.css`.
 - **Generated files:** `website/dist/`; rebuild instead of editing them directly.
 
 A repository note is not automatically transformed into an interactive learning panel. The source Markdown, interactive HTML, and curated homepage summary serve different purposes. The build keeps the deployed study and downloads aligned with their canonical repository files.

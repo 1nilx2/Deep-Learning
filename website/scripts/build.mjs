@@ -15,7 +15,7 @@ await mkdir(path.join(dist, 'assets'), {recursive:true});
 await cp(path.join(site, 'src/index.html'), path.join(dist, 'index.html'));
 for (const [name, source] of Object.entries(content.assets)) await cp(fromRepo(source), path.join(dist, 'assets', name));
 for (const work of content.works) await cp(path.join(site, 'src/cards', `${work.card}.svg`), path.join(dist, 'assets', `${work.card}-card.svg`));
-await build({absWorkingDir:site, entryPoints:['src/app.jsx'], bundle:true, jsx:'automatic', minify:true, outfile:'dist/app.js', legalComments:'eof', define:{'process.env.NODE_ENV':'"production"'}});
+await build({absWorkingDir:site, entryPoints:['src/app.tsx'], bundle:true, jsx:'automatic', minify:true, outfile:'dist/app.js', legalComments:'eof', define:{'process.env.NODE_ENV':'"production"'}});
 const css = await readFile(path.join(site, 'dist/app.css'), 'utf8');
 await writeFile(path.join(dist, 'styles.css'), (await readFile(path.join(site,'src/styles.css'),'utf8'))+'\n'+css);
 await rm(path.join(dist, 'app.css'));

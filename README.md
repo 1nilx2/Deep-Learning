@@ -1,6 +1,6 @@
 # Machine Learning Notes & Labs
 
-> **[Open the interactive website ↗](https://1nilx2.github.io/Deep-Learning/)** — Papers, notes, and labs with the original FlexCarousel. Explore the **[SPD: A single pass study](https://1nilx2.github.io/Deep-Learning/studies/spd/)** or its [GitHub notes](paper/spd/README.md). Updates to source notes and website files rebuild the site through GitHub Pages.
+> **[Open the interactive website ↗](https://1nilx2.github.io/Deep-Learning/)** — Papers, notes, and labs with a curved artwork homepage and interactive paper studies. Explore the **[SPD: A single pass study](https://1nilx2.github.io/Deep-Learning/studies/spd/)** or its [GitHub notes](paper/spd/README.md). Updates to source notes and website files rebuild the site through GitHub Pages.
 
 Study notes and hands-on notebooks across machine learning, NLP, computer vision, and LLMs. I use this repository to connect model architecture, training objectives, evaluation, and implementation. The indexes below describe the scope of each item.
 
