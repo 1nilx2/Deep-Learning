@@ -39,7 +39,7 @@ On an M1 Max with Qwen2.5-1.5B, TurboQuant's **357 MiB KV cache** at 30.3k input
 
 | Section | Contents |
 | --- | --- |
-| [Paper](Paper/README.md) | Paper reading notes with editable diagrams |
+| [Paper](paper/README.md) | Paper reading notes with editable diagrams |
 | [Notes](notes/README.md) | Concept explanations, model analyses, and research reading notes |
 | [Labs](labs/README.md) | Learning notebooks and small code experiments, grouped by domain |
 | [References](references/README.md) | PDFs retained as background reading |
@@ -49,7 +49,7 @@ The notebooks document exploration and learning. Their titles do not imply bench
 ## Repository layout
 
 ```text
-Paper/       Paper reading notes and editable visualizations
+paper/       Paper reading notes and editable visualizations
 notes/       Written explanations and research notes
 labs/        Notebooks and code used while learning or experimenting
 assets/      Images used by the notes
