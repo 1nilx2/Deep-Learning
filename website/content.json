@@ -5,12 +5,12 @@
       "tag": "PAPER / GENERATIVE RERANKING",
       "card": "spd",
       "color": "#c0b4ff",
-      "image": "spd-preview.png",
-      "alt": "SPD 원본 FlexCarousel 학습 페이지 미리보기",
+      "image": "spd-study-cover.svg",
+      "alt": "SPD: an interactive eight-chapter study with the original FlexCarousel",
       "path": "paper/spd/README.md",
       "page": "studies/spd/",
-      "description": "사용자 맥락과 후보를 한 번 읽고, 아이템–순위 점수 행렬에서 전체 순위를 결정하는 SPD. H → M → S, 교사 순위 증류, Hungarian 배정을 8장의 카드와 인터랙티브 행렬로 따라갑니다.",
-      "caveat": "제공된 논문 공부 자료입니다. 행렬과 손실 슬라이더는 설명용 예시이며, 모델을 실제 학습시키는 실험은 아닙니다."
+      "description": "Read the user context and candidates once, then recover a complete ranking from item–position scores. Follow H → M → S, teacher-ranking distillation, and Hungarian assignment through eight cards and an interactive matrix.",
+      "caveat": "A paper reading study. The matrices and loss slider are illustrative examples, not experiments that train a model."
     },
     {
       "title": "GenRec: An LLM-Backed Recommendation Ranker",
@@ -20,8 +20,8 @@
       "image": "genrec-study-cover.svg",
       "alt": "GenRec: interactive eight-chapter study",
       "path": "paper/genrec/README.md",
-      "description": "Netflix의 추천 랭커를 두 단계 학습, 카탈로그 기반 랭킹, 보상 가중치와 prefill-only 추론으로 나누어 읽습니다. 모델이 무엇을 학습하고 어떻게 순위를 만드는지 연결한 논문 노트입니다.",
-      "caveat": "논문을 읽고 정리한 해설입니다. 도식과 학습 과정의 상세 설명은 원문 노트에서 확인할 수 있습니다.",
+      "description": "Read Netflix’s recommendation ranker through two training phases, catalog-aware scoring, reward weighting, and prefill-only inference. Connect what the model learns with how it produces a ranking.",
+      "caveat": "A paper reading study. The full notes include diagrams, training details, and interpretation limits.",
       "page": "studies/genrec/"
     },
     {
@@ -30,10 +30,10 @@
       "card": "embedding",
       "color": "#b7d7cc",
       "image": "embedding-overview.svg",
-      "alt": "221개 대화 쌍의 검색 정확도와 모달리티 편향을 보여주는 Exp 1 결과",
+      "alt": "Exp 1 retrieval accuracy and modality bias across 221 dialogue pairs",
       "path": "labs/multimodal/embeddinggemma2/EXP1_FULL_RESULTS.md",
-      "description": "6명 아동의 대화 221쌍으로 오디오와 텍스트 임베딩의 정렬을 살펴봅니다. Text → Audio Top-1은 72.4%, Audio → Text는 65.6%. 교차 모달 검색과 모달리티별 분리가 함께 나타납니다.",
-      "caveat": "Exp 1 기준. 3쌍만 직접 검토했고 218쌍은 정렬을 가정했습니다. 독립적인 정답 주제 라벨은 없습니다."
+      "description": "Explore audio–text embedding alignment using 221 dialogue pairs from six children. Text-to-audio Top-1 is 72.4%; audio-to-text is 65.6%. Cross-modal retrieval coexists with a strong modality signature.",
+      "caveat": "Exp 1 only. Three pairs were reviewed directly; alignment was assumed for the remaining 218. No independent gold topic labels are available."
     },
     {
       "title": "Laya vs CrossEncoder",
@@ -41,10 +41,10 @@
       "card": "laya",
       "color": "#d2bc9d",
       "image": "laya-results.svg",
-      "alt": "Laya와 CrossEncoder의 BANKING77 정확도 및 요청 시간 비교",
+      "alt": "BANKING77 accuracy and request latency for Laya and CrossEncoder",
       "path": "labs/nlp/laya-vs-cross-encoder/RESULTS.md",
-      "description": "BANKING77의 유사한 결제 의도 8개, 홀드아웃 요청 320개로 분류 모델을 비교합니다. 미세 조정한 Laya는 정확도 90.6%, 요청당 98.8 ms. 미세 조정한 CrossEncoder는 93.4%, 208.0 ms를 기록했습니다.",
-      "caveat": "이 실험 구성에서의 비교입니다. 시스템 간 남아 있는 차이와 재현 조건은 결과 문서에 함께 기록했습니다."
+      "description": "Compare classifiers on eight related BANKING77 payment intents and 320 held-out requests. Fine-tuned Laya reached 90.6% accuracy at 98.8 ms per request; fine-tuned CrossEncoder reached 93.4% at 208.0 ms.",
+      "caveat": "Results apply to this experimental setup. The report documents reproduction conditions and remaining differences between the systems."
     },
     {
       "title": "TurboQuant: Inside the KV Cache",
@@ -52,10 +52,10 @@
       "card": "turbo",
       "color": "#b7c7e6",
       "image": "turbo-results.svg",
-      "alt": "FP16 대비 Q8 K와 TurboQuant 4-bit V의 측정된 KV 메모리 할당량",
+      "alt": "Measured KV-cache allocation: FP16 versus Q8 K and TurboQuant 4-bit V",
       "path": "labs/llm/turboquant-kv-cache/RESULTS.md",
-      "description": "M1 Max와 Qwen2.5-1.5B에서 KV 캐시의 메모리, 지연 시간과 검색 결과를 비교합니다. 입력 30.3k 토큰에서 KV 캐시는 357 MiB, 전체 Metal 할당량은 3,829 MiB였습니다.",
-      "caveat": "1M 토큰 차트는 KV 저장 공간만의 추정치입니다. 이 모델로 1M 토큰 문맥을 실행한 결과가 아닙니다."
+      "description": "Compare KV-cache memory, latency, and retrieval on an M1 Max with Qwen2.5-1.5B. At 30.3k input tokens, the KV cache used 357 MiB within 3,829 MiB of total Metal allocation.",
+      "caveat": "The one-million-token chart projects KV storage only. It is not a run of this model at a one-million-token context length."
     },
     {
       "title": "Netflix Artwork Personalization",
@@ -65,8 +65,8 @@
       "image": "artwork-study-cover.svg",
       "alt": "Artwork Personalization: interactive eight-chapter study",
       "path": "paper/netflix-artwork-personalization/README.md",
-      "description": "어떤 아트워크를 보여줄지 결정하는 개인화 문제를 LLM post-training 관점에서 읽습니다. LoRA, SFT, DPO가 이어지는 과정을 문제 정의와 학습 목표에 연결합니다.",
-      "caveat": "논문 읽기 노트입니다. 편집 가능한 도식과 출처를 포함한 상세 해설로 이어집니다.",
+      "description": "Read artwork personalization through LLM post-training: connect LoRA, SFT, and DPO with the task definition, learning objectives, and choice of an image for a viewer.",
+      "caveat": "A paper reading study with editable diagrams, source references, and a detailed explanation of the learning process.",
       "page": "studies/artwork/"
     }
   ],
@@ -74,7 +74,7 @@
     [
       "paper",
       "SPD: Single Pass Decoding",
-      "A single pass. A complete ranking. 8장의 카드로 읽는 생성형 재랭킹.",
+      "A single pass. A complete ranking. Generative reranking in eight cards.",
       "Reranking · Sinkhorn · Assignment",
       "paper/spd/README.md",
       "studies/spd/"
@@ -82,7 +82,7 @@
     [
       "paper",
       "GenRec",
-      "두 단계 학습에서 prefill-only 추론까지.",
+      "From two-phase training to prefill-only inference.",
       "Recommendation · LLM",
       "paper/genrec/README.md",
       "studies/genrec/"
@@ -90,7 +90,7 @@
     [
       "paper",
       "Netflix Artwork Personalization",
-      "LoRA, SFT, DPO로 읽는 아트워크 개인화.",
+      "Artwork personalization through LoRA, SFT, and DPO.",
       "Personalization · Post-training",
       "paper/netflix-artwork-personalization/README.md",
       "studies/artwork/"
@@ -98,77 +98,77 @@
     [
       "lab",
       "EmbeddingGemma 2",
-      "오디오–텍스트 정렬, 검색 성능과 모달리티 편향.",
+      "Audio–text alignment, retrieval performance, and modality bias.",
       "Multimodal · Audio",
       "labs/multimodal/embeddinggemma2/README.md"
     ],
     [
       "lab",
       "Laya vs CrossEncoder",
-      "8개 BANKING77 의도를 분류하는 재현 가능한 실험.",
+      "A reproducible classification experiment on eight BANKING77 intents.",
       "NLP · Classification",
       "labs/nlp/laya-vs-cross-encoder/README.md"
     ],
     [
       "lab",
       "TurboQuant KV Cache",
-      "Apple Silicon에서 측정한 메모리와 지연 시간.",
+      "Memory and latency measured on Apple Silicon.",
       "LLM · Quantization",
       "labs/llm/turboquant-kv-cache/README.md"
     ],
     [
       "note",
       "Laya: Typed Decision Model",
-      "요청과 질문에서 선택 확률, 모델 구조와 손실 함수로.",
+      "From requests and typed questions to option probabilities, architecture, and loss.",
       "LLM · Architecture",
       "notes/llm/laya.md"
     ],
     [
       "note",
       "Training & Optimization",
-      "경사, 역전파, 교차 엔트로피와 학습 효율.",
+      "Gradients, backpropagation, cross-entropy, and training efficiency.",
       "Foundations · Training",
       "notes/foundations/training-and-optimization.md"
     ],
     [
       "note",
       "Normalization",
-      "학습을 이해하기 위한 정규화 노트.",
+      "Normalization notes for understanding model training.",
       "Foundations",
       "notes/foundations/normalization.md"
     ],
     [
       "note",
       "Segmentation Metrics",
-      "Pixel accuracy, Dice, IoU, mAP를 읽는 법.",
+      "Understanding pixel accuracy, Dice, IoU, and mAP.",
       "Computer vision · Evaluation",
       "notes/cv/segmentation-metrics.md"
     ],
     [
       "note",
       "Training Techniques",
-      "Precision, LoRA, 양자화와 메모리 사용.",
+      "Precision, LoRA, quantization, and memory use.",
       "LLM · Fine-tuning",
       "notes/llm/training-notes.md"
     ],
     [
       "lab",
       "Llama 3.1 · LoRA & Unsloth",
-      "Colab에서 살펴보는 어댑터 학습.",
+      "Adapter training with LoRA and Unsloth in Colab.",
       "LLM · Notebook",
       "labs/llm/Llama_3_1_8B_LoRA_Unsloth_Colab.ipynb"
     ],
     [
       "lab",
       "Neural Style Transfer",
-      "스타일 변환 노트북과 AdaIN 구현.",
+      "A neural style transfer notebook and AdaIN implementation.",
       "Computer vision · Generation",
       "labs/cv/style-transfer/Neural_Style_Transfer.ipynb"
     ],
     [
       "note",
       "CRAFT OCR",
-      "문자 영역 검출을 이해하는 컴퓨터 비전 노트.",
+      "Computer vision notes on text-region detection.",
       "Computer vision · OCR",
       "notes/cv/ocr-craft.md"
     ]
@@ -179,8 +179,8 @@
     "embedding-overview.svg": "labs/multimodal/embeddinggemma2/assets/exp1/overview.svg",
     "laya-results.svg": "assets/spotlight/laya-banking77-model-comparison.svg",
     "turbo-results.svg": "assets/spotlight/turboquant-kv-cache.svg",
-    "spd-preview.png": "paper/spd/assets/preview.png",
     "genrec-study-cover.svg": "paper/genrec/assets/study-cover.svg",
-    "artwork-study-cover.svg": "paper/netflix-artwork-personalization/assets/study-cover.svg"
+    "artwork-study-cover.svg": "paper/netflix-artwork-personalization/assets/study-cover.svg",
+    "spd-study-cover.svg": "paper/spd/assets/study-cover.svg"
   }
 }

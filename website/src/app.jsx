@@ -18,7 +18,7 @@ function selectWork(index) {
   $('detail-description').textContent = work.description;
   $('detail-caveat').textContent = work.caveat;
   $('detail-link').href = work.page || source(work.path);
-  $('detail-link').firstChild.textContent = work.page ? '공부 페이지 열기 ' : '노트 읽기 ';
+  $('detail-link').firstChild.textContent = work.page ? 'Open the study ' : 'Read the notes ';
   $('source-link').href = source(work.path);
   $('figure-link').href = work.page || source(work.path);
   $('detail-image').src = `assets/${work.image}`;
@@ -28,7 +28,7 @@ function selectWork(index) {
 }
 
 function Fallback({goTo}) {
-  return <><div className="fallback-gallery">{items.map((item, i) => <button key={item.src} onClick={() => goTo(i)} aria-label={item.title}><img src={item.src} alt={item.title}/></button>)}</div><p className="fallback-message">카드를 선택해 내용을 읽을 수 있습니다.</p></>;
+  return <><div className="fallback-gallery">{items.map((item, i) => <button key={item.src} onClick={() => goTo(i)} aria-label={item.title}><img src={item.src} alt={item.title}/></button>)}</div><p className="fallback-message">Select a card to read the study.</p></>;
 }
 
 function App() {
