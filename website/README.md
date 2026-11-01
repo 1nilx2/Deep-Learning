@@ -28,6 +28,7 @@ The output is a static website with bundled dependencies and local artwork. It n
 - **SPD notes:** edit `paper/spd/README.md`. The build regenerates both the downloadable `.md` file and the study's embedded notes download from this file.
 - **SPD learning panels:** edit `paper/spd/index.html`, the canonical standalone study. The build copies it to `dist/studies/spd/index.html` and adds homepage/GitHub navigation.
 - **Homepage content:** edit `website/content.json` to add or change featured works and archive entries. A `page` field opens a local interactive study; `path` links to its repository notes.
+- **Homepage thumbnails:** `website/src/thumbnails/` contains topic-specific research plates. `heroImage` and `heroAlt` in `content.json` select them. See the thumbnail README for the provenance of schematic examples and measured values. `thumbnail-review.html` presents all six plates.
 - **Repository figures:** edit the original paths listed in `content.json` under `assets`. Each build copies those sources, so figures are not maintained twice.
 - **Design and behavior:** `website/src/index.html`, `styles.css`, `app.tsx`, `home.css`, and `archive.js`.
 - **GenRec and Artwork chapters:** edit `paper/genrec/study.json` or `paper/netflix-artwork-personalization/study.json`. Each has eight chapters and a named explorer. The shared study UI is in `website/src/study/`; metallic chapter artwork lives beside the papers. Builds regenerate the deployed pages and notes downloads from these sources.

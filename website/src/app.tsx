@@ -6,7 +6,7 @@ import './archive.js';
 import './home.css';
 
 const source = (path: string) => `https://github.com/1nilx2/Deep-Learning/blob/main/${path}`;
-const images = content.works.map(work => ({src:`assets/${work.card}-card.svg`,alt:work.title}));
+const images = content.works.map(work => ({src:`assets/${work.heroImage}`,alt:work.heroAlt}));
 const $ = (id: string) => document.getElementById(id)!;
 
 function App() {

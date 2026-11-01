@@ -10,7 +10,9 @@
       "path": "paper/spd/README.md",
       "page": "studies/spd/",
       "description": "Read the user context and candidates once, then recover a complete ranking from item–position scores. Follow H → M → S, teacher-ranking distillation, and Hungarian assignment through eight cards and an interactive matrix.",
-      "caveat": "A paper reading study. The matrices and loss slider are illustrative examples, not experiments that train a model."
+      "caveat": "A paper reading study. The matrices and loss slider are illustrative examples, not experiments that train a model.",
+      "heroImage": "thumbnails/spd.svg",
+      "heroAlt": "SPD: the study’s three-item maximum-score assignment matrix"
     },
     {
       "title": "GenRec: An LLM-Backed Recommendation Ranker",
@@ -22,7 +24,9 @@
       "path": "paper/genrec/README.md",
       "description": "Read Netflix’s recommendation ranker through two training phases, catalog-aware scoring, reward weighting, and prefill-only inference. Connect what the model learns with how it produces a ranking.",
       "caveat": "A paper reading study. The full notes include diagrams, training details, and interpretation limits.",
-      "page": "studies/genrec/"
+      "page": "studies/genrec/",
+      "heroImage": "thumbnails/genrec.svg",
+      "heroAlt": "GenRec: contextual representation and catalog-aware scoring schematic"
     },
     {
       "title": "EmbeddingGemma 2: Audio–Text Alignment",
@@ -33,7 +37,9 @@
       "alt": "Exp 1 retrieval accuracy and modality bias across 221 dialogue pairs",
       "path": "labs/multimodal/embeddinggemma2/EXP1_FULL_RESULTS.md",
       "description": "Explore audio–text embedding alignment using 221 dialogue pairs from six children. Text-to-audio Top-1 is 72.4%; audio-to-text is 65.6%. Cross-modal retrieval coexists with a strong modality signature.",
-      "caveat": "Exp 1 only. Three pairs were reviewed directly; alignment was assumed for the remaining 218. No independent gold topic labels are available."
+      "caveat": "Exp 1 only. Three pairs were reviewed directly; alignment was assumed for the remaining 218. No independent gold topic labels are available.",
+      "heroImage": "thumbnails/embedding.svg",
+      "heroAlt": "EmbeddingGemma 2: audio–text retrieval with Exp 1 Top-1 results"
     },
     {
       "title": "Laya vs CrossEncoder",
@@ -44,7 +50,9 @@
       "alt": "BANKING77 accuracy and request latency for Laya and CrossEncoder",
       "path": "labs/nlp/laya-vs-cross-encoder/RESULTS.md",
       "description": "Compare classifiers on eight related BANKING77 payment intents and 320 held-out requests. Fine-tuned Laya reached 90.6% accuracy at 98.8 ms per request; fine-tuned CrossEncoder reached 93.4% at 208.0 ms.",
-      "caveat": "Results apply to this experimental setup. The report documents reproduction conditions and remaining differences between the systems."
+      "caveat": "Results apply to this experimental setup. The report documents reproduction conditions and remaining differences between the systems.",
+      "heroImage": "thumbnails/laya.svg",
+      "heroAlt": "Laya versus CrossEncoder: measured accuracy and request latency"
     },
     {
       "title": "TurboQuant: Inside the KV Cache",
@@ -55,7 +63,9 @@
       "alt": "Measured KV-cache allocation: FP16 versus Q8 K and TurboQuant 4-bit V",
       "path": "labs/llm/turboquant-kv-cache/RESULTS.md",
       "description": "Compare KV-cache memory, latency, and retrieval on an M1 Max with Qwen2.5-1.5B. At 30.3k input tokens, the KV cache used 357 MiB within 3,829 MiB of total Metal allocation.",
-      "caveat": "The one-million-token chart projects KV storage only. It is not a run of this model at a one-million-token context length."
+      "caveat": "The one-million-token chart projects KV storage only. It is not a run of this model at a one-million-token context length.",
+      "heroImage": "thumbnails/turbo.svg",
+      "heroAlt": "TurboQuant: measured KV allocation of 896 versus 357 MiB"
     },
     {
       "title": "Netflix Artwork Personalization",
@@ -67,7 +77,9 @@
       "path": "paper/netflix-artwork-personalization/README.md",
       "description": "Read artwork personalization through LLM post-training: connect LoRA, SFT, and DPO with the task definition, learning objectives, and choice of an image for a viewer.",
       "caveat": "A paper reading study with editable diagrams, source references, and a detailed explanation of the learning process.",
-      "page": "studies/artwork/"
+      "page": "studies/artwork/",
+      "heroImage": "thumbnails/artwork.svg",
+      "heroAlt": "Artwork personalization: three fictional posters from the study"
     }
   ],
   "entries": [
@@ -181,6 +193,12 @@
     "turbo-results.svg": "assets/spotlight/turboquant-kv-cache.svg",
     "genrec-study-cover.svg": "paper/genrec/assets/study-cover.svg",
     "artwork-study-cover.svg": "paper/netflix-artwork-personalization/assets/study-cover.svg",
-    "spd-study-cover.svg": "paper/spd/assets/study-cover.svg"
+    "spd-study-cover.svg": "paper/spd/assets/study-cover.svg",
+    "thumbnails/spd.svg": "website/src/thumbnails/spd.svg",
+    "thumbnails/genrec.svg": "website/src/thumbnails/genrec.svg",
+    "thumbnails/embedding.svg": "website/src/thumbnails/embedding.svg",
+    "thumbnails/laya.svg": "website/src/thumbnails/laya.svg",
+    "thumbnails/turbo.svg": "website/src/thumbnails/turbo.svg",
+    "thumbnails/artwork.svg": "website/src/thumbnails/artwork.svg"
   }
 }

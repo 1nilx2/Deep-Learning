@@ -7,6 +7,7 @@ const root=path.dirname(site.replace(/\/$/,''));
 const content=JSON.parse(await readFile(path.join(site,'content.json'),'utf8'));
 for (const work of content.works) {
   await access(path.join(root,work.path));
+  if(work.heroImage) await access(path.join(site,'dist/assets',work.heroImage));
   await access(path.join(site,'dist/assets',work.image));
   await access(path.join(site,'dist/assets',`${work.card}-card.svg`));
   if(work.page) await access(path.join(site,'dist',work.page,'index.html'));

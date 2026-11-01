@@ -13,7 +13,12 @@ for (const work of content.works) await readFile(fromRepo(work.path));
 await rm(dist, {recursive:true, force:true});
 await mkdir(path.join(dist, 'assets'), {recursive:true});
 await cp(path.join(site, 'src/index.html'), path.join(dist, 'index.html'));
-for (const [name, source] of Object.entries(content.assets)) await cp(fromRepo(source), path.join(dist, 'assets', name));
+await cp(path.join(site, 'src/thumbnails/review.html'), path.join(dist, 'thumbnail-review.html'));
+for (const [name, source] of Object.entries(content.assets)) {
+  const destination = path.join(dist, 'assets', name);
+  await mkdir(path.dirname(destination), {recursive:true});
+  await cp(fromRepo(source), destination);
+}
 for (const work of content.works) await cp(path.join(site, 'src/cards', `${work.card}.svg`), path.join(dist, 'assets', `${work.card}-card.svg`));
 await build({absWorkingDir:site, entryPoints:['src/app.tsx'], bundle:true, jsx:'automatic', minify:true, outfile:'dist/app.js', legalComments:'eof', define:{'process.env.NODE_ENV':'"production"'}});
 const css = await readFile(path.join(site, 'dist/app.css'), 'utf8');
