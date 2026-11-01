@@ -1,0 +1,8 @@
+import content from '../content.json';
+const {entries}=content;
+const $ = id => document.getElementById(id);
+const source=path=>'https://github.com/1nilx2/Deep-Learning/blob/main/'+path;
+let filter='all';
+function renderEntries(){const query=$('search').value.trim().toLocaleLowerCase();const matched=entries.filter(entry=>(filter==='all'||entry[0]===filter)&&entry.slice(1,4).join(' ').toLocaleLowerCase().includes(query));$('entries').replaceChildren();for(const [type,title,description,tags,path,page] of matched){const a=document.createElement('a');a.className='entry';a.href=page||source(path);const label=document.createElement('span');label.className='entry-type';label.textContent={paper:'PAPER',note:'NOTE',lab:'LAB'}[type];const body=document.createElement('div');const h=document.createElement('h3');h.textContent=title;const p=document.createElement('p');p.textContent=description;body.append(h,p);const t=document.createElement('span');t.className='entry-tags';t.textContent=tags;const arrow=document.createElement('span');arrow.className='entry-arrow';arrow.textContent='↗';arrow.setAttribute('aria-hidden','true');a.append(label,body,t,arrow);$('entries').append(a);}$('empty').hidden=matched.length>0;$('archive-count').textContent=`${matched.length} / ${entries.length} entries`;}
+document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{filter=button.dataset.filter;document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('selected',b===button);b.setAttribute('aria-pressed',String(b===button));});renderEntries();}));
+$('search').addEventListener('input',renderEntries);$('total').textContent=entries.length;renderEntries();

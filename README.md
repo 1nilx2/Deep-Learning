@@ -1,5 +1,7 @@
 # Machine Learning Notes & Labs
 
+> **Interactive website** — A homepage using the original React Bits FlexCarousel is available in [`website/`](website/README.md), including the [SPD single-pass reranking study](paper/spd/README.md). GitHub Pages rebuilds the site when its source notes or website files change.
+
 Study notes and hands-on notebooks across machine learning, NLP, computer vision, and LLMs. I use this repository to connect model architecture, training objectives, evaluation, and implementation. The indexes below describe the scope of each item.
 
 ## Experiment spotlight

@@ -1,0 +1,55 @@
+name: Publish fieldnotes website
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'website/**'
+      - 'paper/**'
+      - 'notes/**'
+      - 'labs/**'
+      - 'assets/**'
+      - '.github/workflows/website-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fieldnotes-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+      - name: Install website dependencies
+        run: npm ci --prefix website
+      - name: Build from repository sources
+        run: npm run build --prefix website
+      - name: Verify synchronized study and content links
+        run: npm run check --prefix website
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: website/dist
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4

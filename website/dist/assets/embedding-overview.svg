@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" role="img" aria-labelledby="title desc">
+  <title id="title">EmbeddingGemma 2: audio–text alignment with persistent modality bias</title>
+  <desc id="desc">Expanded exploratory Exp 1 on 221 dialogue pairs from six children and eight sessions. Text to audio Top-1 retrieval is 72.4 percent; audio to text is 65.6 percent among 221 candidates. A leave-one-child-out text versus audio classifier reaches 100 percent balanced accuracy, showing persistent modality information. Three pairs were listened to by the user; 218 were assumed aligned at the user's request.</desc>
+  <rect width="1000" height="480" rx="20" fill="#0d1117"/>
+  <rect x="1" y="1" width="998" height="478" rx="19" fill="none" stroke="#30363d" stroke-width="2"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="40" y="42" fill="#7ee787" font-size="13" font-weight="700" letter-spacing="2">EXPERIMENT SPOTLIGHT / MULTIMODAL</text>
+    <text x="40" y="88" fill="#f0f6fc" font-size="32" font-weight="700">EmbeddingGemma 2: audio–text alignment</text>
+    <text x="40" y="119" fill="#aab5c2" font-size="17">221 paired dialogues · 6 children · 8 sessions · 62.1 minutes</text>
+    <line x1="40" y1="144" x2="960" y2="144" stroke="#30363d"/>
+    <rect x="40" y="166" width="440" height="226" rx="15" fill="#161b22" stroke="#30363d"/>
+    <rect x="500" y="166" width="460" height="226" rx="15" fill="#161b22" stroke="#30363d"/>
+    <text x="62" y="200" fill="#f0f6fc" font-size="20" font-weight="700">Cross-modal retrieval</text>
+    <text x="62" y="223" fill="#8b949e" font-size="13">Top-1 accuracy · 221 candidates</text>
+    <text x="62" y="257" fill="#dbe7f2" font-size="15">Text → audio</text>
+    <text x="452" y="257" fill="#79c0ff" font-size="20" font-weight="700" text-anchor="end">72.4%</text>
+    <rect x="62" y="270" width="390" height="13" rx="6" fill="#30363d"/>
+    <rect x="62" y="270" width="282.36" height="13" rx="6" fill="#79c0ff"/>
+    <text x="62" y="318" fill="#dbe7f2" font-size="15">Audio → text</text>
+    <text x="452" y="318" fill="#d2a8ff" font-size="20" font-weight="700" text-anchor="end">65.6%</text>
+    <rect x="62" y="331" width="390" height="13" rx="6" fill="#30363d"/>
+    <rect x="62" y="331" width="255.84" height="13" rx="6" fill="#d2a8ff"/>
+    <text x="62" y="372" fill="#8b949e" font-size="13">Matched cosine 0.810 · mismatched 0.720</text>
+    <text x="522" y="200" fill="#f0f6fc" font-size="20" font-weight="700">Modality remains detectable</text>
+    <text x="522" y="223" fill="#8b949e" font-size="13">Text/audio classifier · leave one child out</text>
+    <text x="522" y="277" fill="#ffa657" font-size="42" font-weight="700">100%</text>
+    <text x="522" y="304" fill="#dbe7f2" font-size="15">balanced accuracy · all 6 folds</text>
+    <text x="522" y="340" fill="#dbe7f2" font-size="15">Modality silhouette: 0.226</text>
+    <text x="522" y="372" fill="#8b949e" font-size="13">Content retrieval ≠ a modality-invariant space</text>
+    <text x="40" y="425" fill="#f0f6fc" font-size="17" font-weight="600">Content aligns, while a strong modality signature persists.</text>
+    <text x="40" y="453" fill="#8b949e" font-size="13">Exploratory · 3 pairs reviewed, 218 assumed aligned · single corpus · no gold topic labels</text>
+  </g>
+</svg>
