@@ -1,5 +1,7 @@
 # Deep Learning — Fieldnotes
 
+[Live website](https://1nilx2.github.io/Deep-Learning/) · [SPD interactive study](https://1nilx2.github.io/Deep-Learning/studies/spd/)
+
 A repository homepage using the **original React + OGL FlexCarousel** supplied with the SPD study: liquid lens rendering, metallic illustrated cards, drag gestures, keyboard navigation, and click-to-focus zoom. No CSS imitation is used for the main gallery.
 
 ## Build and preview
@@ -35,7 +37,7 @@ The homepage features 6 studies and indexes 14 selected entries. Section links l
 
 `.github/workflows/website-pages.yml` runs on pushes to `main` affecting `website/`, `paper/`, `notes/`, `labs/`, `assets/`, or the workflow itself. It installs locked dependencies, rebuilds from repository sources, verifies study synchronization and links, and deploys `website/dist`. Manual dispatch is also supported.
 
-In repository **Settings → Pages → Build and deployment**, select **GitHub Actions** once. After that, pushing source updates publishes the updated website through the workflow. The existing GitHub repository interface remains a README; GitHub Pages serves the separate interactive site.
+GitHub Pages is configured to use **GitHub Actions**. Pushing source updates publishes the updated website through the workflow. The existing GitHub repository interface remains a README; GitHub Pages serves the separate interactive site.
 
 Relative URLs support the `/Deep-Learning/` project path.
 

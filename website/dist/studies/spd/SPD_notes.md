@@ -1,6 +1,6 @@
 # SPD: Single Pass Decoding for Generative Reranking
 
-[Interactive study source](index.html) · [Website preview and publishing](../../website/README.md) · [Original Korean study notes](source/original-summary.ko.md)
+[Open the interactive study ↗](https://1nilx2.github.io/Deep-Learning/studies/spd/) · [Interactive HTML source](index.html) · [Website build and publishing](../../website/README.md) · [Original Korean study notes](source/original-summary.ko.md)
 
 **Authors:** Emil Laftchiev et al., Meta Platforms  
 **Version:** arXiv:2609.01807v2, September 4, 2026; under review  

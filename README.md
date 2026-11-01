@@ -1,6 +1,6 @@
 # Machine Learning Notes & Labs
 
-> **Interactive website** — A homepage using the original React Bits FlexCarousel is available in [`website/`](website/README.md), including the [SPD single-pass reranking study](paper/spd/README.md). GitHub Pages rebuilds the site when its source notes or website files change.
+> **[Open the interactive website ↗](https://1nilx2.github.io/Deep-Learning/)** — Papers, notes, and labs with the original FlexCarousel. Explore the **[SPD: A single pass study](https://1nilx2.github.io/Deep-Learning/studies/spd/)** or its [GitHub notes](paper/spd/README.md). Updates to source notes and website files rebuild the site through GitHub Pages.
 
 Study notes and hands-on notebooks across machine learning, NLP, computer vision, and LLMs. I use this repository to connect model architecture, training objectives, evaluation, and implementation. The indexes below describe the scope of each item.
 
