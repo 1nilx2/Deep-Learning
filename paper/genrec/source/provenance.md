@@ -35,3 +35,7 @@ The author also supplied a Korean plain-language summary covering the paper's pr
 | 6 | Reward-weighted training, prefill-only serving, production comparison, online results |
 | 7-8 | Scaling, phase ablations, context compression, discussion, and conclusions |
 | 9 | Acknowledgments and references |
+
+## Interactive study
+
+The eight-chapter study in `study.json` reorganizes these reviewed notes for the Fieldnotes website. `website/src/study/` provides the shared React learning interface and numerical explorers. Chapter illustrations adapt the repository owner's supplied SPD metallic vector artwork. The context history, item logits, example weights, and serving trace are explicitly illustrative; they are not new Netflix measurements. Reported comparisons retain the reference bases documented above. The website build copies the current README for its notes download.

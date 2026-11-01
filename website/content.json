@@ -16,12 +16,13 @@
       "title": "GenRec: An LLM-Backed Recommendation Ranker",
       "tag": "PAPER / GENERATIVE RECOMMENDATION",
       "card": "genrec",
-      "color": "#c0b4ff",
-      "image": "genrec-overview.svg",
-      "alt": "GenRec의 학습과 추론 파이프라인",
+      "color": "#d5b998",
+      "image": "genrec-study-cover.svg",
+      "alt": "GenRec: interactive eight-chapter study",
       "path": "paper/genrec/README.md",
       "description": "Netflix의 추천 랭커를 두 단계 학습, 카탈로그 기반 랭킹, 보상 가중치와 prefill-only 추론으로 나누어 읽습니다. 모델이 무엇을 학습하고 어떻게 순위를 만드는지 연결한 논문 노트입니다.",
-      "caveat": "논문을 읽고 정리한 해설입니다. 도식과 학습 과정의 상세 설명은 원문 노트에서 확인할 수 있습니다."
+      "caveat": "논문을 읽고 정리한 해설입니다. 도식과 학습 과정의 상세 설명은 원문 노트에서 확인할 수 있습니다.",
+      "page": "studies/genrec/"
     },
     {
       "title": "EmbeddingGemma 2: Audio–Text Alignment",
@@ -60,12 +61,13 @@
       "title": "Netflix Artwork Personalization",
       "tag": "PAPER / LLM POST-TRAINING",
       "card": "artwork",
-      "color": "#d9b9d7",
-      "image": "artwork-pipeline.svg",
-      "alt": "Netflix 아트워크 개인화를 위한 LLM post-training 파이프라인",
+      "color": "#d6b5d0",
+      "image": "artwork-study-cover.svg",
+      "alt": "Artwork Personalization: interactive eight-chapter study",
       "path": "paper/netflix-artwork-personalization/README.md",
       "description": "어떤 아트워크를 보여줄지 결정하는 개인화 문제를 LLM post-training 관점에서 읽습니다. LoRA, SFT, DPO가 이어지는 과정을 문제 정의와 학습 목표에 연결합니다.",
-      "caveat": "논문 읽기 노트입니다. 편집 가능한 도식과 출처를 포함한 상세 해설로 이어집니다."
+      "caveat": "논문 읽기 노트입니다. 편집 가능한 도식과 출처를 포함한 상세 해설로 이어집니다.",
+      "page": "studies/artwork/"
     }
   ],
   "entries": [
@@ -82,14 +84,16 @@
       "GenRec",
       "두 단계 학습에서 prefill-only 추론까지.",
       "Recommendation · LLM",
-      "paper/genrec/README.md"
+      "paper/genrec/README.md",
+      "studies/genrec/"
     ],
     [
       "paper",
       "Netflix Artwork Personalization",
       "LoRA, SFT, DPO로 읽는 아트워크 개인화.",
       "Personalization · Post-training",
-      "paper/netflix-artwork-personalization/README.md"
+      "paper/netflix-artwork-personalization/README.md",
+      "studies/artwork/"
     ],
     [
       "lab",
@@ -175,6 +179,8 @@
     "embedding-overview.svg": "labs/multimodal/embeddinggemma2/assets/exp1/overview.svg",
     "laya-results.svg": "assets/spotlight/laya-banking77-model-comparison.svg",
     "turbo-results.svg": "assets/spotlight/turboquant-kv-cache.svg",
-    "spd-preview.png": "paper/spd/assets/preview.png"
+    "spd-preview.png": "paper/spd/assets/preview.png",
+    "genrec-study-cover.svg": "paper/genrec/assets/study-cover.svg",
+    "artwork-study-cover.svg": "paper/netflix-artwork-personalization/assets/study-cover.svg"
   }
 }

@@ -1,5 +1,7 @@
 # Netflix Artwork Personalization via LLM Post-training
 
+**[Open the interactive study ↗](https://1nilx2.github.io/Deep-Learning/studies/artwork/)** — Eight chapters with the original FlexCarousel and interactive mechanism explorers. [Study content](study.json).
+
 > Different viewers are drawn to different aspects of the same title. Connect viewing history with the visual cues in candidate artworks to choose the image to show each viewer.
 
 - **Paper:** [arXiv:2601.02764v1](https://arxiv.org/abs/2601.02764v1) · [Full text](https://arxiv.org/html/2601.02764v1)

@@ -1,5 +1,7 @@
 # GenRec: An LLM-Backed Recommendation Ranker at Netflix
 
+**[Open the interactive study ↗](https://1nilx2.github.io/Deep-Learning/studies/genrec/)** — Eight chapters with the original FlexCarousel and interactive mechanism explorers. [Study content](study.json).
+
 > Read user history as text, turn it into a contextual representation, and score catalog items with a learned ranking head.
 
 - **Version reviewed:** arXiv:2608.10257v2, August 21, 2026.

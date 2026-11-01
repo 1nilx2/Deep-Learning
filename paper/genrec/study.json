@@ -1,0 +1,110 @@
+{
+  "id": "genrec",
+  "name": "GenRec",
+  "eyebrow": "NETFLIX · FOUNDATION MODELS · RECOMMENDATION",
+  "hero": [
+    "A history of choices.",
+    "A new way to rank."
+  ],
+  "emphasis": "rank.",
+  "intro": "From viewing history to catalog scores.\nEight cards inside an LLM-backed ranker.",
+  "accent": "#d5b998",
+  "paper": "https://arxiv.org/abs/2608.10257v2",
+  "notesPath": "paper/genrec/README.md",
+  "notesFile": "GenRec_notes.md",
+  "version": "arXiv:2608.10257v2 · Sections 4–5",
+  "figure": "genrec-overview.svg",
+  "figureAlt": "GenRec overview and reported results",
+  "next": "artwork",
+  "nextTitle": "The next question: which artwork?",
+  "chapters": [
+    {
+      "tag": "01 / THE QUESTION",
+      "title": "Which title comes next?",
+      "subtitle": "A ranking task, in context.",
+      "paragraphs": [
+        "A viewing history is more than a list of IDs. It contains preferences, timing, engagement, and the context of a request. GenRec expresses these signals as text for an LLM-backed ranker.",
+        "The output is a set of item scores. The system ranks titles or other catalog items; candidate retrieval is a separate concern. Artwork personalization asks a different question after a title has been selected."
+      ],
+      "note": "The diagram follows the existing reading notes. It is an explanatory map, not a production trace.",
+      "lab": "gen-overview"
+    },
+    {
+      "tag": "02 / TWO TRAINING PHASES",
+      "title": "Build a foundation.\nRefresh a ranker.",
+      "subtitle": "Reusable knowledge, timely preferences.",
+      "paragraphs": [
+        "Phase 1 adapts an open-source LLM to Netflix data for user and content understanding, language capabilities, and instruction following.",
+        "Phase 2 specializes that foundation for recommendation. The backbone, catalog-aware ranking head, and learned item embeddings are trained jointly. This phase can refresh more frequently as releases and preferences change."
+      ],
+      "note": "The paper does not disclose a complete Phase-1 training recipe. This is not the artwork paper’s LoRA-SFT → DPO design.",
+      "lab": "gen-phases"
+    },
+    {
+      "tag": "03 / CONTEXT ENGINEERING",
+      "title": "Keep the signal.\nSpend fewer tokens.",
+      "subtitle": "Selection is part of the model design.",
+      "paragraphs": [
+        "Long plays and explicit positive feedback can retain detail. Very short plays and noisy events may be omitted. Repeated activity and binge sessions can be compressed, while older history can be summarized.",
+        "This changes where engineering happens: selecting and expressing useful context still matters. In the reported ablation, context shrank from about 5,000 to 1,700 tokens with negligible offline quality loss."
+      ],
+      "note": "The controls use a fictional history and illustrative token counts. The reported 5,000 → 1,700 reduction is a separate paper result.",
+      "lab": "gen-context"
+    },
+    {
+      "tag": "04 / CATALOG-AWARE SCORING",
+      "title": "One context vector.\nA score for every item.",
+      "subtitle": "h meets the learned item vectors.",
+      "paragraphs": [
+        "The LLM processes the verbalized input and supplies a contextual hidden state h at a pooling position. The scoring head combines h with each learned item embedding eᵢ to obtain a logit sᵢ = φ(h, eᵢ).",
+        "Softmax converts logits to probabilities without changing their order. Sorting the scores produces the ranking. The item embeddings are trainable parameters shared across requests; h is an activation recomputed for the current context."
+      ],
+      "note": "The exact pooling position and scoring function φ are not disclosed. The editable logits explain softmax; they do not assume φ is a dot product.",
+      "lab": "gen-scores"
+    },
+    {
+      "tag": "05 / REWARD-WEIGHTED LEARNING",
+      "title": "The right item.\nThe right training weight.",
+      "subtitle": "Scale the example, not the serving score.",
+      "paragraphs": [
+        "The supervised target is the item associated with valuable engagement. Cross-entropy penalizes a low probability for that target, and a reward-derived weight scales the example’s contribution to training.",
+        "Separate reward signals reflect long-term satisfaction proxies and behavior rebalancing. They do not directly add a reward score to the serving-time ranking head. An auxiliary language objective also supports language capabilities."
+      ],
+      "note": "This is a single-target weighted-CE illustration. Reward-to-weight mapping, normalization, and production hyperparameters are unspecified.",
+      "lab": "gen-loss"
+    },
+    {
+      "tag": "06 / PREFILL-ONLY SERVING",
+      "title": "Read once.\nScore the candidates.",
+      "subtitle": "No token-by-token ranking output.",
+      "paragraphs": [
+        "At serving time, Netflix’s LLM stack uses vLLM in prefill-only mode. The model processes the input context, produces h, and scores the candidate set in one forward pass.",
+        "The ranking path does not generate title names token by token, perform beam search, or use target labels and a training loss. Context length and catalog scoring still require computation."
+      ],
+      "note": "Step through a conceptual request. The animation does not measure latency, and a single pass does not imply constant computational cost.",
+      "lab": "gen-serving"
+    },
+    {
+      "tag": "07 / READ THE COMPARISON",
+      "title": "A gain needs\na comparison base.",
+      "subtitle": "Different experiments, different denominators.",
+      "paragraphs": [
+        "The study reports about +1.6% relative offline MRR versus a mature production ranker. Its online test ran for four weeks on about 10% of traffic on key batch-compute surfaces.",
+        "About 40× fewer labeled examples refers to Phase 2, excluding original LLM pretraining and Phase 1. About one-third serving cost compares compressed and original contexts, not GenRec and a traditional ranker."
+      ],
+      "note": "Do not add ablation improvements to the production comparison or interpret relative changes as percentage-point gains.",
+      "lab": "gen-results"
+    },
+    {
+      "tag": "08 / WHAT TO REMEMBER",
+      "title": "Represent the context.\nLearn the ranking.",
+      "subtitle": "A foundation, specialized for decisions.",
+      "paragraphs": [
+        "GenRec joins a reusable foundation, deliberate context construction, and a frequently refreshed catalog-aware ranking head. It learns the backbone and item vectors together, with reward-weighted ranking and auxiliary language supervision.",
+        "This is distinct from SPD’s per-candidate representations and item–position assignment, and from choosing an artwork for one fixed title. Similar LLM backbones can support very different decisions."
+      ],
+      "note": "Unseen-item onboarding, the concrete scoring function, and exact pooling details are not established in the reading notes.",
+      "lab": "gen-takeaway"
+    }
+  ]
+}
