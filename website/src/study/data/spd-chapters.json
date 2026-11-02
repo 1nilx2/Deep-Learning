@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Single Forward Pass:\nDon’t Autoregress",
+    "tag": "01 / THE IDEA",
+    "subtitle": "One LLM pass. A complete ranking."
+  },
+  {
+    "title": "H: Read the User.\nRead the Candidates.",
+    "tag": "02 / INPUT → REPRESENTATION",
+    "subtitle": "N candidates × D dimensions"
+  },
+  {
+    "title": "M: A Score for Every Rank",
+    "tag": "03 / THE SCORE MATRIX",
+    "subtitle": "Item × rank-position scores"
+  },
+  {
+    "title": "S: Soft Assignments\nfor Training",
+    "tag": "04 / SOFT ASSIGNMENT",
+    "subtitle": "Sinkhorn · differentiable normalization"
+  },
+  {
+    "title": "Learn the\nTeacher’s Ranking",
+    "tag": "05 / TRAINING OBJECTIVE",
+    "subtitle": "Cross-entropy over assignments"
+  },
+  {
+    "title": "Decode the\nBest Assignment",
+    "tag": "06 / INFERENCE",
+    "subtitle": "Hungarian algorithm · exact assignment"
+  },
+  {
+    "title": "28 ms.\nRead the Comparison.",
+    "tag": "07 / QUALITY × LATENCY",
+    "subtitle": "ms · internal dataset · A100"
+  },
+  {
+    "title": "A Ranking Backbone,\nNot a Text Generator.",
+    "tag": "08 / WHAT THIS PROVES",
+    "subtitle": "Contextual representations, not text generation"
+  }
+]

@@ -9,7 +9,6 @@ for (const work of content.works) {
   await access(path.join(root,work.path));
   if(work.heroImage) await access(path.join(site,'dist/assets',work.heroImage));
   await access(path.join(site,'dist/assets',work.image));
-  await access(path.join(site,'dist/assets',`${work.card}-card.svg`));
   if(work.page) await access(path.join(site,'dist',work.page,'index.html'));
 }
 for(const entry of content.entries) await access(path.join(root,entry[4]));
@@ -34,7 +33,7 @@ for(const folder of ['genrec','netflix-artwork-personalization']) {
   const embedded=JSON.parse(html.match(/<script id="study-data" type="application\/json">([\s\S]*?)<\/script>/)[1]);
   assert.deepEqual(embedded,config,'Published chapter content must match its paper source');
   assert.equal(await readFile(path.join(site,'dist/studies',config.id,config.notesFile),'utf8'),await readFile(path.join(root,config.notesPath),'utf8'));
-  for(let i=0;i<8;i++) await access(path.join(site,'dist/assets/studies',`${config.id}-${i}.svg`));
+  for(let i=0;i<8;i++) await access(path.join(site,'dist/assets/plates',`${config.id}-${i}.svg`));
   await access(path.join(site,'dist/studies',config.next,'index.html'));
 }
 const {softmax,weightedCE,dpoLoss,bigramMatch}=await import('../src/study/math.mjs');
@@ -52,3 +51,16 @@ assert.equal(bigramMatch('A warm AMBER room!',['A cold blue moon.','A warm amber
 assert.equal(bigramMatch('Unrelated words',['A cold blue moon.','A warm amber room.']).index,null);
 assert.equal(bigramMatch('cold blue',['A cold blue moon.','A cold blue sky.']).index,null);
 console.log('PASS: both eight-chapter studies, current downloads, companion links, stable softmax/CE/DPO, and caption-matching edge cases.');
+
+for(const id of ['embedding','laya','turbo']){
+  const config=JSON.parse(await readFile(path.join(site,'src/study/data',id+'.json'),'utf8'));
+  const html=await readFile(path.join(site,'dist/studies',id,'index.html'),'utf8');
+  const data=JSON.parse(html.match(/<script id="study-data" type="application\/json">([\s\S]*?)<\/script>/)[1]);
+  assert.deepEqual(data,config);
+  assert.equal(await readFile(path.join(site,'dist/studies',id,config.notesFile),'utf8'),await readFile(path.join(root,config.notesPath),'utf8'));
+  for(let i=0;i<config.chapters.length;i++)await access(path.join(site,'dist/assets/plates',`${id}-${i}.svg`));
+  await access(path.join(site,'dist/studies',config.next,'index.html'));
+}
+assert.ok(study.includes('../../assets/plates/spd-0.svg'),'SPD must use the new chapter plates');
+assert.ok(!study.includes('var UM=[{src:"data:image'),'Old SPD carousel art must be replaced in the deployed study');
+console.log('PASS: all six Study/Lab routes, 39 chapter plates, synchronized downloads, and the SPD carousel artwork hook.');

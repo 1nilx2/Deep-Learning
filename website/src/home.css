@@ -39,3 +39,5 @@
 @media(max-width:720px){.tilted-hero{height:700px}.tilted-content{padding:38px 6% 32px}.tilted-heading h1{font-size:53px}.tilted-subtitle{font-size:11px}.tilted-heading .eyebrow{font-size:8px}.tilted-bottom>p{font-size:11px}.study-tabs button{flex:1 1 calc(33.33% - 7px);font-size:10px;padding:12px 10px;gap:7px}.study-tabs button>b{display:none}.selection-heading>span:last-child{font-size:10px}.featured-selection{padding-top:22px}}
 @media(max-width:390px){.tilted-heading h1{font-size:47px}.hero-actions{gap:14px}.primary-action{font-size:10px;padding:11px 15px;gap:20px}.study-tabs button{font-size:9px}}
 @media(prefers-reduced-motion:reduce){.tilted-hero *{transition:none!important}}
+/* Research plates read at their native proportions in the selected-work preview. */
+.figure img{height:auto;aspect-ratio:1200/1140;object-fit:contain}

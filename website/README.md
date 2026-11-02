@@ -15,23 +15,28 @@ npm run check --prefix website
 python -m http.server 4173 --directory website/dist
 ```
 
-Open http://localhost:4173. The paper collection now includes three interactive studies:
+Open http://localhost:4173. The collection includes six coordinated Study/Lab pages:
 
 - `studies/spd/` — A single pass. A complete ranking.
 - `studies/genrec/` — A history of choices. A new way to rank.
 - `studies/artwork/` — One title. A different first impression.
+- `studies/embedding/` — Audio–text retrieval and modality signatures.
+- `studies/laya/` — Accuracy, calibration, and measured CPU latency.
+- `studies/turbo/` — KV allocation, total Metal memory, and storage projections.
 
 The output is a static website with bundled dependencies and local artwork. It needs no CDN or server framework. The homepage ribbon uses CSS transforms, supports reduced motion, and includes a pause control. Its images are decorative; the study selector and archive provide navigation. The paper studies use WebGL 2 for the original lens effects and zoom. GenRec and Artwork also provide a card-list fallback when WebGL 2 is unavailable. Archive search and category filters work locally.
 
 ## Keep GitHub and the website in sync
 
 - **SPD notes:** edit `paper/spd/README.md`. The build regenerates both the downloadable `.md` file and the study's embedded notes download from this file.
-- **SPD learning panels:** edit `paper/spd/index.html`, the canonical standalone study. The build copies it to `dist/studies/spd/index.html` and adds homepage/GitHub navigation.
+- **Chapter plates:** `website/scripts/research-plates.mjs` generates 39 chapter-specific research plates into `dist/assets/plates/`. They share the muted paper-and-ink palette of the homepage thumbnails and use schematic mechanisms or existing reported results, with interpretation boundaries retained.
+- **Experimental Lab pages:** curated chapter content is in `website/src/study/data/`; explorers are in `experiment-labs.jsx`. Full report downloads are copied from their canonical source notes. These dossiers do not rewrite the underlying protocols.
+- **SPD learning panels:** edit `paper/spd/index.html`, the canonical standalone study. The build copies it to `dist/studies/spd/index.html` and adds homepage/GitHub navigation. It replaces the embedded carousel artwork with generated chapter plates while retaining the original matrix and loss interactions.
 - **Homepage content:** edit `website/content.json` to add or change featured works and archive entries. A `page` field opens a local interactive study; `path` links to its repository notes.
 - **Homepage thumbnails:** `website/src/thumbnails/` contains topic-specific research plates. `heroImage` and `heroAlt` in `content.json` select them. See the thumbnail README for the provenance of schematic examples and measured values. `thumbnail-review.html` presents all six plates.
 - **Repository figures:** edit the original paths listed in `content.json` under `assets`. Each build copies those sources, so figures are not maintained twice.
 - **Design and behavior:** `website/src/index.html`, `styles.css`, `app.tsx`, `home.css`, and `archive.js`.
-- **GenRec and Artwork chapters:** edit `paper/genrec/study.json` or `paper/netflix-artwork-personalization/study.json`. Each has eight chapters and a named explorer. The shared study UI is in `website/src/study/`; metallic chapter artwork lives beside the papers. Builds regenerate the deployed pages and notes downloads from these sources.
+- **GenRec and Artwork chapters:** edit `paper/genrec/study.json` or `paper/netflix-artwork-personalization/study.json`. Each has eight chapters and a named explorer. The shared study UI is in `website/src/study/`; the original metallic artwork is retained as source material; deployed chapter cards use generated research plates. Builds regenerate the deployed pages and notes downloads from these sources.
 - **Homepage component:** `website/src/components/ui/tilted-grid-hero.tsx`, supplied with the approved homepage design. Only its utility import is adapted. Its Tailwind utility classes are implemented in scoped CSS in `home.css`; esbuild compiles its TSX without a framework migration.
 - **Study component:** `website/src/components/FlexCarousel.jsx` and `FlexCarousel.css`.
 - **Generated files:** `website/dist/`; rebuild instead of editing them directly.

@@ -1,0 +1,77 @@
+{
+  "id": "turbo",
+  "kind": "lab",
+  "name": "TurboQuant KV Cache",
+  "eyebrow": "FIELDNOTES · MEASURED EXPERIMENT · LEARNING LAB",
+  "hero": [
+    "Less KV storage.",
+    "A fuller accounting."
+  ],
+  "emphasis": "accounting.",
+  "intro": "Measured allocation, total Metal memory,\nand what a one-million-token projection cannot say.",
+  "accent": "#b7c7e6",
+  "notesPath": "labs/llm/turboquant-kv-cache/RESULTS.md",
+  "notesFile": "TurboQuant_results.md",
+  "version": "Repository experiment · protocol and interpretation limits in the full report",
+  "figure": "turbo-results.svg",
+  "figureAlt": "TurboQuant KV Cache experiment overview",
+  "chapters": [
+    {
+      "tag": "01 / THE SETUP",
+      "title": "Quantize the cache.\nMeasure the process.",
+      "subtitle": "Q8 keys and TurboQuant 4-bit values.",
+      "paragraphs": [
+        "This local lab compares FP16 K/V with Q8_0 keys plus TurboQuant 4-bit values on Qwen2.5-1.5B-Instruct Q8_0, running on an M1 Max. All prompts are synthetic.",
+        "Only values use TurboQuant here. This setup differs from Google’s research evaluation and should be interpreted as a local implementation experiment."
+      ],
+      "note": "The source report records configured capacity separately from input-token count.",
+      "lab": "turbo-memory"
+    },
+    {
+      "tag": "02 / KV ALLOCATION",
+      "title": "896 MiB.\n357 MiB.",
+      "subtitle": "The same measured input length.",
+      "paragraphs": [
+        "At 30,290 input tokens and a configured capacity of 32,768, FP16 KV allocation is 896 MiB and the experimental format uses 357 MiB, a 60.2% reduction.",
+        "The measured points are separate process runs with capacity reserved by the backend. They do not depict a single process’s cache growing live."
+      ],
+      "note": "The shorter point is a median across four prompts; the longer points are medians across two.",
+      "lab": "turbo-memory"
+    },
+    {
+      "tag": "03 / THE WHOLE PROCESS",
+      "title": "The cache is\npart of the total.",
+      "subtitle": "Weights and compute buffers remain.",
+      "paragraphs": [
+        "At 30.3k input tokens, the experimental total Metal allocation is 3,829 MiB: 1,801 MiB model weights, 1,671 MiB compute buffers, and 357 MiB KV.",
+        "The FP16 total is 4,368 MiB. Its 896 MiB KV allocation is only one segment. RSS is a separate process-memory measurement and must not be added to Metal allocation."
+      ],
+      "note": "The 60.2% cache reduction is not a 60.2% reduction in total memory.",
+      "lab": "turbo-memory"
+    },
+    {
+      "tag": "04 / THE TRADE-OFF",
+      "title": "Memory saved.\nMore time to prefill.",
+      "subtitle": "Read retrieval and latency together.",
+      "paragraphs": [
+        "At 30.3k, median prefill was 37.74 s with FP16 and 73.09 s with the experimental format. FP16 returned the first target code in both cases; the experimental format succeeded in one of two.",
+        "The short-context runs were more favorable, but two long-context cases and a single run per condition cannot estimate general retrieval accuracy."
+      ],
+      "note": "The result is a local memory–latency–retrieval trade-off, not a universal quality guarantee.",
+      "lab": "turbo-tradeoff"
+    },
+    {
+      "tag": "05 / PROJECTION",
+      "title": "Estimate storage.\nDo not invent a run.",
+      "subtitle": "One million allocated tokens is arithmetic.",
+      "paragraphs": [
+        "Keeping this architecture and cache format fixed, the two longer capacities imply 28 KiB per allocated token for FP16 and about 11.16 KiB for the experimental format.",
+        "At one million allocated tokens, those rates project about 26.7 GiB versus 10.6 GiB of KV storage. This model’s native context limit is 32,768, so these are not executable one-million-token results."
+      ],
+      "note": "The estimate says nothing about one-million-token accuracy, prefill time, temporary memory, or total Metal allocation.",
+      "lab": "turbo-projection"
+    }
+  ],
+  "next": "embedding",
+  "nextTitle": "Next: retrieval across modalities."
+}
