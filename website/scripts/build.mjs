@@ -52,11 +52,11 @@ for (const config of Object.values(plateStudies).filter(study=>study.id!=='spd')
   const directory=path.join(dist,'studies',config.id);
   await mkdir(directory,{recursive:true});
   const data=JSON.stringify(config).replaceAll('<',String.fromCharCode(92)+'u003c');
-  const shell=`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#100f14"><meta name="description" content="An interactive Study or Lab dossier from Deep Learning Fieldnotes."><title>${config.name} — Fieldnotes</title><link rel="stylesheet" href="../../study.css"><script id="study-data" type="application/json">${data}</script><script src="../../study.js" defer></script></head><body><div id="study-root"></div><noscript><main style="padding:8%;color:#ddd;background:#100f14;font-family:system-ui"><h1>${config.name}</h1><p>Enable JavaScript for the interactive study, or read the complete notes.</p><a href="https://github.com/1nilx2/Deep-Learning/blob/main/${config.notesPath}">Read the GitHub notes</a> · <a href="../../">Fieldnotes</a></main></noscript></body></html>`;
+  const shell=`<!doctype html><html lang="${config.lang||'en'}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#100f14"><meta name="description" content="An interactive Study or Lab dossier from Deep Learning Fieldnotes."><title>${config.name} — Fieldnotes</title><link rel="stylesheet" href="../../study.css"><script id="study-data" type="application/json">${data}</script><script src="../../study.js" defer></script></head><body><div id="study-root"></div><noscript><main style="padding:8%;color:#ddd;background:#100f14;font-family:system-ui"><h1>${config.name}</h1><p>Enable JavaScript for the interactive study, or read the complete notes.</p><a href="https://github.com/1nilx2/Deep-Learning/blob/main/${config.notesPath}">Read the GitHub notes</a> · <a href="../../">Fieldnotes</a></main></noscript></body></html>`;
   await writeFile(path.join(directory,'index.html'),shell);
   await cp(fromRepo(config.notesPath),path.join(directory,config.notesFile));
 }
 
 await writeFile(path.join(dist,'.nojekyll'), '');
 await cp(path.join(site,'THIRD_PARTY_NOTICES.md'), path.join(dist,'THIRD_PARTY_NOTICES.md'));
-console.log(`Built ${content.works.length} featured works, ${content.entries.length} archive entries, and six coordinated Study/Lab pages.`);
+console.log(`Built ${content.works.length} featured works, ${content.entries.length} archive entries, and ${Object.keys(plateStudies).length} coordinated Study/Lab pages.`);

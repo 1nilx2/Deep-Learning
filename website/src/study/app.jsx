@@ -4,7 +4,7 @@ import FlexCarousel from '../components/FlexCarousel';
 import Lab from './labs';
 import './study.css';
 const study=JSON.parse(document.getElementById('study-data').textContent);
-const themes={genrec:['#e5e1d6','#75674e'],artwork:['#e7dfe4','#795a70'],embedding:['#dde7e0','#42685f'],laya:['#e7e0d6','#785e49'],turbo:['#dfe5eb','#4d637b']};
+const themes={gr2:['#dfe6db','#536b50'],genrec:['#e5e1d6','#75674e'],artwork:['#e7dfe4','#795a70'],embedding:['#dde7e0','#42685f'],laya:['#e7e0d6','#785e49'],turbo:['#dfe5eb','#4d637b']};
 const github=`https://github.com/1nilx2/Deep-Learning/blob/main/${study.notesPath}`;
 const items=study.chapters.map((chapter,i)=>({src:`../../assets/plates/${study.id}-${i}.svg`,alt:chapter.title.replaceAll('\n',' '),title:chapter.title.replaceAll('\n',' '),subtitle:chapter.tag}));
 function HeroLine({text}){const i=text.lastIndexOf(study.emphasis);return i>=0?<>{text.slice(0,i)}<em>{study.emphasis}</em>{text.slice(i+study.emphasis.length)}</>:text}
@@ -13,7 +13,7 @@ function App(){
  const [supported]=useState(()=>{try{const gl=document.createElement('canvas').getContext('webgl2');if(!gl)return false;gl.getExtension('WEBGL_lose_context')?.loseContext();return true}catch{return false}});
  const goTo=i=>{const next=(i+items.length)%items.length;setActive(next);if(supported&&navigation.current)navigation.current.goTo(next)};
  const chapter=study.chapters[active];
- useEffect(()=>{document.documentElement.style.setProperty('--accent',study.accent);document.documentElement.style.setProperty('--plate-paper',themes[study.id][0]);document.documentElement.style.setProperty('--plate-ink',themes[study.id][1]);document.title=`${study.name} — Fieldnotes`;},[]);
+ useEffect(()=>{document.documentElement.style.setProperty('--accent',study.accent);document.documentElement.style.setProperty('--plate-paper',themes[study.id][0]);document.documentElement.style.setProperty('--plate-ink',themes[study.id][1]);document.title=`${study.name} — Fieldnotes`;document.documentElement.lang=study.lang||'en';},[]);
  return <>
   <a className="skip" href="#chapter">Skip to the chapter</a>
   <header className="shell"><a className="brand" href="../../">{study.kind==='lab'?'LAB / NOTES':'PAPER / NOTES'} <span>{study.name}</span></a><nav aria-label="Study navigation"><a href="../../">← Fieldnotes</a><a href={study.paper||github.replace(/[^/]+$/,'README.md')} target="_blank" rel="noopener">{study.paper?'Read the paper ↗':'Protocol ↗'}</a><a href={study.notesFile} download>Full notes ↓</a></nav></header>

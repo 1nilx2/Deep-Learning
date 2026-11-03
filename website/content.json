@@ -12,7 +12,8 @@
       "description": "Read the user context and candidates once, then recover a complete ranking from item–position scores. Follow H → M → S, teacher-ranking distillation, and Hungarian assignment through eight cards and an interactive matrix.",
       "caveat": "A paper reading study. The matrices and loss slider are illustrative examples, not experiments that train a model.",
       "heroImage": "thumbnails/spd.svg",
-      "heroAlt": "SPD: the study’s three-item maximum-score assignment matrix"
+      "heroAlt": "SPD: the study’s three-item maximum-score assignment matrix",
+      "shortTitle": "SPD"
     },
     {
       "title": "GenRec: An LLM-Backed Recommendation Ranker",
@@ -26,7 +27,8 @@
       "caveat": "A paper reading study. The full notes include diagrams, training details, and interpretation limits.",
       "page": "studies/genrec/",
       "heroImage": "thumbnails/genrec.svg",
-      "heroAlt": "GenRec: contextual representation and catalog-aware scoring schematic"
+      "heroAlt": "GenRec: contextual representation and catalog-aware scoring schematic",
+      "shortTitle": "GenRec"
     },
     {
       "title": "EmbeddingGemma 2: Audio–Text Alignment",
@@ -40,7 +42,8 @@
       "caveat": "Exp 1 only. Three pairs were reviewed directly; alignment was assumed for the remaining 218. No independent gold topic labels are available.",
       "heroImage": "thumbnails/embedding.svg",
       "heroAlt": "EmbeddingGemma 2: audio–text retrieval with Exp 1 Top-1 results",
-      "page": "studies/embedding/"
+      "page": "studies/embedding/",
+      "shortTitle": "EmbeddingGemma"
     },
     {
       "title": "Laya vs CrossEncoder",
@@ -54,7 +57,8 @@
       "caveat": "Results apply to this experimental setup. The report documents reproduction conditions and remaining differences between the systems.",
       "heroImage": "thumbnails/laya.svg",
       "heroAlt": "Laya versus CrossEncoder: measured accuracy and request latency",
-      "page": "studies/laya/"
+      "page": "studies/laya/",
+      "shortTitle": "Laya"
     },
     {
       "title": "TurboQuant: Inside the KV Cache",
@@ -68,7 +72,8 @@
       "caveat": "The one-million-token chart projects KV storage only. It is not a run of this model at a one-million-token context length.",
       "heroImage": "thumbnails/turbo.svg",
       "heroAlt": "TurboQuant: measured KV allocation of 896 versus 357 MiB",
-      "page": "studies/turbo/"
+      "page": "studies/turbo/",
+      "shortTitle": "TurboQuant"
     },
     {
       "title": "Netflix Artwork Personalization",
@@ -82,10 +87,34 @@
       "caveat": "A paper reading study with editable diagrams, source references, and a detailed explanation of the learning process.",
       "page": "studies/artwork/",
       "heroImage": "thumbnails/artwork.svg",
-      "heroAlt": "Artwork personalization: three fictional posters from the study"
+      "heroAlt": "Artwork personalization: three fictional posters from the study",
+      "shortTitle": "Artwork"
+    },
+    {
+      "title": "GR2: Generative Reasoning Re-ranker",
+      "shortTitle": "GR2",
+      "tag": "PAPER / REASONING & RE-RANKING",
+      "card": "gr2",
+      "color": "#b8cbb6",
+      "image": "thumbnails/gr2.svg",
+      "alt": "GR2: SID alignment, reasoning distillation, and conditional ranking rewards",
+      "path": "paper/gr2/README.md",
+      "page": "studies/gr2/",
+      "description": "Learn an item language, distill selected teacher reasoning, and reward real ranking improvements. Seven chapters connect Semantic IDs, rejection sampling and SFT, conditional rewards, and DAPO.",
+      "caveat": "A reading study based on the supplied v6 paper. Interactive examples are illustrations, separate from reported results; no model runs in the browser.",
+      "heroImage": "thumbnails/gr2.svg",
+      "heroAlt": "GR2: SID alignment, reasoning distillation, and conditional ranking rewards"
     }
   ],
   "entries": [
+    [
+      "paper",
+      "GR2: Generative Reasoning Re-ranker",
+      "Semantic IDs → reasoning traces → SFT → conditional rewards & DAPO.",
+      "Recommendation · Reasoning · RL",
+      "paper/gr2/README.md",
+      "studies/gr2/"
+    ],
     [
       "paper",
       "SPD: Single Pass Decoding",
@@ -202,6 +231,9 @@
     "thumbnails/embedding.svg": "website/src/thumbnails/embedding.svg",
     "thumbnails/laya.svg": "website/src/thumbnails/laya.svg",
     "thumbnails/turbo.svg": "website/src/thumbnails/turbo.svg",
-    "thumbnails/artwork.svg": "website/src/thumbnails/artwork.svg"
+    "thumbnails/artwork.svg": "website/src/thumbnails/artwork.svg",
+    "thumbnails/gr2.svg": "website/src/thumbnails/gr2.svg",
+    "gr2-overview.svg": "paper/gr2/assets/overview.svg",
+    "gr2-paper.pdf": "paper/gr2/source/2602.07774v6.pdf"
   }
 }

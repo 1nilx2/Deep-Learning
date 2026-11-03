@@ -35,7 +35,7 @@ function App() {
         </div>
       </TiltedGridHero>
     </section>
-    <section className="featured-selection shell" id="featured" aria-label="Select a featured study"><div className="selection-heading"><span className="eyebrow">SELECTED WORK / 06 STUDIES</span><span>Follow an idea.</span></div><div className="study-tabs" role="group" aria-label="Featured studies">{content.works.map((work,i)=><button key={work.card} aria-pressed={selected===i} onClick={()=>setSelected(i)}><span>{String(i+1).padStart(2,'0')}</span>{['SPD','GenRec','EmbeddingGemma','Laya','TurboQuant','Artwork'][i]}<b aria-hidden="true">↗</b></button>)}</div></section>
+    <section className="featured-selection shell" id="featured" aria-label="Select a featured study"><div className="selection-heading"><span className="eyebrow">SELECTED WORK / {String(content.works.length).padStart(2,'0')} STUDIES</span><span>Follow an idea.</span></div><div className="study-tabs" role="group" aria-label="Featured studies">{content.works.map((work,i)=><button key={work.card} aria-pressed={selected===i} onClick={()=>setSelected(i)}><span>{String(i+1).padStart(2,'0')}</span>{work.shortTitle}<b aria-hidden="true">↗</b></button>)}</div></section>
   </>;
 }
 createRoot($('home-root')).render(<App/>);

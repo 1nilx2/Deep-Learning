@@ -32,6 +32,8 @@ On an M1 Max with Qwen2.5-1.5B, TurboQuant's **357 MiB KV cache** at 30.3k input
 
 ## Start here
 
+- [GR2: Generative Reasoning Re-ranker](paper/gr2/README.md) — SID alignment, reasoning distillation, weighted SFT, and conditional ranking rewards. [Interactive study](https://1nilx2.github.io/Deep-Learning/studies/gr2/).
+
 - [Laya vs CrossEncoder classification lab](labs/nlp/laya-vs-cross-encoder/README.md) — reproducible training on eight BANKING77 intents, with [held-out results](labs/nlp/laya-vs-cross-encoder/RESULTS.md).
 - [Laya: typed decision model](notes/llm/laya.md) — a bilingual walkthrough from a customer request and typed questions to option probabilities, model architecture, and loss functions.
 - [Training and optimization](notes/foundations/training-and-optimization.md) — working notes on gradients, backpropagation, cross-entropy, calibration, and training efficiency.

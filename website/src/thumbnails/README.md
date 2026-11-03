@@ -10,3 +10,7 @@ These are original vector thumbnails designed around each study, with a consiste
 - **Artwork:** the three fictional After the Tide posters already used in the interactive study. The marked selection is illustrative, not an inferred Netflix user preference.
 
 `heroImage` and `heroAlt` in `website/content.json` select these assets. The shared asset map copies them to `dist/assets/thumbnails/` during the build. Update numeric plates if their referenced reports change.
+
+### GR2
+
+`gr2.svg` is an authored schematic of SID alignment → teacher traces and weighted SFT → conditional rewards and DAPO, based on arXiv:2602.07774v6. The 6 → 2 target-rank move is illustrative, not measured. Editable matching artwork: `paper/gr2/assets/overview.svg`.
