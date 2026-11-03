@@ -97,13 +97,13 @@
       "card": "gr2",
       "color": "#b8cbb6",
       "image": "thumbnails/gr2.svg",
-      "alt": "GR2: SID alignment, reasoning distillation, and conditional ranking rewards",
+      "alt": "GR2: an illustrative hair-care history and reasoning step move candidate C from third to first",
       "path": "paper/gr2/README.md",
       "page": "studies/gr2/",
       "description": "Learn an item language, distill selected teacher reasoning, and reward real ranking improvements. Seven chapters connect Semantic IDs, rejection sampling and SFT, conditional rewards, and DAPO.",
       "caveat": "A reading study based on the supplied v6 paper. Interactive examples are illustrations, separate from reported results; no model runs in the browser.",
       "heroImage": "thumbnails/gr2.svg",
-      "heroAlt": "GR2: SID alignment, reasoning distillation, and conditional ranking rewards"
+      "heroAlt": "GR2: an illustrative hair-care history and reasoning step move candidate C from third to first"
     }
   ],
   "entries": [

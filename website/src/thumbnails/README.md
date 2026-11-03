@@ -13,4 +13,4 @@ These are original vector thumbnails designed around each study, with a consiste
 
 ### GR2
 
-`gr2.svg` is an authored schematic of SID alignment → teacher traces and weighted SFT → conditional rewards and DAPO, based on arXiv:2602.07774v6. The 6 → 2 target-rank move is illustrative, not measured. Editable matching artwork: `paper/gr2/assets/overview.svg`.
+`gr2.svg` depicts a fictional purchase history (shampoo → conditioner), an illustrative reasoning step, and candidate C (hair oil) moving from third to first among the same three candidates. This is authored teaching artwork, not a model prediction or measured ranking gain. It retains the study’s paper-and-ink palette. Editable matching artwork: `paper/gr2/assets/hero.svg`. The full training-pipeline overview remains in `paper/gr2/assets/overview.svg`.
